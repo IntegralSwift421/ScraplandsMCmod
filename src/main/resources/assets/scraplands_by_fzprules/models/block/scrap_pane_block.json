@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "scraplands_by_fzprules:blocks/scrap_made_panel",
+    "up": "scraplands_by_fzprules:blocks/scrap_made_panel",
+    "north": "scraplands_by_fzprules:blocks/scrap_made_panel",
+    "east": "scraplands_by_fzprules:blocks/scrap_made_panel",
+    "south": "scraplands_by_fzprules:blocks/scrap_made_panel",
+    "west": "scraplands_by_fzprules:blocks/scrap_made_panel",
+    "particle": "scraplands_by_fzprules:blocks/scrap_made_panel"
+  }
+}

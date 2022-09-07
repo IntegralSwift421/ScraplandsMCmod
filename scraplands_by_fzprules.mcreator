@@ -1,0 +1,340 @@
+{
+  "mod_elements": [
+    {
+      "name": "RustyDirt",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rusty_dirt"
+    },
+    {
+      "name": "RustyTop",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rusty_top"
+    },
+    {
+      "name": "ScrapBricks",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_bricks"
+    },
+    {
+      "name": "ScrapPaneBlock",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_pane_block"
+    },
+    {
+      "name": "ScrapPile",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_pile"
+    },
+    {
+      "name": "RoboticLog",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robotic_log"
+    },
+    {
+      "name": "ScrapSolarPanel",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_solar_panel"
+    },
+    {
+      "name": "ScrapFlower",
+      "type": "plant",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_flower"
+    },
+    {
+      "name": "LifelessScraplands",
+      "type": "biome",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lifeless_scraplands"
+    },
+    {
+      "name": "Scraplands",
+      "type": "biome",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scraplands"
+    },
+    {
+      "name": "Scraps",
+      "type": "loottable",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scraps"
+    },
+    {
+      "name": "ScrapMetal",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_metal"
+    },
+    {
+      "name": "ScrapBrickRecipe",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_brick_recipe"
+    },
+    {
+      "name": "ScrapPaneRecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_pane_recipe"
+    },
+    {
+      "name": "ScrapPanelRecipe",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_panel_recipe"
+    },
+    {
+      "name": "ScrapArmor",
+      "type": "armor",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "ScrapArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_armor_helmet_recipe"
+    },
+    {
+      "name": "ScrapArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_armor_body_recipe"
+    },
+    {
+      "name": "ScrapArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_armor_leggings_recipe"
+    },
+    {
+      "name": "ScrapArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_armor_boots_recipe"
+    },
+    {
+      "name": "RAM",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ram"
+    },
+    {
+      "name": "RoboPotato",
+      "type": "item",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robo_potato"
+    },
+    {
+      "name": "RoboCarrot",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robo_carrot"
+    },
+    {
+      "name": "RoboCrops",
+      "type": "plant",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robo_crops"
+    },
+    {
+      "name": "RoboCropLoot",
+      "type": "loottable",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robo_crop_loot"
+    },
+    {
+      "name": "RoboCropsSmall",
+      "type": "plant",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robo_crops_small"
+    },
+    {
+      "name": "RoboCropLoot2",
+      "type": "loottable",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robo_crop_loot_2"
+    },
+    {
+      "name": "MechaSlime",
+      "type": "livingentity",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mecha_slime"
+    },
+    {
+      "name": "IonSlime",
+      "type": "livingentity",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ion_slime"
+    },
+    {
+      "name": "IonDrone",
+      "type": "livingentity",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ion_drone"
+    },
+    {
+      "name": "Scraplandian",
+      "type": "livingentity",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scraplandian"
+    },
+    {
+      "name": "Protogen",
+      "type": "livingentity",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "protogen"
+    },
+    {
+      "name": "ScraplandianMenu",
+      "type": "gui",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scraplandian_menu"
+    },
+    {
+      "name": "ProtoInventory",
+      "type": "gui",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "proto_inventory"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "entity.scraplands_by_fzprules.protogen": "Protogen",
+      "item.scraplands_by_fzprules.robo_potato": "Robo Potato",
+      "item.scraplands_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
+      "block.scraplands_by_fzprules.scrap_bricks": "Scrap Bricks",
+      "block.scraplands_by_fzprules.rusty_top": "Rusty Top",
+      "entity.scraplands_by_fzprules.ion_slime": "Mecha Slime",
+      "item.scraplands_by_fzprules.ion_slime_spawn_egg": "Mecha Slime Spawn Egg",
+      "block.scraplands_by_fzprules.robo_crops": "Robo Crops",
+      "item.scraplands_by_fzprules.protogen_spawn_egg": "Protogen Spawn Egg",
+      "biome.scraplands_by_fzprules.lifeless_scraplands": "Lifeless Scraplands",
+      "item.scraplands_by_fzprules.mecha_slime_spawn_egg": "Mecha Slime Spawn Egg",
+      "block.scraplands_by_fzprules.scrap_pile": "Scrap Pile",
+      "block.scraplands_by_fzprules.robotic_log": "Robotic Log",
+      "item.scraplands_by_fzprules.scrap_armor_helmet": "Scrap Helmet",
+      "biome.scraplands_by_fzprules.scraplands": "Scraplands",
+      "item.scraplands_by_fzprules.ion_drone_spawn_egg": "Ion Drone Spawn Egg",
+      "item.scraplands_by_fzprules.scrap_armor_leggings": "Scrap Leggings",
+      "item.scraplands_by_fzprules.ram": "RAM",
+      "entity.scraplands_by_fzprules.mecha_slime": "Mecha Slime",
+      "entity.scraplands_by_fzprules.scraplandian": "Scraplandian",
+      "block.scraplands_by_fzprules.scrap_pane_block": "Scrap Pane Block",
+      "item.scraplands_by_fzprules.scrap_armor_boots": "Scrap Boots",
+      "block.scraplands_by_fzprules.scrap_solar_panel": "Scrap Solar Panel",
+      "item.scraplands_by_fzprules.robo_carrot": "Robo Carrot",
+      "entity.scraplands_by_fzprules.ion_drone": "Ion Drone",
+      "item.scraplands_by_fzprules.scrap_metal": "Scrap Metal",
+      "block.scraplands_by_fzprules.scrap_flower": "Scrap Plantlet",
+      "item.scraplands_by_fzprules.scrap_armor_chestplate": "Scrap Chestplate",
+      "block.scraplands_by_fzprules.rusty_dirt": "Rusty Dirt",
+      "block.scraplands_by_fzprules.robo_crops_small": "Robo Crops Small"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "scraplands_by_fzprules",
+    "modName": "Scraplands by FZPrules",
+    "version": "1.0.0",
+    "author": "Francisco, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "modElementsPackage": "net.mcreator.scraplandsbyfzprules",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200234517
+}

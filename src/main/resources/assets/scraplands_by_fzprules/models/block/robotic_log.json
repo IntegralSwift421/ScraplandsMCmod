@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "scraplands_by_fzprules:blocks/scrap_log_inside",
+    "up": "scraplands_by_fzprules:blocks/scrap_log_inside",
+    "north": "scraplands_by_fzprules:blocks/scrap_log",
+    "east": "scraplands_by_fzprules:blocks/scrap_log",
+    "south": "scraplands_by_fzprules:blocks/scrap_log",
+    "west": "scraplands_by_fzprules:blocks/scrap_log",
+    "particle": "scraplands_by_fzprules:blocks/scrap_log_inside"
+  }
+}

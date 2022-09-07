@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "scraplands_by_fzprules:scrap_metal"
+    },
+    {
+      "item": "scraplands_by_fzprules:scrap_metal"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "scraplands_by_fzprules:scrap_metal"
+    },
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "scraplands_by_fzprules:scrap_metal"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "scraplands_by_fzprules:scrap_metal"
+    },
+    {
+      "item": "scraplands_by_fzprules:scrap_metal"
+    }
+  ],
+  "result": {
+    "item": "scraplands_by_fzprules:scrap_bricks",
+    "count": 4
+  }
+}
