@@ -15,6 +15,8 @@ import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.scraplandsbyfzprules.item.ThundershockItem;
+import net.mcreator.scraplandsbyfzprules.item.ThunderBallItem;
 import net.mcreator.scraplandsbyfzprules.item.ScrapMetalItem;
 import net.mcreator.scraplandsbyfzprules.item.ScrapArmorItem;
 import net.mcreator.scraplandsbyfzprules.item.RoboPotatoItem;
@@ -61,6 +63,9 @@ public class ScraplandsByFzprulesModItems {
 	public static final RegistryObject<Item> PROTOGEN = REGISTRY.register("protogen_spawn_egg",
 			() -> new ForgeSpawnEggItem(ScraplandsByFzprulesModEntities.PROTOGEN, -10066330, -16738048,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> THUNDER_BALL = REGISTRY.register("thunder_ball", () -> new ThunderBallItem());
+	public static final RegistryObject<Item> THUNDERSHOCK = REGISTRY.register("thundershock", () -> new ThundershockItem());
+	public static final RegistryObject<Item> THUNDER_REED = block(ScraplandsByFzprulesModBlocks.THUNDER_REED, CreativeModeTab.TAB_DECORATIONS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

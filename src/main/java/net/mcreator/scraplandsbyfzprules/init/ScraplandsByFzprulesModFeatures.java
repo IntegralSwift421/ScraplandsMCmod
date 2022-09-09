@@ -17,6 +17,7 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Holder;
 
+import net.mcreator.scraplandsbyfzprules.world.features.plants.ThunderReedFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.ScrapFlowerFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.RoboCropsSmallFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.RoboCropsFeature;
@@ -38,6 +39,8 @@ public class ScraplandsByFzprulesModFeatures {
 	public static final RegistryObject<Feature<?>> ROBO_CROPS_SMALL = register("robo_crops_small", RoboCropsSmallFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, RoboCropsSmallFeature.GENERATE_BIOMES,
 					RoboCropsSmallFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> THUNDER_REED = register("thunder_reed", ThunderReedFeature::feature, new FeatureRegistration(
+			GenerationStep.Decoration.VEGETAL_DECORATION, ThunderReedFeature.GENERATE_BIOMES, ThunderReedFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

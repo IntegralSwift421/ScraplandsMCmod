@@ -47,6 +47,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageSource;
@@ -66,6 +67,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.ProtoInventoryMenu;
+import net.mcreator.scraplandsbyfzprules.procedures.ProtogenInteractProcedure;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
 
@@ -254,6 +256,13 @@ public class ProtogenEntity extends TamableAnimal {
 					this.setPersistenceRequired();
 			}
 		}
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		ProtogenInteractProcedure.execute(world, x, y, z, entity);
 		return retval;
 	}
 

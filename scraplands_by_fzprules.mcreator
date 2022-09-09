@@ -277,6 +277,146 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "proto_inventory"
+    },
+    {
+      "name": "ScraplandianTradeSystem",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scraplandian_trade_system",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ScraplandianInteract",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scraplandian_interact",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProtogenInteract",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "protogen_interact",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThunderBall",
+      "type": "item",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_ball"
+    },
+    {
+      "name": "Thundershock",
+      "type": "rangeditem",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thundershock"
+    },
+    {
+      "name": "Orbonaut",
+      "type": "livingentity",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orbonaut"
+    },
+    {
+      "name": "Shock",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shock",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThunderReed",
+      "type": "plant",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_reed"
     }
   ],
   "variable_elements": [],
@@ -285,6 +425,7 @@
     "en_us": {
       "entity.scraplands_by_fzprules.protogen": "Protogen",
       "item.scraplands_by_fzprules.robo_potato": "Robo Potato",
+      "item.scraplands_by_fzprules.orbonaut_spawn_egg": "Orbonaut Spawn Egg",
       "block.scraplands_by_fzprules.rusty_top": "Rusty Top",
       "block.scraplands_by_fzprules.scrap_bricks": "Scrap Bricks",
       "item.scraplands_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
@@ -292,6 +433,8 @@
       "item.scraplands_by_fzprules.ion_slime_spawn_egg": "Mecha Slime Spawn Egg",
       "block.scraplands_by_fzprules.robo_crops": "Robo Crops",
       "item.scraplands_by_fzprules.protogen_spawn_egg": "Protogen Spawn Egg",
+      "item.scraplands_by_fzprules.thunder_ball": "Thunder Ball",
+      "entity.scraplands_by_fzprules.orbonaut": "Orbonaut",
       "biome.scraplands_by_fzprules.lifeless_scraplands": "Lifeless Scraplands",
       "item.scraplands_by_fzprules.mecha_slime_spawn_egg": "Mecha Slime Spawn Egg",
       "block.scraplands_by_fzprules.scrap_pile": "Scrap Pile",
@@ -301,6 +444,7 @@
       "item.scraplands_by_fzprules.ion_drone_spawn_egg": "Ion Drone Spawn Egg",
       "item.scraplands_by_fzprules.scrap_armor_leggings": "Scrap Leggings",
       "item.scraplands_by_fzprules.ram": "RAM",
+      "block.scraplands_by_fzprules.thunder_reed": "Thunder Reed",
       "entity.scraplands_by_fzprules.mecha_slime": "Mecha Slime",
       "entity.scraplands_by_fzprules.scraplandian": "Scraplandian",
       "block.scraplands_by_fzprules.scrap_pane_block": "Scrap Pane Block",
@@ -309,6 +453,7 @@
       "item.scraplands_by_fzprules.robo_carrot": "Robo Carrot",
       "entity.scraplands_by_fzprules.ion_drone": "Ion Drone",
       "item.scraplands_by_fzprules.scrap_metal": "Scrap Metal",
+      "item.scraplands_by_fzprules.thundershock": "Thundershock",
       "block.scraplands_by_fzprules.scrap_flower": "Scrap Plantlet",
       "item.scraplands_by_fzprules.scrap_armor_chestplate": "Scrap Chestplate",
       "block.scraplands_by_fzprules.rusty_dirt": "Rusty Dirt",

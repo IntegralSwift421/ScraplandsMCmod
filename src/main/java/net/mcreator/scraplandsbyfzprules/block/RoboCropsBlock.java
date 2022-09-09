@@ -35,7 +35,7 @@ public class RoboCropsBlock extends DoublePlantBlock {
 
 	@Override
 	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
-		return PlantType.CROP;
+		return PlantType.PLAINS;
 	}
 
 	@OnlyIn(Dist.CLIENT)

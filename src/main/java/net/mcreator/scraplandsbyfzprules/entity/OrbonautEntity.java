@@ -12,10 +12,10 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
@@ -32,45 +32,62 @@ import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.scraplandsbyfzprules.procedures.ShockProcedure;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
+
+import javax.annotation.Nullable;
 
 import java.util.Set;
 import java.util.Random;
 import java.util.EnumSet;
 
 @Mod.EventBusSubscriber
-public class IonDroneEntity extends Monster implements RangedAttackMob {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"));
+public class OrbonautEntity extends Monster implements RangedAttackMob {
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("badlands"),
+			new ResourceLocation("scraplands_by_fzprules:scraplands"), new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"),
+			new ResourceLocation("end_midlands"), new ResourceLocation("desert"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.ION_DRONE.get(), 15, 4, 4));
+					.add(new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.ORBONAUT.get(), 1, 1, 1));
 	}
 
-	public IonDroneEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(ScraplandsByFzprulesModEntities.ION_DRONE.get(), world);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.YELLOW,
+			ServerBossEvent.BossBarOverlay.PROGRESS);
+
+	public OrbonautEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(ScraplandsByFzprulesModEntities.ORBONAUT.get(), world);
 	}
 
-	public IonDroneEntity(EntityType<IonDroneEntity> type, Level world) {
+	public OrbonautEntity(EntityType<OrbonautEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
@@ -93,7 +110,7 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 			}
 
 			public boolean canUse() {
-				if (IonDroneEntity.this.getTarget() != null && !IonDroneEntity.this.getMoveControl().hasWanted()) {
+				if (OrbonautEntity.this.getTarget() != null && !OrbonautEntity.this.getMoveControl().hasWanted()) {
 					return true;
 				} else {
 					return false;
@@ -102,27 +119,27 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 
 			@Override
 			public boolean canContinueToUse() {
-				return IonDroneEntity.this.getMoveControl().hasWanted() && IonDroneEntity.this.getTarget() != null
-						&& IonDroneEntity.this.getTarget().isAlive();
+				return OrbonautEntity.this.getMoveControl().hasWanted() && OrbonautEntity.this.getTarget() != null
+						&& OrbonautEntity.this.getTarget().isAlive();
 			}
 
 			@Override
 			public void start() {
-				LivingEntity livingentity = IonDroneEntity.this.getTarget();
+				LivingEntity livingentity = OrbonautEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				IonDroneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				OrbonautEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
 			}
 
 			@Override
 			public void tick() {
-				LivingEntity livingentity = IonDroneEntity.this.getTarget();
-				if (IonDroneEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-					IonDroneEntity.this.doHurtTarget(livingentity);
+				LivingEntity livingentity = OrbonautEntity.this.getTarget();
+				if (OrbonautEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
+					OrbonautEntity.this.doHurtTarget(livingentity);
 				} else {
-					double d0 = IonDroneEntity.this.distanceToSqr(livingentity);
+					double d0 = OrbonautEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						IonDroneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						OrbonautEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
 					}
 				}
 			}
@@ -130,10 +147,10 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = IonDroneEntity.this.getRandom();
-				double dir_x = IonDroneEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = IonDroneEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = IonDroneEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				Random random = OrbonautEntity.this.getRandom();
+				double dir_x = OrbonautEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = OrbonautEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = OrbonautEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
@@ -144,8 +161,11 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 			}
 		});
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, true, false));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, ProtogenEntity.class, true, false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, ScraplandianEntity.class, true, false));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, IonDroneEntity.class, true, false));
+		this.targetSelector.addGoal(9, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
 			@Override
 			public boolean canContinueToUse() {
@@ -159,9 +179,14 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 		return MobType.UNDEFINED;
 	}
 
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
+	}
+
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.THUNDER_BALL.get()));
+		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.THUNDERSHOCK.get()));
 	}
 
 	@Override
@@ -183,19 +208,53 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 	public boolean hurt(DamageSource source, float amount) {
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
-		if (source == DamageSource.LIGHTNING_BOLT)
+		if (source == DamageSource.WITHER)
+			return false;
+		if (source.getMsgId().equals("witherSkull"))
 			return false;
 		return super.hurt(source, amount);
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		ShockProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason,
+			@Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		ShockProcedure.execute(world, this.getX(), this.getY(), this.getZ());
+		return retval;
+	}
+
+	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		Arrow entityarrow = new Arrow(this.level, this);
-		double d0 = target.getY() + target.getEyeHeight() - 1.1;
-		double d1 = target.getX() - this.getX();
-		double d3 = target.getZ() - this.getZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getY() + Math.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.6F, 12.0F);
-		level.addFreshEntity(entityarrow);
+		ThundershockEntity.shoot(this, target);
+	}
+
+	@Override
+	public boolean canChangeDimensions() {
+		return false;
+	}
+
+	@Override
+	public void startSeenByPlayer(ServerPlayer player) {
+		super.startSeenByPlayer(player);
+		this.bossInfo.addPlayer(player);
+	}
+
+	@Override
+	public void stopSeenByPlayer(ServerPlayer player) {
+		super.stopSeenByPlayer(player);
+		this.bossInfo.removePlayer(player);
+	}
+
+	@Override
+	public void customServerAiStep() {
+		super.customServerAiStep();
+		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
 	@Override
@@ -210,10 +269,24 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 	public void aiStep() {
 		super.aiStep();
 		this.setNoGravity(true);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+		for (int l = 0; l < 4; ++l) {
+			double x0 = x + random.nextFloat();
+			double y0 = y + random.nextFloat();
+			double z0 = z + random.nextFloat();
+			double dx = (random.nextFloat() - 0.5D) * 0.5D;
+			double dy = (random.nextFloat() - 0.5D) * 0.5D;
+			double dz = (random.nextFloat() - 0.5D) * 0.5D;
+			world.addParticle(ParticleTypes.ELECTRIC_SPARK, x0, y0, z0, dx, dy, dz);
+		}
 	}
 
 	public static void init() {
-		SpawnPlacements.register(ScraplandsByFzprulesModEntities.ION_DRONE.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(ScraplandsByFzprulesModEntities.ORBONAUT.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
@@ -221,7 +294,7 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
+		builder = builder.add(Attributes.MAX_HEALTH, 120);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);

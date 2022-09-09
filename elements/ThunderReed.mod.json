@@ -3,19 +3,19 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "robo_plant_top",
-    "textureBottom": "robo_crop_stem",
+    "texture": "thunder_reeds",
+    "textureBottom": "",
     "customModelName": "Cross model",
     "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "plantType": "double",
+    "plantType": "growapable",
     "staticPlantGenerationType": "Flower",
-    "suspiciousStewEffect": "LUCK",
+    "suspiciousStewEffect": "SPEED",
     "suspiciousStewDuration": 100,
     "growapableSpawnType": "Plains",
-    "growapableMaxHeight": 3,
+    "growapableMaxHeight": 5,
     "doublePlantGenerationType": "Flower",
     "customBoundingBox": false,
     "disableOffset": false,
@@ -30,19 +30,19 @@
         "subtract": false
       }
     ],
-    "name": "Robo Crops",
+    "name": "Thunder Reed",
     "specialInfo": [],
     "creativeTab": {
       "value": "DECORATIONS"
     },
-    "hardness": 0.5,
+    "hardness": 0.4,
     "resistance": 0.0,
     "luminance": 0,
     "unbreakable": false,
     "isSolid": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "PLANT"
+      "value": "LODESTONE"
     },
     "breakSound": {
       "value": ""
@@ -59,23 +59,23 @@
     "fallSound": {
       "value": ""
     },
-    "useLootTableForDrops": true,
+    "useLootTableForDrops": false,
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:ThunderBall"
     },
     "dropAmount": 1,
     "forceTicking": false,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "hasTileEntity": false,
-    "isReplaceable": false,
+    "isReplaceable": true,
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "XZ",
     "aiPathNodeType": "DEFAULT",
-    "flammability": 100,
-    "fireSpreadSpeed": 60,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
@@ -89,6 +89,9 @@
       }
     ],
     "patchSize": 64,
-    "generateAtAnyHeight": false
+    "generateAtAnyHeight": false,
+    "onHitByProjectile": {
+      "name": "Shock"
+    }
   }
 }

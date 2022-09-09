@@ -14,6 +14,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.scraplandsbyfzprules.block.ThunderReedBlock;
 import net.mcreator.scraplandsbyfzprules.block.ScrapSolarPanelBlock;
 import net.mcreator.scraplandsbyfzprules.block.ScrapPileBlock;
 import net.mcreator.scraplandsbyfzprules.block.ScrapPaneBlockBlock;
@@ -38,6 +39,7 @@ public class ScraplandsByFzprulesModBlocks {
 	public static final RegistryObject<Block> SCRAP_FLOWER = REGISTRY.register("scrap_flower", () -> new ScrapFlowerBlock());
 	public static final RegistryObject<Block> ROBO_CROPS = REGISTRY.register("robo_crops", () -> new RoboCropsBlock());
 	public static final RegistryObject<Block> ROBO_CROPS_SMALL = REGISTRY.register("robo_crops_small", () -> new RoboCropsSmallBlock());
+	public static final RegistryObject<Block> THUNDER_REED = REGISTRY.register("thunder_reed", () -> new ThunderReedBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -46,6 +48,7 @@ public class ScraplandsByFzprulesModBlocks {
 			ScrapFlowerBlock.registerRenderLayer();
 			RoboCropsBlock.registerRenderLayer();
 			RoboCropsSmallBlock.registerRenderLayer();
+			ThunderReedBlock.registerRenderLayer();
 		}
 	}
 }

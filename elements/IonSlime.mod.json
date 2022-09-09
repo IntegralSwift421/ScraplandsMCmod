@@ -78,7 +78,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Items.SLIME_BALL"
+      "value": "CUSTOM:ThunderBall"
     },
     "livingSound": {
       "value": "entity.slime.squish"

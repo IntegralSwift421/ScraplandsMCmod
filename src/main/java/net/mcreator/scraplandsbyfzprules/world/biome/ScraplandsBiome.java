@@ -1,6 +1,8 @@
 
 package net.mcreator.scraplandsbyfzprules.world.biome;
 
+import net.minecraftforge.common.BiomeDictionary;
+
 import net.minecraft.world.level.levelgen.placement.SurfaceWaterDepthFilter;
 import net.minecraft.world.level.levelgen.placement.RarityFilter;
 import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
@@ -24,20 +26,24 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.VegetationFeatures;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
+import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.core.Registry;
 
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBiomes;
 
 import java.util.List;
 
 public class ScraplandsBiome {
-	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(-0.071428571429f, 0.071428571429f),
-			Climate.Parameter.span(-0.071428571429f, 0.071428571429f), Climate.Parameter.span(0.438571428571f, 0.581428571429f),
-			Climate.Parameter.span(0.728571428571f, 0.871428571429f), Climate.Parameter.point(0),
+	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(0.261904761905f, 0.404761904763f),
+			Climate.Parameter.span(-0.671428571429f, -0.528571428571f), Climate.Parameter.span(0.438571428571f, 0.581428571429f),
+			Climate.Parameter.span(0.528571428571f, 0.671428571429f), Climate.Parameter.point(0),
 			Climate.Parameter.span(0.494605288149f, 0.637462431007f), 0);
 
 	public static Biome createBiome() {
@@ -77,11 +83,14 @@ public class ScraplandsBiome {
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.MECHA_SLIME.get(), 100, 1, 5));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.PROTOGEN.get(), 25, 3, 6));
 		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.SCRAPLANDIAN.get(), 25, 1, 6));
-		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.DESERT).temperature(0.5f)
-				.downfall(0.5f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build())
+		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.DESERT).temperature(1f)
+				.downfall(0.2f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build())
 				.build();
 	}
 
 	public static void init() {
+		BiomeDictionary.addTypes(
+				ResourceKey.create(Registry.BIOME_REGISTRY, BuiltinRegistries.BIOME.getKey(ScraplandsByFzprulesModBiomes.SCRAPLANDS.get())),
+				BiomeDictionary.Type.WASTELAND, BiomeDictionary.Type.RARE);
 	}
 }

@@ -21,6 +21,7 @@ import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.biome.MultiNoiseBiomeSource;
 import net.minecraft.world.level.biome.Climate;
 import net.minecraft.world.level.biome.Biome;
@@ -88,8 +89,7 @@ public class ScraplandsByFzprulesModBiomes {
 							surfaceRules.add(1,
 									preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, LIFELESS_SCRAPLANDS.getId()),
 											ScraplandsByFzprulesModBlocks.RUSTY_TOP.get().defaultBlockState(),
-											ScraplandsByFzprulesModBlocks.RUSTY_DIRT.get().defaultBlockState(),
-											ScraplandsByFzprulesModBlocks.RUSTY_DIRT.get().defaultBlockState()));
+											ScraplandsByFzprulesModBlocks.RUSTY_DIRT.get().defaultBlockState(), Blocks.CLAY.defaultBlockState()));
 							surfaceRules.add(1,
 									preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, SCRAPLANDS.getId()),
 											ScraplandsByFzprulesModBlocks.RUSTY_TOP.get().defaultBlockState(),
