@@ -285,9 +285,9 @@
     "en_us": {
       "entity.scraplands_by_fzprules.protogen": "Protogen",
       "item.scraplands_by_fzprules.robo_potato": "Robo Potato",
-      "item.scraplands_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
-      "block.scraplands_by_fzprules.scrap_bricks": "Scrap Bricks",
       "block.scraplands_by_fzprules.rusty_top": "Rusty Top",
+      "block.scraplands_by_fzprules.scrap_bricks": "Scrap Bricks",
+      "item.scraplands_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
       "entity.scraplands_by_fzprules.ion_slime": "Mecha Slime",
       "item.scraplands_by_fzprules.ion_slime_spawn_egg": "Mecha Slime Spawn Egg",
       "block.scraplands_by_fzprules.robo_crops": "Robo Crops",
