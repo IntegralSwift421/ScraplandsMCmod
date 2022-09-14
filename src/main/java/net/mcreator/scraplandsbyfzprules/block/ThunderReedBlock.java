@@ -13,7 +13,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SugarCaneBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
@@ -24,7 +26,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.mcreator.scraplandsbyfzprules.procedures.ShockProcedure;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
 
 import java.util.Random;
@@ -47,7 +48,16 @@ public class ThunderReedBlock extends SugarCaneBlock {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ScraplandsByFzprulesModItems.THUNDER_BALL.get()));
+		return Collections.singletonList(new ItemStack(this, 1));
+	}
+
+	@Override
+	public boolean canSurvive(BlockState blockstate, LevelReader worldIn, BlockPos pos) {
+		BlockPos blockpos = pos.below();
+		BlockState groundState = worldIn.getBlockState(blockpos);
+		return groundState.is(this) || groundState.is(ScraplandsByFzprulesModBlocks.RUSTY_DIRT.get())
+
+		;
 	}
 
 	@Override
@@ -71,6 +81,12 @@ public class ThunderReedBlock extends SugarCaneBlock {
 				}
 			}
 		}
+	}
+
+	@Override
+	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+		super.wasExploded(world, pos, e);
+		ShockProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

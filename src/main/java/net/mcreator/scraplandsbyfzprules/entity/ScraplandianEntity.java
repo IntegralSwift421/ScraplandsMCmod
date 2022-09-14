@@ -16,6 +16,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
@@ -56,9 +57,11 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.ScraplandianMenuMenu;
 import net.mcreator.scraplandsbyfzprules.procedures.ScraplandianInteractProcedure;
+import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
 
 import javax.annotation.Nullable;
@@ -109,9 +112,24 @@ public class ScraplandianEntity extends PathfinderMob {
 		return MobType.UNDEFINED;
 	}
 
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.ROBOT_CORE.get()));
+	}
+
+	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.ambient"));
+	}
+
+	@Override
+	public void playStepSound(BlockPos pos, BlockState blockIn) {
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.netherite_block.step")), 0.15f, 1);
+	}
+
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.hurt"));
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "scraplands_by_fzprules:blocks/thunder_reeds"
+    "layer0": "scraplands_by_fzprules:items/thunder_reed"
   }
 }

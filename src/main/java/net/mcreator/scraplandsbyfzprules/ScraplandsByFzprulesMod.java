@@ -30,6 +30,7 @@ import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModFeatures;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlockEntities;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBiomes;
 
 import java.util.function.Supplier;
@@ -51,7 +52,7 @@ public class ScraplandsByFzprulesMod {
 		ScraplandsByFzprulesModBlocks.REGISTRY.register(bus);
 		ScraplandsByFzprulesModItems.REGISTRY.register(bus);
 		ScraplandsByFzprulesModEntities.REGISTRY.register(bus);
-
+		ScraplandsByFzprulesModBlockEntities.REGISTRY.register(bus);
 		ScraplandsByFzprulesModFeatures.REGISTRY.register(bus);
 
 		ScraplandsByFzprulesModBiomes.REGISTRY.register(bus);

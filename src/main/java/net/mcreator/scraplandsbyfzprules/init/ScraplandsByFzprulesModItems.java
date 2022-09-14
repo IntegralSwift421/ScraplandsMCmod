@@ -17,11 +17,20 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.scraplandsbyfzprules.item.ThundershockItem;
 import net.mcreator.scraplandsbyfzprules.item.ThunderBallItem;
+import net.mcreator.scraplandsbyfzprules.item.ScrapSwordItem;
+import net.mcreator.scraplandsbyfzprules.item.ScrapShovelItem;
+import net.mcreator.scraplandsbyfzprules.item.ScrapPickaxeItem;
 import net.mcreator.scraplandsbyfzprules.item.ScrapMetalItem;
+import net.mcreator.scraplandsbyfzprules.item.ScrapHoeItem;
+import net.mcreator.scraplandsbyfzprules.item.ScrapAxeItem;
 import net.mcreator.scraplandsbyfzprules.item.ScrapArmorItem;
+import net.mcreator.scraplandsbyfzprules.item.RobotSpawnItem;
+import net.mcreator.scraplandsbyfzprules.item.RobotCoreItem;
 import net.mcreator.scraplandsbyfzprules.item.RoboPotatoItem;
 import net.mcreator.scraplandsbyfzprules.item.RoboCarrotItem;
+import net.mcreator.scraplandsbyfzprules.item.RamBladeItem;
 import net.mcreator.scraplandsbyfzprules.item.RAMItem;
+import net.mcreator.scraplandsbyfzprules.item.GreaterRobotCoreItem;
 import net.mcreator.scraplandsbyfzprules.ScraplandsByFzprulesMod;
 
 public class ScraplandsByFzprulesModItems {
@@ -66,6 +75,16 @@ public class ScraplandsByFzprulesModItems {
 	public static final RegistryObject<Item> THUNDER_BALL = REGISTRY.register("thunder_ball", () -> new ThunderBallItem());
 	public static final RegistryObject<Item> THUNDERSHOCK = REGISTRY.register("thundershock", () -> new ThundershockItem());
 	public static final RegistryObject<Item> THUNDER_REED = block(ScraplandsByFzprulesModBlocks.THUNDER_REED, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> THUNDER_PROCESSOR = block(ScraplandsByFzprulesModBlocks.THUNDER_PROCESSOR, CreativeModeTab.TAB_REDSTONE);
+	public static final RegistryObject<Item> RAM_BLADE = REGISTRY.register("ram_blade", () -> new RamBladeItem());
+	public static final RegistryObject<Item> SCRAP_PICKAXE = REGISTRY.register("scrap_pickaxe", () -> new ScrapPickaxeItem());
+	public static final RegistryObject<Item> SCRAP_AXE = REGISTRY.register("scrap_axe", () -> new ScrapAxeItem());
+	public static final RegistryObject<Item> SCRAP_SWORD = REGISTRY.register("scrap_sword", () -> new ScrapSwordItem());
+	public static final RegistryObject<Item> SCRAP_SHOVEL = REGISTRY.register("scrap_shovel", () -> new ScrapShovelItem());
+	public static final RegistryObject<Item> SCRAP_HOE = REGISTRY.register("scrap_hoe", () -> new ScrapHoeItem());
+	public static final RegistryObject<Item> ROBOT_CORE = REGISTRY.register("robot_core", () -> new RobotCoreItem());
+	public static final RegistryObject<Item> GREATER_ROBOT_CORE = REGISTRY.register("greater_robot_core", () -> new GreaterRobotCoreItem());
+	public static final RegistryObject<Item> ROBOT_SPAWN = REGISTRY.register("robot_spawn", () -> new RobotSpawnItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

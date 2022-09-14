@@ -8,7 +8,6 @@ import net.minecraftforge.items.CapabilityItemHandler;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -77,10 +76,6 @@ public class ScraplandianMenuMenu extends AbstractContainerMenu implements Suppl
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 16, 53) {
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return (Items.COPPER_INGOT == stack.getItem());
-			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 43, 53) {
 		}));

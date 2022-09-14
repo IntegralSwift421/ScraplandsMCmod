@@ -34,7 +34,6 @@ import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.OpenDoorGoal;
 import net.minecraft.world.entity.ai.goal.MoveBackToVillageGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -45,7 +44,6 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
@@ -70,6 +68,7 @@ import net.mcreator.scraplandsbyfzprules.world.inventory.ProtoInventoryMenu;
 import net.mcreator.scraplandsbyfzprules.procedures.ProtogenInteractProcedure;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
 import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
 
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
@@ -109,22 +108,16 @@ public class ProtogenEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
-			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
-			}
-		});
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1, (float) 10, (float) 2, false));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(5, new OwnerHurtByTargetGoal(this));
-		this.targetSelector.addGoal(6, new OwnerHurtTargetGoal(this));
-		this.goalSelector.addGoal(7, new OpenDoorGoal(this, true));
-		this.goalSelector.addGoal(8, new MoveBackToVillageGoal(this, 0.6, false));
-		this.goalSelector.addGoal(9, new OpenDoorGoal(this, false));
-		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(11, new FloatGoal(this));
+		this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1, (float) 10, (float) 2, false));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(4, new OwnerHurtByTargetGoal(this));
+		this.targetSelector.addGoal(5, new OwnerHurtTargetGoal(this));
+		this.goalSelector.addGoal(6, new OpenDoorGoal(this, true));
+		this.goalSelector.addGoal(7, new MoveBackToVillageGoal(this, 0.6, false));
+		this.goalSelector.addGoal(8, new OpenDoorGoal(this, false));
+		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(10, new FloatGoal(this));
 	}
 
 	@Override
@@ -132,14 +125,24 @@ public class ProtogenEntity extends TamableAnimal {
 		return MobType.UNDEFINED;
 	}
 
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.ROBOT_CORE.get()));
+	}
+
+	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.protogen"));
+	}
+
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.protogen.dead"));
 	}
 
 	@Override
@@ -275,8 +278,10 @@ public class ProtogenEntity extends TamableAnimal {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return List.of(ScraplandsByFzprulesModItems.RAM.get(), ScraplandsByFzprulesModItems.ROBO_POTATO.get(),
-				ScraplandsByFzprulesModItems.ROBO_CARROT.get()).contains(stack.getItem());
+		return List
+				.of(ScraplandsByFzprulesModItems.RAM.get(), ScraplandsByFzprulesModItems.ROBO_POTATO.get(),
+						ScraplandsByFzprulesModItems.ROBO_CARROT.get(), ScraplandsByFzprulesModBlocks.THUNDER_REED.get().asItem())
+				.contains(stack.getItem());
 	}
 
 	public static void init() {

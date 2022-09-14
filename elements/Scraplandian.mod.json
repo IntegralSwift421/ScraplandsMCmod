@@ -78,19 +78,19 @@
     "immuneToWither": true,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": ""
+      "value": "CUSTOM:RobotCore"
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:entity.robot.ambient"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:entity.robot.hurt"
     },
     "deathSound": {
       "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "block.netherite_block.step"
     },
     "spawnParticles": false,
     "particleToSpawn": {

@@ -17,7 +17,7 @@
     "shootConstantly": false,
     "usageCount": 200,
     "actionSound": {
-      "value": "entity.arrow.shoot"
+      "value": "CUSTOM:thundershock"
     },
     "hasGlow": false,
     "animation": "crossbow",

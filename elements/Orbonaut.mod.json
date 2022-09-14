@@ -78,16 +78,16 @@
     "immuneToWither": true,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:Thundershock"
+      "value": "CUSTOM:GreaterRobotCore"
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:entity.orbonaut.ambient"
     },
     "hurtSound": {
       "value": "entity.generic.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:entity.orbonaut.dead"
     },
     "stepSound": {
       "value": ""

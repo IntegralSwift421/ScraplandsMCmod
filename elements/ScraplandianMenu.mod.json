@@ -27,10 +27,13 @@
         "type": "button",
         "data": {
           "text": "Trade",
+          "onClick": {
+            "name": "ScraplandianTradeSystem"
+          },
           "width": 51,
           "height": 20,
           "name": "Trade",
-          "x": 186,
+          "x": 187,
           "y": 62
         }
       },
@@ -38,7 +41,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "Items.COPPER_INGOT"
+            "value": ""
           },
           "id": 0,
           "disableStackInteraction": false,
@@ -100,7 +103,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

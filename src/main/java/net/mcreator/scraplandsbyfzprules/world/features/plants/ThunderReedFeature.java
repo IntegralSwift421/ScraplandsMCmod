@@ -37,12 +37,12 @@ public class ThunderReedFeature extends RandomPatchFeature {
 	public static Feature<?> feature() {
 		FEATURE = new ThunderReedFeature();
 		CONFIGURED_FEATURE = FeatureUtils.register("scraplands_by_fzprules:thunder_reed", FEATURE,
-				FeatureUtils.simpleRandomPatchConfiguration(64, PlacementUtils.filtered(Feature.BLOCK_COLUMN,
+				FeatureUtils.simpleRandomPatchConfiguration(20, PlacementUtils.filtered(Feature.BLOCK_COLUMN,
 						BlockColumnConfiguration.simple(BiasedToBottomInt.of(2, 4),
 								BlockStateProvider.simple(ScraplandsByFzprulesModBlocks.THUNDER_REED.get().defaultBlockState())),
 						BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE,
 								BlockPredicate.wouldSurvive(ScraplandsByFzprulesModBlocks.THUNDER_REED.get().defaultBlockState(), BlockPos.ZERO)))));
-		PLACED_FEATURE = PlacementUtils.register("scraplands_by_fzprules:thunder_reed", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
+		PLACED_FEATURE = PlacementUtils.register("scraplands_by_fzprules:thunder_reed", CONFIGURED_FEATURE, List.of(CountPlacement.of(1),
 				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 		return FEATURE;
 	}

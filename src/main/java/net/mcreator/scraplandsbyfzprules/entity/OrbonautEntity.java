@@ -186,7 +186,12 @@ public class OrbonautEntity extends Monster implements RangedAttackMob {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.THUNDERSHOCK.get()));
+		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.GREATER_ROBOT_CORE.get()));
+	}
+
+	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.orbonaut.ambient"));
 	}
 
 	@Override
@@ -196,7 +201,7 @@ public class OrbonautEntity extends Monster implements RangedAttackMob {
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.orbonaut.dead"));
 	}
 
 	@Override

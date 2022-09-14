@@ -10,7 +10,7 @@
         {
           "type": "minecraft:item",
           "name": "scraplands_by_fzprules:scrap_metal",
-          "weight": 10,
+          "weight": 25,
           "functions": [
             {
               "function": "set_count",
@@ -24,7 +24,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_nugget",
-          "weight": 6,
+          "weight": 15,
           "conditions": [
             {
               "condition": "minecraft:inverted",
@@ -64,7 +64,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:gold_nugget",
-          "weight": 6,
+          "weight": 15,
           "conditions": [
             {
               "condition": "minecraft:inverted",
@@ -104,7 +104,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:raw_iron",
-          "weight": 4,
+          "weight": 10,
           "conditions": [
             {
               "condition": "minecraft:inverted",
@@ -144,7 +144,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:raw_gold",
-          "weight": 4,
+          "weight": 10,
           "conditions": [
             {
               "condition": "minecraft:inverted",
@@ -184,7 +184,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:raw_copper",
-          "weight": 5,
+          "weight": 12,
           "conditions": [
             {
               "condition": "minecraft:inverted",
@@ -224,7 +224,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:flint",
-          "weight": 4,
+          "weight": 10,
           "functions": [
             {
               "function": "set_count",
@@ -246,7 +246,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:gold_ingot",
-          "weight": 3,
+          "weight": 6,
           "conditions": [
             {
               "condition": "minecraft:match_tool",
@@ -283,7 +283,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_ingot",
-          "weight": 3,
+          "weight": 6,
           "conditions": [
             {
               "condition": "minecraft:match_tool",
@@ -320,7 +320,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:copper_ingot",
-          "weight": 3,
+          "weight": 8,
           "conditions": [
             {
               "condition": "minecraft:match_tool",
@@ -379,6 +379,123 @@
               "count": {
                 "min": 1,
                 "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "scraplands_by_fzprules:scrap_rod",
+          "weight": 17,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 5
+              }
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            },
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "scraplands_by_fzprules:robot_core",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:silk_touch",
+                    "levels": {
+                      "min": 1
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "scraplands_by_fzprules:ram",
+          "weight": 12,
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:silk_touch",
+                    "levels": {
+                      "min": 1
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 5
+              }
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            },
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "scraplands_by_fzprules:thunder_reed",
+          "weight": 8,
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:silk_touch",
+                    "levels": {
+                      "min": 1
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 3,
+                "max": 3
               }
             }
           ]

@@ -165,8 +165,13 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.ambient"));
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.hurt"));
 	}
 
 	@Override

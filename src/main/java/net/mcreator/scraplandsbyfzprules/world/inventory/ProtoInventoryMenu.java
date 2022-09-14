@@ -75,25 +75,25 @@ public class ProtoInventoryMenu extends AbstractContainerMenu implements Supplie
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 34, 26) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 43, 26) {
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 34, 44) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 26) {
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 70, 26) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 26) {
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 88, 26) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 97, 26) {
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 106, 26) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 115, 26) {
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 124, 26) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 43, 44) {
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 70, 44) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 61, 44) {
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 88, 44) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 79, 44) {
 		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 106, 44) {
+		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 97, 44) {
 		}));
-		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 124, 44) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 115, 44) {
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

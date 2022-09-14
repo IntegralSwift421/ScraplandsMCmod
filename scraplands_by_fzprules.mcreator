@@ -417,43 +417,312 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "thunder_reed"
+    },
+    {
+      "name": "ThunderShop",
+      "type": "gui",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_shop"
+    },
+    {
+      "name": "ThunderProcessorProcess",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_processor_process",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThunderProcessor",
+      "type": "block",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_processor"
+    },
+    {
+      "name": "ThunderProcessorRecipe",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_processor_recipe"
+    },
+    {
+      "name": "RamBlade",
+      "type": "tool",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ram_blade"
+    },
+    {
+      "name": "ScrapPickaxe",
+      "type": "tool",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_pickaxe"
+    },
+    {
+      "name": "ScrapAxe",
+      "type": "tool",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_axe"
+    },
+    {
+      "name": "ScrapSword",
+      "type": "tool",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_sword"
+    },
+    {
+      "name": "ScrapShovel",
+      "type": "tool",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_shovel"
+    },
+    {
+      "name": "ScrapHoe",
+      "type": "tool",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_hoe"
+    },
+    {
+      "name": "ScrapPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_pickaxe_recipe"
+    },
+    {
+      "name": "ScrapAxeRecipe",
+      "type": "recipe",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_axe_recipe"
+    },
+    {
+      "name": "ScrapSwordRecipe",
+      "type": "recipe",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_sword_recipe"
+    },
+    {
+      "name": "ScrapShovelRecipe",
+      "type": "recipe",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_shovel_recipe"
+    },
+    {
+      "name": "ScrapHoeRecipe",
+      "type": "recipe",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_hoe_recipe"
+    },
+    {
+      "name": "RobotCore",
+      "type": "item",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robot_core"
+    },
+    {
+      "name": "GreaterRobotCore",
+      "type": "item",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "greater_robot_core"
+    },
+    {
+      "name": "RobotSpawn",
+      "type": "item",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robot_spawn"
+    },
+    {
+      "name": "RobotSpawnRecipe",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robot_spawn_recipe"
+    },
+    {
+      "name": "SpawnRobot",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_robot",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "entity.protogen",
+      "files": [
+        "protogen_sound1"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "entity.robot.ambient",
+      "files": [
+        "robot.sound1"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "entity.robot.hurt",
+      "files": [
+        "robot.hurt",
+        "robot.hurt2"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "entity.orbonaut.dead",
+      "files": [
+        "orbonaut.dead"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "entity.orbonaut.ambient",
+      "files": [
+        "orbonaut.sound1",
+        "orbonaut.sound2"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "thundershock",
+      "files": [
+        "thundershock.shoot"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "entity.protogen.dead",
+      "files": [
+        "protogen.dead"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
   "language_map": {
     "en_us": {
+      "item.scraplands_by_fzprules.scrap_axe": "Scrap Axe",
+      "subtitles.thundershock": "",
       "entity.scraplands_by_fzprules.protogen": "Protogen",
       "item.scraplands_by_fzprules.robo_potato": "Robo Potato",
+      "item.scraplands_by_fzprules.scrap_pickaxe": "Scrap Pickaxe",
       "item.scraplands_by_fzprules.orbonaut_spawn_egg": "Orbonaut Spawn Egg",
       "block.scraplands_by_fzprules.rusty_top": "Rusty Top",
       "block.scraplands_by_fzprules.scrap_bricks": "Scrap Bricks",
       "item.scraplands_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
-      "entity.scraplands_by_fzprules.ion_slime": "Mecha Slime",
-      "item.scraplands_by_fzprules.ion_slime_spawn_egg": "Mecha Slime Spawn Egg",
-      "block.scraplands_by_fzprules.robo_crops": "Robo Crops",
-      "item.scraplands_by_fzprules.protogen_spawn_egg": "Protogen Spawn Egg",
+      "item.scraplands_by_fzprules.scrap_shovel": "Scrap Shovel",
       "item.scraplands_by_fzprules.thunder_ball": "Thunder Ball",
+      "subtitles.entity.protogen.dead": "",
       "entity.scraplands_by_fzprules.orbonaut": "Orbonaut",
-      "biome.scraplands_by_fzprules.lifeless_scraplands": "Lifeless Scraplands",
-      "item.scraplands_by_fzprules.mecha_slime_spawn_egg": "Mecha Slime Spawn Egg",
       "block.scraplands_by_fzprules.scrap_pile": "Scrap Pile",
-      "block.scraplands_by_fzprules.robotic_log": "Robotic Log",
       "item.scraplands_by_fzprules.scrap_armor_helmet": "Scrap Helmet",
       "biome.scraplands_by_fzprules.scraplands": "Scraplands",
       "item.scraplands_by_fzprules.ion_drone_spawn_egg": "Ion Drone Spawn Egg",
-      "item.scraplands_by_fzprules.scrap_armor_leggings": "Scrap Leggings",
       "item.scraplands_by_fzprules.ram": "RAM",
+      "entity.scraplands_by_fzprules.scraplandian": "Scraplandian",
+      "item.scraplands_by_fzprules.scrap_armor_boots": "Scrap Boots",
+      "entity.scraplands_by_fzprules.ion_drone": "Ion Drone",
+      "subtitles.entity.robot.hurt": "",
+      "subtitles.entity.orbonaut.dead": "",
+      "item.scraplands_by_fzprules.thundershock": "Thundershock",
+      "item.scraplands_by_fzprules.robot_spawn": "Robot Spawn",
+      "item.scraplands_by_fzprules.scrap_sword": "Scrap Sword",
+      "block.scraplands_by_fzprules.thunder_processor": "Thunder Processor",
+      "item.scraplands_by_fzprules.ram_blade": "Ram Blade",
+      "subtitles.entity.protogen": "",
+      "item.scraplands_by_fzprules.greater_robot_core": "Greater Robot Core",
+      "subtitles.entity.robot.ambient": "",
+      "item.scraplands_by_fzprules.ion_slime_spawn_egg": "Mecha Slime Spawn Egg",
+      "entity.scraplands_by_fzprules.ion_slime": "Mecha Slime",
+      "item.scraplands_by_fzprules.protogen_spawn_egg": "Protogen Spawn Egg",
+      "block.scraplands_by_fzprules.robo_crops": "Robo Crops",
+      "biome.scraplands_by_fzprules.lifeless_scraplands": "Lifeless Scraplands",
+      "item.scraplands_by_fzprules.mecha_slime_spawn_egg": "Mecha Slime Spawn Egg",
+      "block.scraplands_by_fzprules.robotic_log": "Robotic Log",
+      "item.scraplands_by_fzprules.scrap_armor_leggings": "Scrap Leggings",
       "block.scraplands_by_fzprules.thunder_reed": "Thunder Reed",
       "entity.scraplands_by_fzprules.mecha_slime": "Mecha Slime",
-      "entity.scraplands_by_fzprules.scraplandian": "Scraplandian",
+      "item.scraplands_by_fzprules.robot_core": "Robot Core",
+      "subtitles.entity.orbonaut.ambient": "",
       "block.scraplands_by_fzprules.scrap_pane_block": "Scrap Pane Block",
-      "item.scraplands_by_fzprules.scrap_armor_boots": "Scrap Boots",
       "block.scraplands_by_fzprules.scrap_solar_panel": "Scrap Solar Panel",
+      "subtitles.entity.orbonaut.hurt": "",
       "item.scraplands_by_fzprules.robo_carrot": "Robo Carrot",
-      "entity.scraplands_by_fzprules.ion_drone": "Ion Drone",
       "item.scraplands_by_fzprules.scrap_metal": "Scrap Metal",
-      "item.scraplands_by_fzprules.thundershock": "Thundershock",
+      "item.scraplands_by_fzprules.scrap_hoe": "Scrap Hoe",
       "block.scraplands_by_fzprules.scrap_flower": "Scrap Plantlet",
       "item.scraplands_by_fzprules.scrap_armor_chestplate": "Scrap Chestplate",
       "block.scraplands_by_fzprules.rusty_dirt": "Rusty Dirt",

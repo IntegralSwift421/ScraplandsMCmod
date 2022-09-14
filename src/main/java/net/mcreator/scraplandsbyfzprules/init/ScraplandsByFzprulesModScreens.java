@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.scraplandsbyfzprules.client.gui.ThunderShopScreen;
 import net.mcreator.scraplandsbyfzprules.client.gui.ScraplandianMenuScreen;
 import net.mcreator.scraplandsbyfzprules.client.gui.ProtoInventoryScreen;
 
@@ -21,6 +22,7 @@ public class ScraplandsByFzprulesModScreens {
 		event.enqueueWork(() -> {
 			MenuScreens.register(ScraplandsByFzprulesModMenus.SCRAPLANDIAN_MENU, ScraplandianMenuScreen::new);
 			MenuScreens.register(ScraplandsByFzprulesModMenus.PROTO_INVENTORY, ProtoInventoryScreen::new);
+			MenuScreens.register(ScraplandsByFzprulesModMenus.THUNDER_SHOP, ThunderShopScreen::new);
 		});
 	}
 }

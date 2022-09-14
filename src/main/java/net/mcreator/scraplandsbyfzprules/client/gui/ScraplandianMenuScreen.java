@@ -12,6 +12,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.ScraplandianMenuMenu;
+import net.mcreator.scraplandsbyfzprules.network.ScraplandianMenuButtonMessage;
+import net.mcreator.scraplandsbyfzprules.ScraplandsByFzprulesMod;
 
 import java.util.HashMap;
 
@@ -87,7 +89,11 @@ public class ScraplandianMenuScreen extends AbstractContainerScreen<Scraplandian
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 60, this.topPos + 25, 51, 20, new TextComponent("Trade"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 61, this.topPos + 25, 51, 20, new TextComponent("Trade"), e -> {
+			if (true) {
+				ScraplandsByFzprulesMod.PACKET_HANDLER.sendToServer(new ScraplandianMenuButtonMessage(0, x, y, z));
+				ScraplandianMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}));
 	}
 }

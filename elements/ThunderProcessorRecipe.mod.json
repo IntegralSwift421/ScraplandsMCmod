@@ -1,0 +1,46 @@
+{
+  "_fv": 33,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:ScrapSolarPanel"
+      },
+      {
+        "value": "CUSTOM:ScrapSolarPanel"
+      },
+      {
+        "value": "CUSTOM:ScrapSolarPanel"
+      },
+      {
+        "value": "CUSTOM:RAM"
+      },
+      {
+        "value": "CUSTOM:GreaterRobotCore"
+      },
+      {
+        "value": "CUSTOM:RAM"
+      },
+      {
+        "value": "CUSTOM:ScrapSolarPanel"
+      },
+      {
+        "value": "CUSTOM:ScrapSolarPanel"
+      },
+      {
+        "value": "CUSTOM:ScrapSolarPanel"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:ThunderProcessor"
+    },
+    "name": "thunder_processor_recipe",
+    "namespace": "mod"
+  }
+}

@@ -81,10 +81,10 @@
       "value": "CUSTOM:ThunderBall"
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:entity.robot.ambient"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:entity.robot.hurt"
     },
     "deathSound": {
       "value": "entity.generic.death"

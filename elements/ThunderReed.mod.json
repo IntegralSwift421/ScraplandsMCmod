@@ -6,7 +6,7 @@
     "texture": "thunder_reeds",
     "textureBottom": "",
     "customModelName": "Cross model",
-    "itemTexture": "",
+    "itemTexture": "thunder_reed",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -61,7 +61,7 @@
     },
     "useLootTableForDrops": false,
     "customDrop": {
-      "value": "CUSTOM:ThunderBall"
+      "value": ""
     },
     "dropAmount": 1,
     "forceTicking": false,
@@ -78,8 +78,12 @@
     "fireSpreadSpeed": 0,
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
-    "canBePlacedOn": [],
-    "frequencyOnChunks": 5,
+    "canBePlacedOn": [
+      {
+        "value": "CUSTOM:RustyDirt"
+      }
+    ],
+    "frequencyOnChunks": 1,
     "spawnWorldTypes": [
       "Surface"
     ],
@@ -88,8 +92,11 @@
         "value": "CUSTOM:LifelessScraplands"
       }
     ],
-    "patchSize": 64,
+    "patchSize": 20,
     "generateAtAnyHeight": false,
+    "onDestroyedByExplosion": {
+      "name": "Shock"
+    },
     "onHitByProjectile": {
       "name": "Shock"
     }
