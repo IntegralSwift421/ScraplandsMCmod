@@ -21,7 +21,7 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.core.Holder;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
 
 import java.util.Set;
 import java.util.List;
@@ -33,13 +33,12 @@ public class RoboCropsSmallFeature extends RandomPatchFeature {
 
 	public static Feature<?> feature() {
 		FEATURE = new RoboCropsSmallFeature();
-		CONFIGURED_FEATURE = FeatureUtils
-				.register("scraplands_by_fzprules:robo_crops_small", FEATURE,
-						FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
-								new SimpleBlockConfiguration(
-										BlockStateProvider.simple(ScraplandsByFzprulesModBlocks.ROBO_CROPS_SMALL.get().defaultBlockState())),
-								List.of(), 64));
-		PLACED_FEATURE = PlacementUtils.register("scraplands_by_fzprules:robo_crops_small", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
+		CONFIGURED_FEATURE = FeatureUtils.register("battle_of_the_races_by_fzprules:robo_crops_small", FEATURE,
+				FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+						new SimpleBlockConfiguration(
+								BlockStateProvider.simple(BattleOfTheRacesByFzprulesModBlocks.ROBO_CROPS_SMALL.get().defaultBlockState())),
+						List.of(), 64));
+		PLACED_FEATURE = PlacementUtils.register("battle_of_the_races_by_fzprules:robo_crops_small", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
 				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 		return FEATURE;
 	}
@@ -48,7 +47,7 @@ public class RoboCropsSmallFeature extends RandomPatchFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"));
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:lifeless_scraplands"));
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public RoboCropsSmallFeature() {

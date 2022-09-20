@@ -15,6 +15,6 @@ public class ProtogenRenderer extends MobRenderer<ProtogenEntity, ModelProtogen<
 
 	@Override
 	public ResourceLocation getTextureLocation(ProtogenEntity entity) {
-		return new ResourceLocation("scraplands_by_fzprules:textures/entities/prototexture.png");
+		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/prototexture.png");
 	}
 }

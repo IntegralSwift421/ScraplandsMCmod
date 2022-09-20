@@ -19,6 +19,6 @@ public class MechaSlimeRenderer extends HumanoidMobRenderer<MechaSlimeEntity, Hu
 
 	@Override
 	public ResourceLocation getTextureLocation(MechaSlimeEntity entity) {
-		return new ResourceLocation("scraplands_by_fzprules:textures/entities/slime3.png");
+		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/slime3.png");
 	}
 }

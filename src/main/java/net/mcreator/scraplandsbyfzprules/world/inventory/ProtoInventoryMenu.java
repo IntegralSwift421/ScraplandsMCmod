@@ -18,7 +18,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModMenus;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModMenus;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class ProtoInventoryMenu extends AbstractContainerMenu implements Supplie
 	private boolean bound = false;
 
 	public ProtoInventoryMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(ScraplandsByFzprulesModMenus.PROTO_INVENTORY, id);
+		super(BattleOfTheRacesByFzprulesModMenus.PROTO_INVENTORY, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(10);

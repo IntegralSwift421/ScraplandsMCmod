@@ -1,0 +1,41 @@
+{
+  "_fv": 33,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:InfectedProtogen"
+      },
+      {
+        "value": "CUSTOM:InfectedScraplandian"
+      },
+      {
+        "value": "CUSTOM:IonDrone"
+      },
+      {
+        "value": "CUSTOM:IonGiant"
+      },
+      {
+        "value": "CUSTOM:IonSlime"
+      },
+      {
+        "value": "CUSTOM:MechaSlime"
+      },
+      {
+        "value": "CUSTOM:Orbonaut"
+      },
+      {
+        "value": "CUSTOM:Protogen"
+      },
+      {
+        "value": "CUSTOM:Scraplandian"
+      }
+    ],
+    "name": "robotic",
+    "namespace": "mod"
+  }
+}

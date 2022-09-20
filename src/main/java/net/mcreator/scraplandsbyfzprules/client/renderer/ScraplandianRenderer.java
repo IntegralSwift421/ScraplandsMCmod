@@ -19,6 +19,6 @@ public class ScraplandianRenderer extends HumanoidMobRenderer<ScraplandianEntity
 
 	@Override
 	public ResourceLocation getTextureLocation(ScraplandianEntity entity) {
-		return new ResourceLocation("scraplands_by_fzprules:textures/entities/scraplandian.png");
+		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/scraplandian.png");
 	}
 }

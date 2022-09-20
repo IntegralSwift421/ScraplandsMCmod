@@ -18,7 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -59,6 +59,6 @@ public class RustyTopBlock extends Block {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ScraplandsByFzprulesModBlocks.RUSTY_DIRT.get()));
+		return Collections.singletonList(new ItemStack(BattleOfTheRacesByFzprulesModBlocks.RUSTY_DIRT.get()));
 	}
 }

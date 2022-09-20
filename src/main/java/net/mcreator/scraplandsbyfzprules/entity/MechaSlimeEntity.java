@@ -35,24 +35,24 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
 
 import java.util.Set;
 
 @Mod.EventBusSubscriber
 public class MechaSlimeEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("scraplands_by_fzprules:scraplands"),
-			new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:lifeless_scraplands"),
+			new ResourceLocation("battle_of_the_races_by_fzprules:scraplands"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.MECHA_SLIME.get(), 10, 2, 5));
+					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.MECHA_SLIME.get(), 10, 2, 5));
 	}
 
 	public MechaSlimeEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(ScraplandsByFzprulesModEntities.MECHA_SLIME.get(), world);
+		this(BattleOfTheRacesByFzprulesModEntities.MECHA_SLIME.get(), world);
 	}
 
 	public MechaSlimeEntity(EntityType<MechaSlimeEntity> type, Level world) {
@@ -112,7 +112,7 @@ public class MechaSlimeEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(ScraplandsByFzprulesModEntities.MECHA_SLIME.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.MECHA_SLIME.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

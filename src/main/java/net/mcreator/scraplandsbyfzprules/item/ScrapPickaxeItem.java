@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
 
 public class ScrapPickaxeItem extends PickaxeItem {
 	public ScrapPickaxeItem() {
@@ -34,7 +34,7 @@ public class ScrapPickaxeItem extends PickaxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(ScraplandsByFzprulesModItems.SCRAP_METAL.get()));
+				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.SCRAP_METAL.get()));
 			}
 		}, 1, -3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
 	}

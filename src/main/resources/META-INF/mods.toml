@@ -3,14 +3,14 @@ loaderVersion="[40,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="scraplands_by_fzprules"
+modId="battle_of_the_races_by_fzprules"
 version="1.0.0"
-displayName="Scraplands by FZPrules"
+displayName="Battle Of The Races by FZPrules"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
 authors="Francisco, MCreator"
 
-[[dependencies.scraplands_by_fzprules]]
+[[dependencies.battle_of_the_races_by_fzprules]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2]"

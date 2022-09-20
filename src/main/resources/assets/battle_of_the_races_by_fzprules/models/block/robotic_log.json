@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "battle_of_the_races_by_fzprules:blocks/scrap_log_inside",
+    "up": "battle_of_the_races_by_fzprules:blocks/scrap_log_inside",
+    "north": "battle_of_the_races_by_fzprules:blocks/scrap_log",
+    "east": "battle_of_the_races_by_fzprules:blocks/scrap_log",
+    "south": "battle_of_the_races_by_fzprules:blocks/scrap_log",
+    "west": "battle_of_the_races_by_fzprules:blocks/scrap_log",
+    "particle": "battle_of_the_races_by_fzprules:blocks/scrap_log_inside"
+  }
+}

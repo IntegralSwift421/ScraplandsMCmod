@@ -54,8 +54,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.scraplandsbyfzprules.procedures.ShockProcedure;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
 
 import javax.annotation.Nullable;
 
@@ -66,21 +66,21 @@ import java.util.EnumSet;
 @Mod.EventBusSubscriber
 public class OrbonautEntity extends Monster implements RangedAttackMob {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("badlands"),
-			new ResourceLocation("scraplands_by_fzprules:scraplands"), new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"),
-			new ResourceLocation("end_midlands"), new ResourceLocation("desert"));
+			new ResourceLocation("battle_of_the_races_by_fzprules:lifeless_scraplands"), new ResourceLocation("end_midlands"),
+			new ResourceLocation("desert"), new ResourceLocation("battle_of_the_races_by_fzprules:scraplands"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.ORBONAUT.get(), 1, 1, 1));
+					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.ORBONAUT.get(), 1, 1, 1));
 	}
 
 	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.YELLOW,
 			ServerBossEvent.BossBarOverlay.PROGRESS);
 
 	public OrbonautEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(ScraplandsByFzprulesModEntities.ORBONAUT.get(), world);
+		this(BattleOfTheRacesByFzprulesModEntities.ORBONAUT.get(), world);
 	}
 
 	public OrbonautEntity(EntityType<OrbonautEntity> type, Level world) {
@@ -186,12 +186,12 @@ public class OrbonautEntity extends Monster implements RangedAttackMob {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.GREATER_ROBOT_CORE.get()));
+		this.spawnAtLocation(new ItemStack(BattleOfTheRacesByFzprulesModItems.GREATER_ROBOT_CORE.get()));
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.orbonaut.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.orbonaut.ambient"));
 	}
 
 	@Override
@@ -201,7 +201,7 @@ public class OrbonautEntity extends Monster implements RangedAttackMob {
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.orbonaut.dead"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.orbonaut.dead"));
 	}
 
 	@Override
@@ -291,7 +291,7 @@ public class OrbonautEntity extends Monster implements RangedAttackMob {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(ScraplandsByFzprulesModEntities.ORBONAUT.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.ORBONAUT.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

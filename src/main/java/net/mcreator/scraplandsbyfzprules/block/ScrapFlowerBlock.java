@@ -20,8 +20,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -52,11 +52,11 @@ public class ScrapFlowerBlock extends FlowerBlock {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ScraplandsByFzprulesModItems.SCRAP_METAL.get()));
+		return Collections.singletonList(new ItemStack(BattleOfTheRacesByFzprulesModItems.SCRAP_METAL.get()));
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ScraplandsByFzprulesModBlocks.SCRAP_FLOWER.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BattleOfTheRacesByFzprulesModBlocks.SCRAP_FLOWER.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

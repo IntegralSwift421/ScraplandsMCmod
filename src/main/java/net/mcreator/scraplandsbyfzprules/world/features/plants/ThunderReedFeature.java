@@ -24,7 +24,7 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.core.Holder;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
 
 import java.util.Set;
 import java.util.List;
@@ -36,13 +36,14 @@ public class ThunderReedFeature extends RandomPatchFeature {
 
 	public static Feature<?> feature() {
 		FEATURE = new ThunderReedFeature();
-		CONFIGURED_FEATURE = FeatureUtils.register("scraplands_by_fzprules:thunder_reed", FEATURE,
-				FeatureUtils.simpleRandomPatchConfiguration(20, PlacementUtils.filtered(Feature.BLOCK_COLUMN,
-						BlockColumnConfiguration.simple(BiasedToBottomInt.of(2, 4),
-								BlockStateProvider.simple(ScraplandsByFzprulesModBlocks.THUNDER_REED.get().defaultBlockState())),
-						BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE,
-								BlockPredicate.wouldSurvive(ScraplandsByFzprulesModBlocks.THUNDER_REED.get().defaultBlockState(), BlockPos.ZERO)))));
-		PLACED_FEATURE = PlacementUtils.register("scraplands_by_fzprules:thunder_reed", CONFIGURED_FEATURE, List.of(CountPlacement.of(1),
+		CONFIGURED_FEATURE = FeatureUtils.register("battle_of_the_races_by_fzprules:thunder_reed", FEATURE,
+				FeatureUtils.simpleRandomPatchConfiguration(20,
+						PlacementUtils.filtered(Feature.BLOCK_COLUMN,
+								BlockColumnConfiguration.simple(BiasedToBottomInt.of(2, 4),
+										BlockStateProvider.simple(BattleOfTheRacesByFzprulesModBlocks.THUNDER_REED.get().defaultBlockState())),
+								BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE, BlockPredicate
+										.wouldSurvive(BattleOfTheRacesByFzprulesModBlocks.THUNDER_REED.get().defaultBlockState(), BlockPos.ZERO)))));
+		PLACED_FEATURE = PlacementUtils.register("battle_of_the_races_by_fzprules:thunder_reed", CONFIGURED_FEATURE, List.of(CountPlacement.of(1),
 				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 		return FEATURE;
 	}
@@ -51,7 +52,7 @@ public class ThunderReedFeature extends RandomPatchFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"));
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:lifeless_scraplands"));
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public ThunderReedFeature() {

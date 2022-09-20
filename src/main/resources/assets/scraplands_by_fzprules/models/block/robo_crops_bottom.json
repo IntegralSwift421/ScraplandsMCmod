@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "scraplands_by_fzprules:blocks/robo_crop_stem",
-    "particle": "scraplands_by_fzprules:blocks/robo_crop_stem"
-  }
-}

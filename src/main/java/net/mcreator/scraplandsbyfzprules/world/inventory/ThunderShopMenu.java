@@ -19,7 +19,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModMenus;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModMenus;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class ThunderShopMenu extends AbstractContainerMenu implements Supplier<M
 	private boolean bound = false;
 
 	public ThunderShopMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(ScraplandsByFzprulesModMenus.THUNDER_SHOP, id);
+		super(BattleOfTheRacesByFzprulesModMenus.THUNDER_SHOP, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(4);

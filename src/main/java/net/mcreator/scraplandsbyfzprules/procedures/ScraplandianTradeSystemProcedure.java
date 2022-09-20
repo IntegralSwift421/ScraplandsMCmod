@@ -7,7 +7,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class ScraplandianTradeSystemProcedure {
 					}
 				}.getAmount(2) == 0 || (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
 						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY)
-						.getItem() == ScraplandsByFzprulesModItems.RAM.get())) {
+						.getItem() == BattleOfTheRacesByFzprulesModItems.RAM.get())) {
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
 				((Slot) _slots.get(0)).remove(1);
@@ -46,7 +46,7 @@ public class ScraplandianTradeSystemProcedure {
 			}
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(ScraplandsByFzprulesModItems.RAM.get());
+				ItemStack _setstack = new ItemStack(BattleOfTheRacesByFzprulesModItems.RAM.get());
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
@@ -67,7 +67,7 @@ public class ScraplandianTradeSystemProcedure {
 				: ItemStack.EMPTY).getItem() == Items.COPPER_INGOT
 				&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
 						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY)
-						.getItem() == ScraplandsByFzprulesModItems.SCRAP_METAL.get()
+						.getItem() == BattleOfTheRacesByFzprulesModItems.SCRAP_METAL.get()
 				&& (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
@@ -125,10 +125,10 @@ public class ScraplandianTradeSystemProcedure {
 					}
 				}.getAmount(2) == 0 || (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
 						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY)
-						.getItem() == ScraplandsByFzprulesModItems.ROBO_POTATO.get()
+						.getItem() == BattleOfTheRacesByFzprulesModItems.ROBO_POTATO.get()
 						&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
 								&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY)
-								.getItem() == ScraplandsByFzprulesModItems.ROBO_CARROT.get())) {
+								.getItem() == BattleOfTheRacesByFzprulesModItems.ROBO_CARROT.get())) {
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
 				((Slot) _slots.get(0)).remove(1);
@@ -141,7 +141,7 @@ public class ScraplandianTradeSystemProcedure {
 			}
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(ScraplandsByFzprulesModItems.ROBO_POTATO.get());
+				ItemStack _setstack = new ItemStack(BattleOfTheRacesByFzprulesModItems.ROBO_POTATO.get());
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
@@ -158,7 +158,7 @@ public class ScraplandianTradeSystemProcedure {
 			}
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(ScraplandsByFzprulesModItems.ROBO_CARROT.get());
+				ItemStack _setstack = new ItemStack(BattleOfTheRacesByFzprulesModItems.ROBO_CARROT.get());
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
@@ -192,7 +192,7 @@ public class ScraplandianTradeSystemProcedure {
 					}
 				}.getAmount(2) == 0 || (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
 						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY)
-						.getItem() == ScraplandsByFzprulesModItems.THUNDERSHOCK.get())) {
+						.getItem() == BattleOfTheRacesByFzprulesModItems.THUNDERSHOCK.get())) {
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
 				((Slot) _slots.get(0)).remove(1);
@@ -205,7 +205,7 @@ public class ScraplandianTradeSystemProcedure {
 			}
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(ScraplandsByFzprulesModItems.THUNDERSHOCK.get());
+				ItemStack _setstack = new ItemStack(BattleOfTheRacesByFzprulesModItems.THUNDERSHOCK.get());
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current

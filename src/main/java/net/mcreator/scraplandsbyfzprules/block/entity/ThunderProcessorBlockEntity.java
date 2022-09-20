@@ -23,7 +23,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.ThunderShopMenu;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlockEntities;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlockEntities;
 
 import javax.annotation.Nullable;
 
@@ -36,7 +36,7 @@ public class ThunderProcessorBlockEntity extends RandomizableContainerBlockEntit
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public ThunderProcessorBlockEntity(BlockPos position, BlockState state) {
-		super(ScraplandsByFzprulesModBlockEntities.THUNDER_PROCESSOR.get(), position, state);
+		super(BattleOfTheRacesByFzprulesModBlockEntities.THUNDER_PROCESSOR.get(), position, state);
 	}
 
 	@Override

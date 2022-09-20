@@ -45,8 +45,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
 
 import java.util.Set;
 import java.util.Random;
@@ -54,17 +54,17 @@ import java.util.EnumSet;
 
 @Mod.EventBusSubscriber
 public class IonDroneEntity extends Monster implements RangedAttackMob {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:lifeless_scraplands"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.ION_DRONE.get(), 15, 4, 4));
+					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.ION_DRONE.get(), 15, 4, 4));
 	}
 
 	public IonDroneEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(ScraplandsByFzprulesModEntities.ION_DRONE.get(), world);
+		this(BattleOfTheRacesByFzprulesModEntities.ION_DRONE.get(), world);
 	}
 
 	public IonDroneEntity(EntityType<IonDroneEntity> type, Level world) {
@@ -161,17 +161,17 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.THUNDER_BALL.get()));
+		this.spawnAtLocation(new ItemStack(BattleOfTheRacesByFzprulesModItems.THUNDER_BALL.get()));
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.robot.ambient"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.robot.hurt"));
 	}
 
 	@Override
@@ -218,7 +218,7 @@ public class IonDroneEntity extends Monster implements RangedAttackMob {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(ScraplandsByFzprulesModEntities.ION_DRONE.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.ION_DRONE.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

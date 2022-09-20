@@ -33,7 +33,7 @@ public class ProtoInventoryScreen extends AbstractContainerScreen<ProtoInventory
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("scraplands_by_fzprules:textures/screens/proto_inventory.png");
+	private static final ResourceLocation texture = new ResourceLocation("battle_of_the_races_by_fzprules:textures/screens/proto_inventory.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {

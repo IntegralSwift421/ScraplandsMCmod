@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.ScraplandianMenuMenu;
 import net.mcreator.scraplandsbyfzprules.procedures.ScraplandianTradeSystemProcedure;
-import net.mcreator.scraplandsbyfzprules.ScraplandsByFzprulesMod;
+import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
@@ -70,7 +70,7 @@ public class ScraplandianMenuButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		ScraplandsByFzprulesMod.addNetworkMessage(ScraplandianMenuButtonMessage.class, ScraplandianMenuButtonMessage::buffer,
+		BattleOfTheRacesByFzprulesMod.addNetworkMessage(ScraplandianMenuButtonMessage.class, ScraplandianMenuButtonMessage::buffer,
 				ScraplandianMenuButtonMessage::new, ScraplandianMenuButtonMessage::handler);
 	}
 }

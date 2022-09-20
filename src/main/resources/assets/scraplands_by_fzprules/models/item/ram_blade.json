@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "scraplands_by_fzprules:items/ramblade"
-  }
-}

@@ -21,7 +21,7 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.core.Holder;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
 
 import java.util.Set;
 import java.util.List;
@@ -33,11 +33,12 @@ public class ScrapFlowerFeature extends RandomPatchFeature {
 
 	public static Feature<?> feature() {
 		FEATURE = new ScrapFlowerFeature();
-		CONFIGURED_FEATURE = FeatureUtils.register("scraplands_by_fzprules:scrap_flower", FEATURE,
+		CONFIGURED_FEATURE = FeatureUtils.register("battle_of_the_races_by_fzprules:scrap_flower", FEATURE,
 				FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
-						new SimpleBlockConfiguration(BlockStateProvider.simple(ScraplandsByFzprulesModBlocks.SCRAP_FLOWER.get().defaultBlockState())),
+						new SimpleBlockConfiguration(
+								BlockStateProvider.simple(BattleOfTheRacesByFzprulesModBlocks.SCRAP_FLOWER.get().defaultBlockState())),
 						List.of(), 32));
-		PLACED_FEATURE = PlacementUtils.register("scraplands_by_fzprules:scrap_flower", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
+		PLACED_FEATURE = PlacementUtils.register("battle_of_the_races_by_fzprules:scrap_flower", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
 				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 		return FEATURE;
 	}
@@ -46,8 +47,8 @@ public class ScrapFlowerFeature extends RandomPatchFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("scraplands_by_fzprules:scraplands"),
-			new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"));
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:lifeless_scraplands"),
+			new ResourceLocation("battle_of_the_races_by_fzprules:scraplands"));
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public ScrapFlowerFeature() {

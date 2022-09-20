@@ -19,6 +19,6 @@ public class IonSlimeRenderer extends HumanoidMobRenderer<IonSlimeEntity, Humano
 
 	@Override
 	public ResourceLocation getTextureLocation(IonSlimeEntity entity) {
-		return new ResourceLocation("scraplands_by_fzprules:textures/entities/slime2.png");
+		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/slime2.png");
 	}
 }

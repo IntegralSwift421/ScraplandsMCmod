@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "battle_of_the_races_by_fzprules:scrap_metal"
+    },
+    "1": {
+      "item": "battle_of_the_races_by_fzprules:scrap_metal"
+    },
+    "2": {
+      "item": "battle_of_the_races_by_fzprules:scrap_metal"
+    },
+    "3": {
+      "item": "battle_of_the_races_by_fzprules:scrap_metal"
+    },
+    "5": {
+      "item": "battle_of_the_races_by_fzprules:scrap_metal"
+    },
+    "6": {
+      "item": "battle_of_the_races_by_fzprules:scrap_metal"
+    },
+    "8": {
+      "item": "battle_of_the_races_by_fzprules:scrap_metal"
+    }
+  },
+  "result": {
+    "item": "battle_of_the_races_by_fzprules:scrap_armor_leggings",
+    "count": 1
+  }
+}

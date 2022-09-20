@@ -16,7 +16,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
 
 public class RoboCropsBlock extends DoublePlantBlock {
 	public RoboCropsBlock() {
@@ -40,6 +40,6 @@ public class RoboCropsBlock extends DoublePlantBlock {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(ScraplandsByFzprulesModBlocks.ROBO_CROPS.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BattleOfTheRacesByFzprulesModBlocks.ROBO_CROPS.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

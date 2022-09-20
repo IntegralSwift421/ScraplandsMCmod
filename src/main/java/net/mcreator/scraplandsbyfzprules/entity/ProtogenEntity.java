@@ -66,9 +66,9 @@ import net.minecraft.core.Direction;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.ProtoInventoryMenu;
 import net.mcreator.scraplandsbyfzprules.procedures.ProtogenInteractProcedure;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
 
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
@@ -80,18 +80,18 @@ import io.netty.buffer.Unpooled;
 
 @Mod.EventBusSubscriber
 public class ProtogenEntity extends TamableAnimal {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("scraplands_by_fzprules:scraplands"),
-			new ResourceLocation("windswept_hills"), new ResourceLocation("scraplands_by_fzprules:lifeless_scraplands"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:lifeless_scraplands"),
+			new ResourceLocation("windswept_hills"), new ResourceLocation("battle_of_the_races_by_fzprules:scraplands"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.CREATURE)
-					.add(new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.PROTOGEN.get(), 5, 2, 5));
+					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.PROTOGEN.get(), 5, 2, 5));
 	}
 
 	public ProtogenEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(ScraplandsByFzprulesModEntities.PROTOGEN.get(), world);
+		this(BattleOfTheRacesByFzprulesModEntities.PROTOGEN.get(), world);
 	}
 
 	public ProtogenEntity(EntityType<ProtogenEntity> type, Level world) {
@@ -127,22 +127,22 @@ public class ProtogenEntity extends TamableAnimal {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.ROBOT_CORE.get()));
+		this.spawnAtLocation(new ItemStack(BattleOfTheRacesByFzprulesModItems.ROBOT_CORE.get()));
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.protogen"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.protogen"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.robot.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.protogen.dead"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.protogen.dead"));
 	}
 
 	@Override
@@ -271,7 +271,7 @@ public class ProtogenEntity extends TamableAnimal {
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		ProtogenEntity retval = ScraplandsByFzprulesModEntities.PROTOGEN.get().create(serverWorld);
+		ProtogenEntity retval = BattleOfTheRacesByFzprulesModEntities.PROTOGEN.get().create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}
@@ -279,13 +279,13 @@ public class ProtogenEntity extends TamableAnimal {
 	@Override
 	public boolean isFood(ItemStack stack) {
 		return List
-				.of(ScraplandsByFzprulesModItems.RAM.get(), ScraplandsByFzprulesModItems.ROBO_POTATO.get(),
-						ScraplandsByFzprulesModItems.ROBO_CARROT.get(), ScraplandsByFzprulesModBlocks.THUNDER_REED.get().asItem())
+				.of(BattleOfTheRacesByFzprulesModItems.RAM.get(), BattleOfTheRacesByFzprulesModItems.ROBO_POTATO.get(),
+						BattleOfTheRacesByFzprulesModItems.ROBO_CARROT.get(), BattleOfTheRacesByFzprulesModBlocks.THUNDER_REED.get().asItem())
 				.contains(stack.getItem());
 	}
 
 	public static void init() {
-		SpawnPlacements.register(ScraplandsByFzprulesModEntities.PROTOGEN.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.PROTOGEN.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos,
 						random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
 	}

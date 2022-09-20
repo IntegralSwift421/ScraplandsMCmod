@@ -16,13 +16,13 @@ public class IonDroneRenderer extends MobRenderer<IonDroneEntity, ModelDrone<Ion
 		this.addLayer(new EyesLayer<IonDroneEntity, ModelDrone<IonDroneEntity>>(this) {
 			@Override
 			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("scraplands_by_fzprules:textures/entities/drone_texture_glow.png"));
+				return RenderType.eyes(new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/drone_texture_glow.png"));
 			}
 		});
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(IonDroneEntity entity) {
-		return new ResourceLocation("scraplands_by_fzprules:textures/entities/drone_texture.png");
+		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/drone_texture.png");
 	}
 }

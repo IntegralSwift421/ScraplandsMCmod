@@ -35,7 +35,7 @@ public class ThunderShopScreen extends AbstractContainerScreen<ThunderShopMenu> 
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("scraplands_by_fzprules:textures/screens/thunder_shop.png");
+	private static final ResourceLocation texture = new ResourceLocation("battle_of_the_races_by_fzprules:textures/screens/thunder_shop.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -52,7 +52,7 @@ public class ThunderShopScreen extends AbstractContainerScreen<ThunderShopMenu> 
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("scraplands_by_fzprules:textures/screens/arrow.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("battle_of_the_races_by_fzprules:textures/screens/arrow.png"));
 		this.blit(ms, this.leftPos + 69, this.topPos + 52, 0, 0, 32, 16, 32, 16);
 
 		RenderSystem.disableBlend();

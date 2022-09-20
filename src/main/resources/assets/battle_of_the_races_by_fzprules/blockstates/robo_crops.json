@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "battle_of_the_races_by_fzprules:block/robo_crops"
+    },
+    "half=lower": {
+      "model": "battle_of_the_races_by_fzprules:block/robo_crops_bottom"
+    }
+  }
+}

@@ -21,8 +21,8 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class ModelOrbonaut<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("scraplands_by_fzprules", "model_orbonaut"),
-			"main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
+			new ResourceLocation("battle_of_the_races_by_fzprules", "model_orbonaut"), "main");
 	public final ModelPart Head;
 	public final ModelPart Body;
 	public final ModelPart LeftArm;

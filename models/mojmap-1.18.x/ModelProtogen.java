@@ -9,6 +9,7 @@ public class ModelProtogen<T extends Entity> extends EntityModel<T> {
 			new ResourceLocation("modid", "protogen"), "main");
 	private final ModelPart Head;
 	private final ModelPart Body;
+	private final ModelPart Tail;
 	private final ModelPart RightArm;
 	private final ModelPart LeftArm;
 	private final ModelPart RightLeg;
@@ -17,6 +18,7 @@ public class ModelProtogen<T extends Entity> extends EntityModel<T> {
 	public ModelProtogen(ModelPart root) {
 		this.Head = root.getChild("Head");
 		this.Body = root.getChild("Body");
+		this.Tail = root.getChild("Tail");
 		this.RightArm = root.getChild("RightArm");
 		this.LeftArm = root.getChild("LeftArm");
 		this.RightLeg = root.getChild("RightLeg");
@@ -52,7 +54,7 @@ public class ModelProtogen<T extends Entity> extends EntityModel<T> {
 						.addBox(-4.0F, -24.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 3.1416F, 0.0F));
 
-		PartDefinition Tail = Body.addOrReplaceChild("Tail",
+		PartDefinition Tail = partdefinition.addOrReplaceChild("Tail",
 				CubeListBuilder.create().texOffs(56, 21)
 						.addBox(-2.0F, -2.0F, 1.0F, 4.0F, 4.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(0, 0)
 						.addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.25F)),
@@ -90,6 +92,7 @@ public class ModelProtogen<T extends Entity> extends EntityModel<T> {
 			float red, float green, float blue, float alpha) {
 		Head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		Tail.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		RightArm.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		LeftArm.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		RightLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

@@ -22,10 +22,11 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class ModelProtogen<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("scraplands_by_fzprules", "model_protogen"),
-			"main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
+			new ResourceLocation("battle_of_the_races_by_fzprules", "model_protogen"), "main");
 	public final ModelPart Head;
 	public final ModelPart Body;
+	public final ModelPart Tail;
 	public final ModelPart RightArm;
 	public final ModelPart LeftArm;
 	public final ModelPart RightLeg;
@@ -34,6 +35,7 @@ public class ModelProtogen<T extends Entity> extends EntityModel<T> {
 	public ModelProtogen(ModelPart root) {
 		this.Head = root.getChild("Head");
 		this.Body = root.getChild("Body");
+		this.Tail = root.getChild("Tail");
 		this.RightArm = root.getChild("RightArm");
 		this.LeftArm = root.getChild("LeftArm");
 		this.RightLeg = root.getChild("RightLeg");
@@ -59,7 +61,7 @@ public class ModelProtogen<T extends Entity> extends EntityModel<T> {
 				CubeListBuilder.create().texOffs(16, 38).addBox(-4.0F, -24.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.25F)).texOffs(16, 22)
 						.addBox(-4.0F, -24.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 3.1416F, 0.0F));
-		PartDefinition Tail = Body.addOrReplaceChild("Tail",
+		PartDefinition Tail = partdefinition.addOrReplaceChild("Tail",
 				CubeListBuilder.create().texOffs(56, 21).addBox(-2.0F, -2.0F, 1.0F, 4.0F, 4.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(0, 0)
 						.addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.25F)),
 				PartPose.offsetAndRotation(0.0F, 11.0F, 2.0F, -0.3491F, 0.0F, 0.0F));
@@ -87,6 +89,7 @@ public class ModelProtogen<T extends Entity> extends EntityModel<T> {
 			float blue, float alpha) {
 		Head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		Tail.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		RightArm.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		LeftArm.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		RightLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

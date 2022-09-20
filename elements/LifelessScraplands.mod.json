@@ -41,8 +41,8 @@
     "biomeCategory": "DESERT",
     "rainingPossibility": 0.0,
     "temperature": 1.6,
-    "baseHeight": 0.1,
-    "heightVariation": 0.2,
+    "baseHeight": 0.2,
+    "heightVariation": 0.4,
     "spawnBiome": true,
     "spawnBiomeNether": false,
     "spawnInCaves": false,
@@ -156,6 +156,24 @@
         "minGroup": 1,
         "maxGroup": 2,
         "weight": 2,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:InfectedProtogen"
+        },
+        "minGroup": 2,
+        "maxGroup": 4,
+        "weight": 100,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:InfectedScraplandian"
+        },
+        "minGroup": 2,
+        "maxGroup": 5,
+        "weight": 150,
         "spawnType": "monster"
       }
     ]

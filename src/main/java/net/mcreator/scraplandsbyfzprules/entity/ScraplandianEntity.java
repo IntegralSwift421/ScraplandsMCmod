@@ -61,8 +61,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.ScraplandianMenuMenu;
 import net.mcreator.scraplandsbyfzprules.procedures.ScraplandianInteractProcedure;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.ScraplandsByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
 
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
@@ -74,11 +74,11 @@ public class ScraplandianEntity extends PathfinderMob {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		event.getSpawns().getSpawner(MobCategory.MONSTER)
-				.add(new MobSpawnSettings.SpawnerData(ScraplandsByFzprulesModEntities.SCRAPLANDIAN.get(), 20, 4, 4));
+				.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.SCRAPLANDIAN.get(), 20, 4, 4));
 	}
 
 	public ScraplandianEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(ScraplandsByFzprulesModEntities.SCRAPLANDIAN.get(), world);
+		this(BattleOfTheRacesByFzprulesModEntities.SCRAPLANDIAN.get(), world);
 	}
 
 	public ScraplandianEntity(EntityType<ScraplandianEntity> type, Level world) {
@@ -114,12 +114,12 @@ public class ScraplandianEntity extends PathfinderMob {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(ScraplandsByFzprulesModItems.ROBOT_CORE.get()));
+		this.spawnAtLocation(new ItemStack(BattleOfTheRacesByFzprulesModItems.ROBOT_CORE.get()));
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.robot.ambient"));
 	}
 
 	@Override
@@ -129,7 +129,7 @@ public class ScraplandianEntity extends PathfinderMob {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("scraplands_by_fzprules:entity.robot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.robot.hurt"));
 	}
 
 	@Override
@@ -225,7 +225,7 @@ public class ScraplandianEntity extends PathfinderMob {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(ScraplandsByFzprulesModEntities.SCRAPLANDIAN.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.SCRAPLANDIAN.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
