@@ -17,15 +17,25 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.scraplandsbyfzprules.entity.ThundershockEntity;
+import net.mcreator.scraplandsbyfzprules.entity.SnowpileEntity;
+import net.mcreator.scraplandsbyfzprules.entity.SnowlandShadowEntity;
+import net.mcreator.scraplandsbyfzprules.entity.SnowlandHunterEntity;
+import net.mcreator.scraplandsbyfzprules.entity.SnowlandFurryEntity;
+import net.mcreator.scraplandsbyfzprules.entity.SnowStaffEntity;
 import net.mcreator.scraplandsbyfzprules.entity.ScraplandianEntity;
 import net.mcreator.scraplandsbyfzprules.entity.ProtogenEntity;
 import net.mcreator.scraplandsbyfzprules.entity.OrbonautEntity;
+import net.mcreator.scraplandsbyfzprules.entity.MotherdroneEntity;
 import net.mcreator.scraplandsbyfzprules.entity.MechaSlimeEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IonSlimeEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IonGiantEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IonDroneEntity;
 import net.mcreator.scraplandsbyfzprules.entity.InfectedScraplandianEntity;
 import net.mcreator.scraplandsbyfzprules.entity.InfectedProtogenEntity;
+import net.mcreator.scraplandsbyfzprules.entity.IceWispEntity;
+import net.mcreator.scraplandsbyfzprules.entity.IceButterflyEntity;
+import net.mcreator.scraplandsbyfzprules.entity.FrozenEntity;
+import net.mcreator.scraplandsbyfzprules.entity.FigtherDroneEntity;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -75,6 +85,52 @@ public class BattleOfTheRacesByFzprulesModEntities {
 	public static final RegistryObject<EntityType<InfectedProtogenEntity>> INFECTED_PROTOGEN = register("infected_protogen",
 			EntityType.Builder.<InfectedProtogenEntity>of(InfectedProtogenEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InfectedProtogenEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MotherdroneEntity>> MOTHERDRONE = register("motherdrone",
+			EntityType.Builder.<MotherdroneEntity>of(MotherdroneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(80).setUpdateInterval(3).setCustomClientFactory(MotherdroneEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FigtherDroneEntity>> FIGTHER_DRONE = register("figther_drone",
+			EntityType.Builder.<FigtherDroneEntity>of(FigtherDroneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FigtherDroneEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FrozenEntity>> FROZEN = register("frozen",
+			EntityType.Builder.<FrozenEntity>of(FrozenEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(FrozenEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SnowStaffEntity>> SNOW_STAFF = register("projectile_snow_staff",
+			EntityType.Builder.<SnowStaffEntity>of(SnowStaffEntity::new, MobCategory.MISC).setCustomClientFactory(SnowStaffEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SnowpileEntity>> SNOWPILE = register("snowpile",
+			EntityType.Builder.<SnowpileEntity>of(SnowpileEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(SnowpileEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<IceButterflyEntity>> ICE_BUTTERFLY = register("ice_butterfly",
+			EntityType.Builder.<IceButterflyEntity>of(IceButterflyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(IceButterflyEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SnowlandHunterEntity>> SNOWLAND_HUNTER = register("snowland_hunter",
+			EntityType.Builder.<SnowlandHunterEntity>of(SnowlandHunterEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SnowlandHunterEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SnowlandFurryEntity>> SNOWLAND_FURRY = register("snowland_furry",
+			EntityType.Builder.<SnowlandFurryEntity>of(SnowlandFurryEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SnowlandFurryEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SnowlandShadowEntity>> SNOWLAND_SHADOW = register("snowland_shadow",
+			EntityType.Builder.<SnowlandShadowEntity>of(SnowlandShadowEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SnowlandShadowEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<IceWispEntity>> ICE_WISP = register("ice_wisp",
+			EntityType.Builder.<IceWispEntity>of(IceWispEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(IceWispEntity::new)
+
+					.sized(1f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -92,6 +148,15 @@ public class BattleOfTheRacesByFzprulesModEntities {
 			IonGiantEntity.init();
 			InfectedScraplandianEntity.init();
 			InfectedProtogenEntity.init();
+			MotherdroneEntity.init();
+			FigtherDroneEntity.init();
+			FrozenEntity.init();
+			SnowpileEntity.init();
+			IceButterflyEntity.init();
+			SnowlandHunterEntity.init();
+			SnowlandFurryEntity.init();
+			SnowlandShadowEntity.init();
+			IceWispEntity.init();
 		});
 	}
 
@@ -106,5 +171,14 @@ public class BattleOfTheRacesByFzprulesModEntities {
 		event.put(ION_GIANT.get(), IonGiantEntity.createAttributes().build());
 		event.put(INFECTED_SCRAPLANDIAN.get(), InfectedScraplandianEntity.createAttributes().build());
 		event.put(INFECTED_PROTOGEN.get(), InfectedProtogenEntity.createAttributes().build());
+		event.put(MOTHERDRONE.get(), MotherdroneEntity.createAttributes().build());
+		event.put(FIGTHER_DRONE.get(), FigtherDroneEntity.createAttributes().build());
+		event.put(FROZEN.get(), FrozenEntity.createAttributes().build());
+		event.put(SNOWPILE.get(), SnowpileEntity.createAttributes().build());
+		event.put(ICE_BUTTERFLY.get(), IceButterflyEntity.createAttributes().build());
+		event.put(SNOWLAND_HUNTER.get(), SnowlandHunterEntity.createAttributes().build());
+		event.put(SNOWLAND_FURRY.get(), SnowlandFurryEntity.createAttributes().build());
+		event.put(SNOWLAND_SHADOW.get(), SnowlandShadowEntity.createAttributes().build());
+		event.put(ICE_WISP.get(), IceWispEntity.createAttributes().build());
 	}
 }

@@ -21,6 +21,7 @@ import net.mcreator.scraplandsbyfzprules.world.features.plants.ThunderReedFeatur
 import net.mcreator.scraplandsbyfzprules.world.features.plants.ScrapFlowerFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.RoboCropsSmallFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.RoboCropsFeature;
+import net.mcreator.scraplandsbyfzprules.world.features.plants.IceBlossomFeature;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 import java.util.function.Supplier;
@@ -42,6 +43,8 @@ public class BattleOfTheRacesByFzprulesModFeatures {
 					RoboCropsSmallFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> THUNDER_REED = register("thunder_reed", ThunderReedFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.VEGETAL_DECORATION, ThunderReedFeature.GENERATE_BIOMES, ThunderReedFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> ICE_BLOSSOM = register("ice_blossom", IceBlossomFeature::feature, new FeatureRegistration(
+			GenerationStep.Decoration.VEGETAL_DECORATION, IceBlossomFeature.GENERATE_BIOMES, IceBlossomFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

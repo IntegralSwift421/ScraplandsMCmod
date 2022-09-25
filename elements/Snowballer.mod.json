@@ -1,0 +1,44 @@
+{
+  "_fv": 33,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Snowballer",
+    "type": "WEAPON",
+    "rarity": "VERY_RARE",
+    "minLevel": 1,
+    "maxLevel": 3,
+    "damageModifier": 0,
+    "compatibleEnchantments": [],
+    "compatibleItems": [
+      {
+        "value": "CUSTOM:IceSword"
+      },
+      {
+        "value": "CUSTOM:IceAxe"
+      },
+      {
+        "value": "CUSTOM:IceSickle"
+      },
+      {
+        "value": "CUSTOM:IceHammer"
+      },
+      {
+        "value": "CUSTOM:IceScythe"
+      },
+      {
+        "value": "Items.BOW"
+      },
+      {
+        "value": "CUSTOM:SnowStaff"
+      },
+      {
+        "value": "CUSTOM:ScrapPipe"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": true,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

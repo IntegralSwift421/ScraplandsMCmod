@@ -70,7 +70,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap_layer_1.png";
+			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
 		}
 	}
 
@@ -81,7 +81,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap_layer_1.png";
+			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
 		}
 	}
 
@@ -92,7 +92,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap_layer_2.png";
+			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap2_layer_1_layer_2.png";
 		}
 	}
 
@@ -103,7 +103,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap_layer_1.png";
+			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
 		}
 	}
 }

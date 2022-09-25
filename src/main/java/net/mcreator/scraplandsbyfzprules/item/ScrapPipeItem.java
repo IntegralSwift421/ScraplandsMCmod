@@ -7,7 +7,9 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.entity.LivingEntity;
 
+import net.mcreator.scraplandsbyfzprules.procedures.GeneralEnchantmentProcedureProcedure;
 import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
 
 public class ScrapPipeItem extends SwordItem {
@@ -37,5 +39,12 @@ public class ScrapPipeItem extends SwordItem {
 				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.SCRAP_METAL.get()));
 			}
 		}, 3, -3f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+	}
+
+	@Override
+	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
+		boolean retval = super.onEntitySwing(itemstack, entity);
+		GeneralEnchantmentProcedureProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity, itemstack);
+		return retval;
 	}
 }

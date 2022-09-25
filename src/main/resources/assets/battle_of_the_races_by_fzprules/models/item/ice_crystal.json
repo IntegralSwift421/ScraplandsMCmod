@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "battle_of_the_races_by_fzprules:items/iceshard"
+  }
+}

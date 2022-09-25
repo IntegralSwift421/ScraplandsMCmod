@@ -17,6 +17,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.scraplandsbyfzprules.item.ThundershockItem;
 import net.mcreator.scraplandsbyfzprules.item.ThunderBallItem;
+import net.mcreator.scraplandsbyfzprules.item.SnowStaffItem;
 import net.mcreator.scraplandsbyfzprules.item.ScrapSwordItem;
 import net.mcreator.scraplandsbyfzprules.item.ScrapShovelItem;
 import net.mcreator.scraplandsbyfzprules.item.ScrapPipeItem;
@@ -32,6 +33,18 @@ import net.mcreator.scraplandsbyfzprules.item.RoboCarrotItem;
 import net.mcreator.scraplandsbyfzprules.item.RamBladeItem;
 import net.mcreator.scraplandsbyfzprules.item.RAMItem;
 import net.mcreator.scraplandsbyfzprules.item.InfectedCoreItem;
+import net.mcreator.scraplandsbyfzprules.item.IceSwordItem;
+import net.mcreator.scraplandsbyfzprules.item.IceSpearItem;
+import net.mcreator.scraplandsbyfzprules.item.IceSickleItem;
+import net.mcreator.scraplandsbyfzprules.item.IceShovelItem;
+import net.mcreator.scraplandsbyfzprules.item.IceScytheItem;
+import net.mcreator.scraplandsbyfzprules.item.IcePollenItem;
+import net.mcreator.scraplandsbyfzprules.item.IcePickaxeItem;
+import net.mcreator.scraplandsbyfzprules.item.IceHoeItem;
+import net.mcreator.scraplandsbyfzprules.item.IceHammerItem;
+import net.mcreator.scraplandsbyfzprules.item.IceCrystalItem;
+import net.mcreator.scraplandsbyfzprules.item.IceAxeItem;
+import net.mcreator.scraplandsbyfzprules.item.IceArmorItem;
 import net.mcreator.scraplandsbyfzprules.item.GreaterRobotCoreItem;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
@@ -101,6 +114,55 @@ public class BattleOfTheRacesByFzprulesModItems {
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> INFECTED_PROTOGEN = REGISTRY.register("infected_protogen_spawn_egg",
 			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.INFECTED_PROTOGEN, -10066330, -52429,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> FIGTHER_DRONE = REGISTRY.register("figther_drone_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.FIGTHER_DRONE, -13421773, -10066432,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> FROZEN = REGISTRY.register("frozen_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.FROZEN, -16737895, -1,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> ICE_CRYSTAL = REGISTRY.register("ice_crystal", () -> new IceCrystalItem());
+	public static final RegistryObject<Item> SNOW_STAFF = REGISTRY.register("snow_staff", () -> new SnowStaffItem());
+	public static final RegistryObject<Item> ICE_PICKAXE = REGISTRY.register("ice_pickaxe", () -> new IcePickaxeItem());
+	public static final RegistryObject<Item> ICE_AXE = REGISTRY.register("ice_axe", () -> new IceAxeItem());
+	public static final RegistryObject<Item> ICE_SWORD = REGISTRY.register("ice_sword", () -> new IceSwordItem());
+	public static final RegistryObject<Item> ICE_SHOVEL = REGISTRY.register("ice_shovel", () -> new IceShovelItem());
+	public static final RegistryObject<Item> ICE_HOE = REGISTRY.register("ice_hoe", () -> new IceHoeItem());
+	public static final RegistryObject<Item> ICE_SICKLE = REGISTRY.register("ice_sickle", () -> new IceSickleItem());
+	public static final RegistryObject<Item> ICE_HAMMER = REGISTRY.register("ice_hammer", () -> new IceHammerItem());
+	public static final RegistryObject<Item> ICE_SCYTHE = REGISTRY.register("ice_scythe", () -> new IceScytheItem());
+	public static final RegistryObject<Item> SNOWPILE = REGISTRY.register("snowpile_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.SNOWPILE, -1, -3342337,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> ICE_ARMOR_HELMET = REGISTRY.register("ice_armor_helmet", () -> new IceArmorItem.Helmet());
+	public static final RegistryObject<Item> ICE_ARMOR_CHESTPLATE = REGISTRY.register("ice_armor_chestplate", () -> new IceArmorItem.Chestplate());
+	public static final RegistryObject<Item> ICE_ARMOR_LEGGINGS = REGISTRY.register("ice_armor_leggings", () -> new IceArmorItem.Leggings());
+	public static final RegistryObject<Item> ICE_ARMOR_BOOTS = REGISTRY.register("ice_armor_boots", () -> new IceArmorItem.Boots());
+	public static final RegistryObject<Item> ICE_BUTTERFLY = REGISTRY.register("ice_butterfly_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.ICE_BUTTERFLY, -6684673, -16711681,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> FROSTED_STONE = block(BattleOfTheRacesByFzprulesModBlocks.FROSTED_STONE,
+			CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> FROSTED_STONE_SLAB = block(BattleOfTheRacesByFzprulesModBlocks.FROSTED_STONE_SLAB,
+			CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> FROSTED_STONE_STAIRS = block(BattleOfTheRacesByFzprulesModBlocks.FROSTED_STONE_STAIRS,
+			CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> FROSTED_STONE_WALL = block(BattleOfTheRacesByFzprulesModBlocks.FROSTED_STONE_WALL,
+			CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> ICE_POLLEN = REGISTRY.register("ice_pollen", () -> new IcePollenItem());
+	public static final RegistryObject<Item> ICE_BLOSSOM = block(BattleOfTheRacesByFzprulesModBlocks.ICE_BLOSSOM, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> SNOWLAND_HUNTER = REGISTRY.register("snowland_hunter_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_HUNTER, -10079488, -6724096,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SNOWLAND_FURRY = REGISTRY.register("snowland_furry_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_FURRY, -1, -6684673,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SNOWLAND_SHADOW = REGISTRY.register("snowland_shadow_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_SHADOW, -16777063, -3355648,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> ICE_SPEAR = REGISTRY.register("ice_spear", () -> new IceSpearItem());
+	public static final RegistryObject<Item> ICE_WISP = REGISTRY.register("ice_wisp_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.ICE_WISP, -3342337, -6697729,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {

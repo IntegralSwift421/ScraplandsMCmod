@@ -693,6 +693,456 @@
           }
         ]
       }
+    },
+    {
+      "name": "Motherdrone",
+      "type": "livingentity",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "motherdrone"
+    },
+    {
+      "name": "MotherdroneHurt",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "motherdrone_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WaterWeak",
+      "type": "tag",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_weak"
+    },
+    {
+      "name": "FigtherDrone",
+      "type": "livingentity",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "figther_drone"
+    },
+    {
+      "name": "Frozen",
+      "type": "livingentity",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen"
+    },
+    {
+      "name": "FrosenWastes",
+      "type": "biome",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frosen_wastes"
+    },
+    {
+      "name": "IceCrystal",
+      "type": "item",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_crystal"
+    },
+    {
+      "name": "SnowStaff",
+      "type": "rangeditem",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snow_staff"
+    },
+    {
+      "name": "FrostBiter",
+      "type": "enchantment",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_biter"
+    },
+    {
+      "name": "IcePickaxe",
+      "type": "tool",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_pickaxe"
+    },
+    {
+      "name": "IceAxe",
+      "type": "tool",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_axe"
+    },
+    {
+      "name": "IceSword",
+      "type": "tool",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_sword"
+    },
+    {
+      "name": "IceShovel",
+      "type": "tool",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_shovel"
+    },
+    {
+      "name": "IceHoe",
+      "type": "tool",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_hoe"
+    },
+    {
+      "name": "IcePickaxeRecipe",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_pickaxe_recipe"
+    },
+    {
+      "name": "IceAxeRecipe",
+      "type": "recipe",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_axe_recipe"
+    },
+    {
+      "name": "IceSwordRecipe",
+      "type": "recipe",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_sword_recipe"
+    },
+    {
+      "name": "IceShovelRecipe",
+      "type": "recipe",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_shovel_recipe"
+    },
+    {
+      "name": "IceHoeRecipe",
+      "type": "recipe",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_hoe_recipe"
+    },
+    {
+      "name": "IceSickle",
+      "type": "tool",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_sickle"
+    },
+    {
+      "name": "IceHammer",
+      "type": "tool",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_hammer"
+    },
+    {
+      "name": "IceSickleRecipe",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_sickle_recipe"
+    },
+    {
+      "name": "IceHammerRecipe",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_hammer_recipe"
+    },
+    {
+      "name": "IceScythe",
+      "type": "tool",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_scythe"
+    },
+    {
+      "name": "FrosenWonders",
+      "type": "biome",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frosen_wonders"
+    },
+    {
+      "name": "Snowpile",
+      "type": "livingentity",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snowpile"
+    },
+    {
+      "name": "Snowballer",
+      "type": "enchantment",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snowballer"
+    },
+    {
+      "name": "IceToolDebuffs",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_tool_debuffs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IceArmor",
+      "type": "armor",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "IceArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_helmet_recipe"
+    },
+    {
+      "name": "IceArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_body_recipe"
+    },
+    {
+      "name": "IceArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_leggings_recipe"
+    },
+    {
+      "name": "IceArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_boots_recipe"
+    },
+    {
+      "name": "GeneralEnchantmentProcedure",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "general_enchantment_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IceButterfly",
+      "type": "livingentity",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_butterfly"
+    },
+    {
+      "name": "FrostedStone",
+      "type": "block",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frosted_stone"
+    },
+    {
+      "name": "FrostedStoneSlab",
+      "type": "block",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frosted_stone_slab"
+    },
+    {
+      "name": "FrostedStoneStairs",
+      "type": "block",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frosted_stone_stairs"
+    },
+    {
+      "name": "FrostedStoneWall",
+      "type": "block",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frosted_stone_wall"
+    },
+    {
+      "name": "IcePollen",
+      "type": "item",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_pollen"
+    },
+    {
+      "name": "IceBlossom",
+      "type": "plant",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_blossom"
+    },
+    {
+      "name": "SnowlandHunter",
+      "type": "livingentity",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snowland_hunter"
+    },
+    {
+      "name": "SnowlandFurry",
+      "type": "livingentity",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snowland_furry"
+    },
+    {
+      "name": "SnowlandShadow",
+      "type": "livingentity",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snowland_shadow"
+    },
+    {
+      "name": "IceSpear",
+      "type": "tool",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_spear"
+    },
+    {
+      "name": "IceWisp",
+      "type": "livingentity",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_wisp"
     }
   ],
   "variable_elements": [],
@@ -758,6 +1208,8 @@
   ],
   "language_map": {
     "en_us": {
+      "item.battle_of_the_races_by_fzprules.ice_spear": "Ice Spear",
+      "item.battle_of_the_races_by_fzprules.ice_shovel": "Ice Shovel",
       "item.battle_of_the_races_by_fzprules.scrap_pipe": "Scrap Pipe",
       "entity.scraplands_by_fzprules.infected_protogen": "Infected Protogen",
       "item.scraplands_by_fzprules.robo_potato": "Robo Potato",
@@ -765,37 +1217,54 @@
       "item.battle_of_the_races_by_fzprules.scrap_shovel": "Scrap Shovel",
       "item.scraplands_by_fzprules.scrap_pickaxe": "Scrap Pickaxe",
       "item.scraplands_by_fzprules.orbonaut_spawn_egg": "Orbonaut Spawn Egg",
-      "item.scraplands_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
       "block.scraplands_by_fzprules.rusty_top": "Rusty Top",
+      "item.scraplands_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
       "item.scraplands_by_fzprules.thunder_ball": "Thunder Ball",
+      "item.battle_of_the_races_by_fzprules.snowpile_spawn_egg": "Snowpile Spawn Egg",
       "entity.battle_of_the_races_by_fzprules.ion_giant": "Ion Giant",
+      "item.battle_of_the_races_by_fzprules.ice_armor_helmet": "Ice Helmet",
       "block.scraplands_by_fzprules.scrap_pile": "Scrap Pile",
       "item.battle_of_the_races_by_fzprules.scrap_hoe": "Scrap Hoe",
       "biome.scraplands_by_fzprules.scraplands": "Scraplands",
       "item.scraplands_by_fzprules.ion_drone_spawn_egg": "Ion Drone Spawn Egg",
       "entity.scraplands_by_fzprules.ion_giant": "Ion Giant",
+      "block.battle_of_the_races_by_fzprules.frosted_stone_slab": "Frosted Stone Slab",
       "item.scraplands_by_fzprules.ram": "RAM",
+      "item.battle_of_the_races_by_fzprules.ice_sword": "Ice Sword",
+      "block.battle_of_the_races_by_fzprules.frosted_stone_stairs": "Frosted Stone Stairs",
+      "entity.battle_of_the_races_by_fzprules.snowpile": "Snowpile",
       "entity.scraplands_by_fzprules.scraplandian": "Scraplandian",
       "entity.battle_of_the_races_by_fzprules.scraplandian": "Scraplandian",
       "item.battle_of_the_races_by_fzprules.scrap_axe": "Scrap Axe",
       "item.scraplands_by_fzprules.scrap_armor_boots": "Scrap Boots",
+      "enchantment.battle_of_the_races_by_fzprules.frost_biter": "Frost Biter",
       "item.battle_of_the_races_by_fzprules.infected_scraplandian_spawn_egg": "Infected Scraplandian Spawn Egg",
       "item.battle_of_the_races_by_fzprules.ion_giant_spawn_egg": "Ion Giant Spawn Egg",
+      "biome.battle_of_the_races_by_fzprules.frosen_wonders": "Frosen Wastes",
+      "block.battle_of_the_races_by_fzprules.frosted_stone": "Frosted Stone",
       "item.battle_of_the_races_by_fzprules.scrap_armor_helmet": "Scrap Helmet",
       "item.battle_of_the_races_by_fzprules.scrap_sword": "Scrap Sword",
       "entity.battle_of_the_races_by_fzprules.mecha_slime": "Mecha Slime",
       "item.battle_of_the_races_by_fzprules.mecha_slime_spawn_egg": "Mecha Slime Spawn Egg",
       "item.battle_of_the_races_by_fzprules.robot_core": "Robot Core",
+      "item.battle_of_the_races_by_fzprules.ice_pollen": "Ice Pollen",
       "block.battle_of_the_races_by_fzprules.scrap_pile": "Scrap Pile",
       "block.battle_of_the_races_by_fzprules.scrap_solar_panel": "Scrap Solar Panel",
       "item.battle_of_the_races_by_fzprules.greater_robot_core": "Greater Robot Core",
+      "item.battle_of_the_races_by_fzprules.ice_hammer": "Ice Hammer",
+      "biome.battle_of_the_races_by_fzprules.frosen_wastes": "Frosen Wastes",
       "subtitles.entity.protogen": "",
       "block.battle_of_the_races_by_fzprules.scrap_flower": "Scrap Plantlet",
+      "item.battle_of_the_races_by_fzprules.ice_pickaxe": "Ice Pickaxe",
       "item.battle_of_the_races_by_fzprules.ram_blade": "Ram Blade",
       "item.battle_of_the_races_by_fzprules.scrap_armor_leggings": "Scrap Leggings",
+      "enchantment.battle_of_the_races_by_fzprules.snowballer": "Snowballer",
       "item.battle_of_the_races_by_fzprules.scrap_pickaxe": "Scrap Pickaxe",
+      "item.battle_of_the_races_by_fzprules.frozen_spawn_egg": "Frozen Spawn Egg",
+      "entity.battle_of_the_races_by_fzprules.snowland_shadow": "Snowland Shadow",
       "item.scraplands_by_fzprules.scrap_armor_leggings": "Scrap Leggings",
       "item.battle_of_the_races_by_fzprules.ion_drone_spawn_egg": "Ion Drone Spawn Egg",
+      "item.battle_of_the_races_by_fzprules.ice_armor_leggings": "Ice Leggings",
       "item.scraplands_by_fzprules.robot_core": "Robot Core",
       "biome.battle_of_the_races_by_fzprules.scraplands": "Scraplands",
       "subtitles.entity.orbonaut.ambient": "",
@@ -805,6 +1274,7 @@
       "item.battle_of_the_races_by_fzprules.scrap_metal": "Scrap Metal",
       "subtitles.entity.orbonaut.hurt": "",
       "item.scraplands_by_fzprules.scrap_metal": "Scrap Metal",
+      "item.battle_of_the_races_by_fzprules.ice_armor_boots": "Ice Boots",
       "item.battle_of_the_races_by_fzprules.robo_potato": "Robo Potato",
       "item.battle_of_the_races_by_fzprules.ram": "RAM",
       "block.scraplands_by_fzprules.robo_crops_small": "Robo Crops Small",
@@ -813,25 +1283,36 @@
       "entity.battle_of_the_races_by_fzprules.orbonaut": "Orbonaut",
       "entity.scraplands_by_fzprules.protogen": "Protogen",
       "item.battle_of_the_races_by_fzprules.thunder_ball": "Thunder Ball",
+      "item.battle_of_the_races_by_fzprules.ice_sickle": "Ice Sickle",
       "entity.battle_of_the_races_by_fzprules.infected_scraplandian": "Infected Scraplandian",
       "block.scraplands_by_fzprules.scrap_bricks": "Scrap Bricks",
+      "block.battle_of_the_races_by_fzprules.frosted_stone_wall": "Frosted Stone Wall",
       "item.scraplands_by_fzprules.scrap_shovel": "Scrap Shovel",
       "block.battle_of_the_races_by_fzprules.robo_crops_small": "Robo Crops Small",
       "item.battle_of_the_races_by_fzprules.orbonaut_spawn_egg": "Orbonaut Spawn Egg",
+      "item.battle_of_the_races_by_fzprules.figther_drone_spawn_egg": "Figther Drone Spawn Egg",
+      "item.battle_of_the_races_by_fzprules.ice_armor_chestplate": "Ice Chestplate",
       "enchantment.battle_of_the_races_by_fzprules.splash": "Splash",
       "subtitles.entity.protogen.dead": "",
       "entity.scraplands_by_fzprules.orbonaut": "Orbonaut",
       "item.scraplands_by_fzprules.scrap_armor_helmet": "Scrap Helmet",
       "item.battle_of_the_races_by_fzprules.infected_core": "Infected Core",
+      "item.battle_of_the_races_by_fzprules.motherdrone_spawn_egg": "Motherdrone Spawn Egg",
       "block.battle_of_the_races_by_fzprules.thunder_reed": "Thunder Reed",
       "block.battle_of_the_races_by_fzprules.rusty_top": "Rusty Top",
       "item.battle_of_the_races_by_fzprules.robot_spawn": "Robot Spawn",
+      "block.battle_of_the_races_by_fzprules.ice_blossom": "Ice Blossom",
+      "entity.battle_of_the_races_by_fzprules.snowland_hunter": "Snowland Hunter",
+      "entity.battle_of_the_races_by_fzprules.motherdrone": "Motherdrone",
       "item.scraplands_by_fzprules.infected_core": "Infected Core",
+      "item.battle_of_the_races_by_fzprules.ice_wisp_spawn_egg": "Ice Wisp Spawn Egg",
       "entity.battle_of_the_races_by_fzprules.ion_drone": "Ion Drone",
       "block.battle_of_the_races_by_fzprules.robo_crops": "Robo Crops",
       "item.scraplands_by_fzprules.ion_giant_spawn_egg": "Ion Giant Spawn Egg",
       "entity.scraplands_by_fzprules.ion_drone": "Ion Drone",
       "enchantment.scraplands_by_fzprules.splash": "Splash",
+      "item.battle_of_the_races_by_fzprules.snow_staff": "Snow Staff",
+      "item.battle_of_the_races_by_fzprules.snowland_hunter_spawn_egg": "Snowland Hunter Spawn Egg",
       "subtitles.entity.robot.hurt": "",
       "subtitles.entity.orbonaut.dead": "",
       "item.battle_of_the_races_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
@@ -842,8 +1323,11 @@
       "item.battle_of_the_races_by_fzprules.infected_protogen_spawn_egg": "Infected Protogen Spawn Egg",
       "item.battle_of_the_races_by_fzprules.protogen_spawn_egg": "Protogen Spawn Egg",
       "item.scraplands_by_fzprules.scrap_pipe": "Scrap Pipe",
+      "entity.battle_of_the_races_by_fzprules.frozen": "Frozen",
       "block.scraplands_by_fzprules.thunder_processor": "Thunder Processor",
       "entity.battle_of_the_races_by_fzprules.ion_slime": "Mecha Slime",
+      "item.battle_of_the_races_by_fzprules.ice_axe": "Ice Axe",
+      "item.battle_of_the_races_by_fzprules.ice_scythe": "Ice Scythe",
       "item.scraplands_by_fzprules.ram_blade": "Ram Blade",
       "entity.scraplands_by_fzprules.infected_scraplandian": "Infected Scraplandian",
       "item.scraplands_by_fzprules.greater_robot_core": "Greater Robot Core",
@@ -856,11 +1340,16 @@
       "item.scraplands_by_fzprules.mecha_slime_spawn_egg": "Mecha Slime Spawn Egg",
       "block.scraplands_by_fzprules.robotic_log": "Robotic Log",
       "item.battle_of_the_races_by_fzprules.scrap_armor_chestplate": "Scrap Chestplate",
+      "item.battle_of_the_races_by_fzprules.ice_crystal": "Ice Crystal",
+      "entity.battle_of_the_races_by_fzprules.figther_drone": "Figther Drone",
       "item.scraplands_by_fzprules.infected_protogen_spawn_egg": "Infected Protogen Spawn Egg",
       "block.battle_of_the_races_by_fzprules.thunder_processor": "Thunder Processor",
       "block.scraplands_by_fzprules.thunder_reed": "Thunder Reed",
+      "item.battle_of_the_races_by_fzprules.snowland_shadow_spawn_egg": "Snowland Shadow Spawn Egg",
       "entity.scraplands_by_fzprules.mecha_slime": "Mecha Slime",
+      "entity.battle_of_the_races_by_fzprules.ice_butterfly": "Ice Butterfly",
       "block.scraplands_by_fzprules.scrap_pane_block": "Scrap Pane Block",
+      "entity.battle_of_the_races_by_fzprules.ice_wisp": "Ice Wisp",
       "biome.battle_of_the_races_by_fzprules.lifeless_scraplands": "Lifeless Scraplands",
       "block.scraplands_by_fzprules.scrap_solar_panel": "Scrap Solar Panel",
       "item.scraplands_by_fzprules.robo_carrot": "Robo Carrot",
@@ -870,10 +1359,14 @@
       "block.battle_of_the_races_by_fzprules.scrap_bricks": "Scrap Bricks",
       "item.battle_of_the_races_by_fzprules.ion_slime_spawn_egg": "Mecha Slime Spawn Egg",
       "item.battle_of_the_races_by_fzprules.thundershock": "Thundershock",
+      "item.battle_of_the_races_by_fzprules.ice_butterfly_spawn_egg": "Ice Butterfly Spawn Egg",
+      "item.battle_of_the_races_by_fzprules.ice_hoe": "Ice Hoe",
+      "item.battle_of_the_races_by_fzprules.snowland_furry_spawn_egg": "Snowland Furry Spawn Egg",
       "item.battle_of_the_races_by_fzprules.scrap_armor_boots": "Scrap Boots",
       "block.scraplands_by_fzprules.scrap_flower": "Scrap Plantlet",
       "item.scraplands_by_fzprules.scrap_armor_chestplate": "Scrap Chestplate",
-      "block.scraplands_by_fzprules.rusty_dirt": "Rusty Dirt"
+      "block.scraplands_by_fzprules.rusty_dirt": "Rusty Dirt",
+      "entity.battle_of_the_races_by_fzprules.snowland_furry": "Snowland Furry"
     }
   },
   "foldersRoot": {

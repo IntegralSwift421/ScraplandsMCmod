@@ -11,10 +11,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.item.enchantment.Enchantment;
 
 import net.mcreator.scraplandsbyfzprules.enchantment.SplashEnchantment;
+import net.mcreator.scraplandsbyfzprules.enchantment.SnowballerEnchantment;
+import net.mcreator.scraplandsbyfzprules.enchantment.FrostBiterEnchantment;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 public class BattleOfTheRacesByFzprulesModEnchantments {
 	public static final DeferredRegister<Enchantment> REGISTRY = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS,
 			BattleOfTheRacesByFzprulesMod.MODID);
 	public static final RegistryObject<Enchantment> SPLASH = REGISTRY.register("splash", () -> new SplashEnchantment());
+	public static final RegistryObject<Enchantment> FROST_BITER = REGISTRY.register("frost_biter", () -> new FrostBiterEnchantment());
+	public static final RegistryObject<Enchantment> SNOWBALLER = REGISTRY.register("snowballer", () -> new SnowballerEnchantment());
 }

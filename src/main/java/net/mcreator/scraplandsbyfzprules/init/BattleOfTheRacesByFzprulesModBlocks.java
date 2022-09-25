@@ -26,6 +26,11 @@ import net.mcreator.scraplandsbyfzprules.block.RustyDirtBlock;
 import net.mcreator.scraplandsbyfzprules.block.RoboticLogBlock;
 import net.mcreator.scraplandsbyfzprules.block.RoboCropsSmallBlock;
 import net.mcreator.scraplandsbyfzprules.block.RoboCropsBlock;
+import net.mcreator.scraplandsbyfzprules.block.IceBlossomBlock;
+import net.mcreator.scraplandsbyfzprules.block.FrostedStoneWallBlock;
+import net.mcreator.scraplandsbyfzprules.block.FrostedStoneStairsBlock;
+import net.mcreator.scraplandsbyfzprules.block.FrostedStoneSlabBlock;
+import net.mcreator.scraplandsbyfzprules.block.FrostedStoneBlock;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 public class BattleOfTheRacesByFzprulesModBlocks {
@@ -42,6 +47,11 @@ public class BattleOfTheRacesByFzprulesModBlocks {
 	public static final RegistryObject<Block> ROBO_CROPS_SMALL = REGISTRY.register("robo_crops_small", () -> new RoboCropsSmallBlock());
 	public static final RegistryObject<Block> THUNDER_REED = REGISTRY.register("thunder_reed", () -> new ThunderReedBlock());
 	public static final RegistryObject<Block> THUNDER_PROCESSOR = REGISTRY.register("thunder_processor", () -> new ThunderProcessorBlock());
+	public static final RegistryObject<Block> FROSTED_STONE = REGISTRY.register("frosted_stone", () -> new FrostedStoneBlock());
+	public static final RegistryObject<Block> FROSTED_STONE_SLAB = REGISTRY.register("frosted_stone_slab", () -> new FrostedStoneSlabBlock());
+	public static final RegistryObject<Block> FROSTED_STONE_STAIRS = REGISTRY.register("frosted_stone_stairs", () -> new FrostedStoneStairsBlock());
+	public static final RegistryObject<Block> FROSTED_STONE_WALL = REGISTRY.register("frosted_stone_wall", () -> new FrostedStoneWallBlock());
+	public static final RegistryObject<Block> ICE_BLOSSOM = REGISTRY.register("ice_blossom", () -> new IceBlossomBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -51,6 +61,8 @@ public class BattleOfTheRacesByFzprulesModBlocks {
 			RoboCropsBlock.registerRenderLayer();
 			RoboCropsSmallBlock.registerRenderLayer();
 			ThunderReedBlock.registerRenderLayer();
+			FrostedStoneWallBlock.registerRenderLayer();
+			IceBlossomBlock.registerRenderLayer();
 		}
 	}
 }

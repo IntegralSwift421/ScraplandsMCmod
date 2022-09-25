@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "battle_of_the_races_by_fzprules:items/ice_spear"
+  }
+}
