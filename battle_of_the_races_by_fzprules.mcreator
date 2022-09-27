@@ -6,7 +6,8 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rusty_dirt"
+      "registry_name": "rusty_dirt",
+      "path": "~/Scraplands"
     },
     {
       "name": "RustyTop",
@@ -14,7 +15,8 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rusty_top"
+      "registry_name": "rusty_top",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapBricks",
@@ -22,7 +24,8 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_bricks"
+      "registry_name": "scrap_bricks",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapPaneBlock",
@@ -30,7 +33,8 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_pane_block"
+      "registry_name": "scrap_pane_block",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapPile",
@@ -38,7 +42,8 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_pile"
+      "registry_name": "scrap_pile",
+      "path": "~/Scraplands"
     },
     {
       "name": "RoboticLog",
@@ -46,7 +51,8 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robotic_log"
+      "registry_name": "robotic_log",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapSolarPanel",
@@ -54,7 +60,8 @@
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_solar_panel"
+      "registry_name": "scrap_solar_panel",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapFlower",
@@ -62,7 +69,8 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_flower"
+      "registry_name": "scrap_flower",
+      "path": "~/Scraplands"
     },
     {
       "name": "LifelessScraplands",
@@ -70,7 +78,8 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "lifeless_scraplands"
+      "registry_name": "lifeless_scraplands",
+      "path": "~/Scraplands"
     },
     {
       "name": "Scraplands",
@@ -78,7 +87,8 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scraplands"
+      "registry_name": "scraplands",
+      "path": "~/Scraplands"
     },
     {
       "name": "Scraps",
@@ -86,7 +96,8 @@
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scraps"
+      "registry_name": "scraps",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapMetal",
@@ -94,7 +105,8 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_metal"
+      "registry_name": "scrap_metal",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapBrickRecipe",
@@ -102,7 +114,8 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_brick_recipe"
+      "registry_name": "scrap_brick_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapPaneRecipe",
@@ -110,7 +123,8 @@
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_pane_recipe"
+      "registry_name": "scrap_pane_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapPanelRecipe",
@@ -118,7 +132,8 @@
       "sortid": 15,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_panel_recipe"
+      "registry_name": "scrap_panel_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapArmor",
@@ -132,7 +147,8 @@
         "el": true,
         "eb": true,
         "ec": true
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapArmorHelmetRecipe",
@@ -140,7 +156,8 @@
       "sortid": 18,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_armor_helmet_recipe"
+      "registry_name": "scrap_armor_helmet_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapArmorBodyRecipe",
@@ -148,7 +165,8 @@
       "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_armor_body_recipe"
+      "registry_name": "scrap_armor_body_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapArmorLeggingsRecipe",
@@ -156,7 +174,8 @@
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_armor_leggings_recipe"
+      "registry_name": "scrap_armor_leggings_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapArmorBootsRecipe",
@@ -164,7 +183,8 @@
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_armor_boots_recipe"
+      "registry_name": "scrap_armor_boots_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "RAM",
@@ -172,7 +192,8 @@
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ram"
+      "registry_name": "ram",
+      "path": "~/Scraplands"
     },
     {
       "name": "RoboPotato",
@@ -180,7 +201,8 @@
       "sortid": 23,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robo_potato"
+      "registry_name": "robo_potato",
+      "path": "~/Scraplands"
     },
     {
       "name": "RoboCarrot",
@@ -188,7 +210,8 @@
       "sortid": 24,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robo_carrot"
+      "registry_name": "robo_carrot",
+      "path": "~/Scraplands"
     },
     {
       "name": "RoboCrops",
@@ -196,7 +219,8 @@
       "sortid": 25,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robo_crops"
+      "registry_name": "robo_crops",
+      "path": "~/Scraplands"
     },
     {
       "name": "RoboCropLoot",
@@ -204,7 +228,8 @@
       "sortid": 26,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robo_crop_loot"
+      "registry_name": "robo_crop_loot",
+      "path": "~/Scraplands"
     },
     {
       "name": "RoboCropsSmall",
@@ -212,7 +237,8 @@
       "sortid": 27,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robo_crops_small"
+      "registry_name": "robo_crops_small",
+      "path": "~/Scraplands"
     },
     {
       "name": "RoboCropLoot2",
@@ -220,7 +246,8 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robo_crop_loot_2"
+      "registry_name": "robo_crop_loot_2",
+      "path": "~/Scraplands"
     },
     {
       "name": "MechaSlime",
@@ -228,7 +255,8 @@
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "mecha_slime"
+      "registry_name": "mecha_slime",
+      "path": "~/Scraplands"
     },
     {
       "name": "IonSlime",
@@ -236,7 +264,8 @@
       "sortid": 30,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ion_slime"
+      "registry_name": "ion_slime",
+      "path": "~/Scraplands"
     },
     {
       "name": "IonDrone",
@@ -244,7 +273,8 @@
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ion_drone"
+      "registry_name": "ion_drone",
+      "path": "~/Scraplands"
     },
     {
       "name": "Scraplandian",
@@ -252,7 +282,8 @@
       "sortid": 32,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scraplandian"
+      "registry_name": "scraplandian",
+      "path": "~/Scraplands"
     },
     {
       "name": "Protogen",
@@ -260,7 +291,8 @@
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "protogen"
+      "registry_name": "protogen",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScraplandianMenu",
@@ -268,7 +300,8 @@
       "sortid": 34,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scraplandian_menu"
+      "registry_name": "scraplandian_menu",
+      "path": "~/Scraplands"
     },
     {
       "name": "ProtoInventory",
@@ -276,7 +309,8 @@
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "proto_inventory"
+      "registry_name": "proto_inventory",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScraplandianTradeSystem",
@@ -292,7 +326,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "ScraplandianInteract",
@@ -324,7 +359,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "ProtogenInteract",
@@ -356,7 +392,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "ThunderBall",
@@ -364,7 +401,8 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "thunder_ball"
+      "registry_name": "thunder_ball",
+      "path": "~/Scraplands"
     },
     {
       "name": "Thundershock",
@@ -372,7 +410,8 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "thundershock"
+      "registry_name": "thundershock",
+      "path": "~/Scraplands"
     },
     {
       "name": "Orbonaut",
@@ -380,7 +419,8 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "orbonaut"
+      "registry_name": "orbonaut",
+      "path": "~/Scraplands"
     },
     {
       "name": "Shock",
@@ -408,7 +448,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "ThunderReed",
@@ -416,7 +457,8 @@
       "sortid": 41,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "thunder_reed"
+      "registry_name": "thunder_reed",
+      "path": "~/Scraplands"
     },
     {
       "name": "ThunderShop",
@@ -424,7 +466,8 @@
       "sortid": 42,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "thunder_shop"
+      "registry_name": "thunder_shop",
+      "path": "~/Scraplands"
     },
     {
       "name": "ThunderProcessorProcess",
@@ -440,7 +483,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "ThunderProcessor",
@@ -448,7 +492,8 @@
       "sortid": 42,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "thunder_processor"
+      "registry_name": "thunder_processor",
+      "path": "~/Scraplands"
     },
     {
       "name": "ThunderProcessorRecipe",
@@ -456,7 +501,8 @@
       "sortid": 44,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "thunder_processor_recipe"
+      "registry_name": "thunder_processor_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "RamBlade",
@@ -464,7 +510,8 @@
       "sortid": 47,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ram_blade"
+      "registry_name": "ram_blade",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapPickaxe",
@@ -472,7 +519,8 @@
       "sortid": 48,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_pickaxe"
+      "registry_name": "scrap_pickaxe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapAxe",
@@ -480,7 +528,8 @@
       "sortid": 49,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_axe"
+      "registry_name": "scrap_axe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapSword",
@@ -488,7 +537,8 @@
       "sortid": 50,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_sword"
+      "registry_name": "scrap_sword",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapShovel",
@@ -496,7 +546,8 @@
       "sortid": 51,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_shovel"
+      "registry_name": "scrap_shovel",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapHoe",
@@ -504,7 +555,8 @@
       "sortid": 52,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_hoe"
+      "registry_name": "scrap_hoe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapPickaxeRecipe",
@@ -512,7 +564,8 @@
       "sortid": 53,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_pickaxe_recipe"
+      "registry_name": "scrap_pickaxe_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapAxeRecipe",
@@ -520,7 +573,8 @@
       "sortid": 54,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_axe_recipe"
+      "registry_name": "scrap_axe_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapSwordRecipe",
@@ -528,7 +582,8 @@
       "sortid": 55,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_sword_recipe"
+      "registry_name": "scrap_sword_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapShovelRecipe",
@@ -536,7 +591,8 @@
       "sortid": 56,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_shovel_recipe"
+      "registry_name": "scrap_shovel_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapHoeRecipe",
@@ -544,7 +600,8 @@
       "sortid": 57,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_hoe_recipe"
+      "registry_name": "scrap_hoe_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "RobotCore",
@@ -552,7 +609,8 @@
       "sortid": 59,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robot_core"
+      "registry_name": "robot_core",
+      "path": "~/Scraplands"
     },
     {
       "name": "GreaterRobotCore",
@@ -560,7 +618,8 @@
       "sortid": 60,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "greater_robot_core"
+      "registry_name": "greater_robot_core",
+      "path": "~/Scraplands"
     },
     {
       "name": "RobotSpawn",
@@ -568,7 +627,8 @@
       "sortid": 61,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robot_spawn"
+      "registry_name": "robot_spawn",
+      "path": "~/Scraplands"
     },
     {
       "name": "RobotSpawnRecipe",
@@ -576,7 +636,8 @@
       "sortid": 62,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robot_spawn_recipe"
+      "registry_name": "robot_spawn_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "SpawnRobot",
@@ -608,7 +669,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "IonGiant",
@@ -616,7 +678,8 @@
       "sortid": 64,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ion_giant"
+      "registry_name": "ion_giant",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapPipe",
@@ -624,7 +687,8 @@
       "sortid": 65,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_pipe"
+      "registry_name": "scrap_pipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "InfectedCore",
@@ -632,7 +696,8 @@
       "sortid": 66,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "infected_core"
+      "registry_name": "infected_core",
+      "path": "~/Scraplands"
     },
     {
       "name": "InfectedScraplandian",
@@ -640,7 +705,8 @@
       "sortid": 67,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "infected_scraplandian"
+      "registry_name": "infected_scraplandian",
+      "path": "~/Scraplands"
     },
     {
       "name": "InfectedProtogen",
@@ -648,7 +714,8 @@
       "sortid": 68,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "infected_protogen"
+      "registry_name": "infected_protogen",
+      "path": "~/Scraplands"
     },
     {
       "name": "ScrapPipeRecipe",
@@ -656,7 +723,8 @@
       "sortid": 69,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap_pipe_recipe"
+      "registry_name": "scrap_pipe_recipe",
+      "path": "~/Scraplands"
     },
     {
       "name": "Splash",
@@ -664,7 +732,8 @@
       "sortid": 70,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "splash"
+      "registry_name": "splash",
+      "path": "~/Scraplands"
     },
     {
       "name": "Robotic",
@@ -672,7 +741,8 @@
       "sortid": 71,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "robotic"
+      "registry_name": "robotic",
+      "path": "~/Scraplands"
     },
     {
       "name": "SplashEffect",
@@ -692,7 +762,8 @@
             "type": "itemstack"
           }
         ]
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "Motherdrone",
@@ -700,7 +771,8 @@
       "sortid": 72,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "motherdrone"
+      "registry_name": "motherdrone",
+      "path": "~/Scraplands"
     },
     {
       "name": "MotherdroneHurt",
@@ -728,7 +800,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Scraplands"
     },
     {
       "name": "WaterWeak",
@@ -744,7 +817,8 @@
       "sortid": 75,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "figther_drone"
+      "registry_name": "figther_drone",
+      "path": "~/Scraplands"
     },
     {
       "name": "Frozen",
@@ -752,7 +826,8 @@
       "sortid": 76,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "frozen"
+      "registry_name": "frozen",
+      "path": "~/SnowWastes"
     },
     {
       "name": "FrosenWastes",
@@ -760,7 +835,8 @@
       "sortid": 77,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "frosen_wastes"
+      "registry_name": "frosen_wastes",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceCrystal",
@@ -768,7 +844,8 @@
       "sortid": 78,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_crystal"
+      "registry_name": "ice_crystal",
+      "path": "~/SnowWastes"
     },
     {
       "name": "SnowStaff",
@@ -776,7 +853,8 @@
       "sortid": 79,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "snow_staff"
+      "registry_name": "snow_staff",
+      "path": "~/SnowWastes"
     },
     {
       "name": "FrostBiter",
@@ -784,7 +862,8 @@
       "sortid": 80,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "frost_biter"
+      "registry_name": "frost_biter",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IcePickaxe",
@@ -792,7 +871,8 @@
       "sortid": 81,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_pickaxe"
+      "registry_name": "ice_pickaxe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceAxe",
@@ -800,7 +880,8 @@
       "sortid": 82,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_axe"
+      "registry_name": "ice_axe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceSword",
@@ -808,7 +889,8 @@
       "sortid": 83,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_sword"
+      "registry_name": "ice_sword",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceShovel",
@@ -816,7 +898,8 @@
       "sortid": 84,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_shovel"
+      "registry_name": "ice_shovel",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceHoe",
@@ -824,7 +907,8 @@
       "sortid": 85,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_hoe"
+      "registry_name": "ice_hoe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IcePickaxeRecipe",
@@ -832,7 +916,8 @@
       "sortid": 86,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_pickaxe_recipe"
+      "registry_name": "ice_pickaxe_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceAxeRecipe",
@@ -840,7 +925,8 @@
       "sortid": 87,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_axe_recipe"
+      "registry_name": "ice_axe_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceSwordRecipe",
@@ -848,7 +934,8 @@
       "sortid": 88,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_sword_recipe"
+      "registry_name": "ice_sword_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceShovelRecipe",
@@ -856,7 +943,8 @@
       "sortid": 89,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_shovel_recipe"
+      "registry_name": "ice_shovel_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceHoeRecipe",
@@ -864,7 +952,8 @@
       "sortid": 90,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_hoe_recipe"
+      "registry_name": "ice_hoe_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceSickle",
@@ -872,7 +961,8 @@
       "sortid": 91,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_sickle"
+      "registry_name": "ice_sickle",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceHammer",
@@ -880,7 +970,8 @@
       "sortid": 92,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_hammer"
+      "registry_name": "ice_hammer",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceSickleRecipe",
@@ -888,7 +979,8 @@
       "sortid": 93,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_sickle_recipe"
+      "registry_name": "ice_sickle_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceHammerRecipe",
@@ -896,7 +988,8 @@
       "sortid": 94,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_hammer_recipe"
+      "registry_name": "ice_hammer_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceScythe",
@@ -904,7 +997,8 @@
       "sortid": 95,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_scythe"
+      "registry_name": "ice_scythe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "FrosenWonders",
@@ -912,7 +1006,8 @@
       "sortid": 96,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "frosen_wonders"
+      "registry_name": "frosen_wonders",
+      "path": "~/SnowWastes"
     },
     {
       "name": "Snowpile",
@@ -920,7 +1015,8 @@
       "sortid": 96,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "snowpile"
+      "registry_name": "snowpile",
+      "path": "~/SnowWastes"
     },
     {
       "name": "Snowballer",
@@ -928,7 +1024,8 @@
       "sortid": 97,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "snowballer"
+      "registry_name": "snowballer",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceToolDebuffs",
@@ -964,7 +1061,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceArmor",
@@ -978,7 +1076,8 @@
         "el": true,
         "eb": true,
         "ec": true
-      }
+      },
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceArmorHelmetRecipe",
@@ -986,7 +1085,8 @@
       "sortid": 99,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_armor_helmet_recipe"
+      "registry_name": "ice_armor_helmet_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceArmorBodyRecipe",
@@ -994,7 +1094,8 @@
       "sortid": 100,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_armor_body_recipe"
+      "registry_name": "ice_armor_body_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceArmorLeggingsRecipe",
@@ -1002,7 +1103,8 @@
       "sortid": 101,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_armor_leggings_recipe"
+      "registry_name": "ice_armor_leggings_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceArmorBootsRecipe",
@@ -1010,7 +1112,8 @@
       "sortid": 102,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_armor_boots_recipe"
+      "registry_name": "ice_armor_boots_recipe",
+      "path": "~/SnowWastes"
     },
     {
       "name": "GeneralEnchantmentProcedure",
@@ -1046,7 +1149,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceButterfly",
@@ -1054,7 +1158,8 @@
       "sortid": 104,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_butterfly"
+      "registry_name": "ice_butterfly",
+      "path": "~/SnowWastes"
     },
     {
       "name": "FrostedStone",
@@ -1062,7 +1167,8 @@
       "sortid": 105,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "frosted_stone"
+      "registry_name": "frosted_stone",
+      "path": "~/SnowWastes"
     },
     {
       "name": "FrostedStoneSlab",
@@ -1070,7 +1176,8 @@
       "sortid": 106,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "frosted_stone_slab"
+      "registry_name": "frosted_stone_slab",
+      "path": "~/SnowWastes"
     },
     {
       "name": "FrostedStoneStairs",
@@ -1078,7 +1185,8 @@
       "sortid": 107,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "frosted_stone_stairs"
+      "registry_name": "frosted_stone_stairs",
+      "path": "~/SnowWastes"
     },
     {
       "name": "FrostedStoneWall",
@@ -1086,7 +1194,8 @@
       "sortid": 108,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "frosted_stone_wall"
+      "registry_name": "frosted_stone_wall",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IcePollen",
@@ -1094,7 +1203,8 @@
       "sortid": 109,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_pollen"
+      "registry_name": "ice_pollen",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceBlossom",
@@ -1102,7 +1212,8 @@
       "sortid": 109,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_blossom"
+      "registry_name": "ice_blossom",
+      "path": "~/Scraplands"
     },
     {
       "name": "SnowlandHunter",
@@ -1110,7 +1221,8 @@
       "sortid": 110,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "snowland_hunter"
+      "registry_name": "snowland_hunter",
+      "path": "~/SnowWastes"
     },
     {
       "name": "SnowlandFurry",
@@ -1118,7 +1230,8 @@
       "sortid": 111,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "snowland_furry"
+      "registry_name": "snowland_furry",
+      "path": "~/SnowWastes"
     },
     {
       "name": "SnowlandShadow",
@@ -1126,7 +1239,8 @@
       "sortid": 112,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "snowland_shadow"
+      "registry_name": "snowland_shadow",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceSpear",
@@ -1134,7 +1248,8 @@
       "sortid": 113,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_spear"
+      "registry_name": "ice_spear",
+      "path": "~/SnowWastes"
     },
     {
       "name": "IceWisp",
@@ -1142,7 +1257,249 @@
       "sortid": 114,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ice_wisp"
+      "registry_name": "ice_wisp",
+      "path": "~/SnowWastes"
+    },
+    {
+      "name": "IceSeer",
+      "type": "livingentity",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_seer",
+      "path": "~/SnowWastes"
+    },
+    {
+      "name": "IceSpike",
+      "type": "livingentity",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_spike",
+      "path": "~/SnowWastes"
+    },
+    {
+      "name": "FallingSpikeEvent",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "falling_spike_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SnowWastes"
+    },
+    {
+      "name": "EnemyOfBossMob",
+      "type": "tag",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enemy_of_boss_mob"
+    },
+    {
+      "name": "SpawnIcespike",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_icespike",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SnowWastes"
+    },
+    {
+      "name": "FairyCrystal",
+      "type": "block",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_crystal",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyShard",
+      "type": "item",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_shard",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyDust",
+      "type": "item",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_dust",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyPickaxe",
+      "type": "tool",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_pickaxe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyAxe",
+      "type": "tool",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_axe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairySword",
+      "type": "tool",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_sword",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyShovel",
+      "type": "tool",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_shovel",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyHoe",
+      "type": "tool",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_hoe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_pickaxe_recipe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyAxeRecipe",
+      "type": "recipe",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_axe_recipe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairySwordRecipe",
+      "type": "recipe",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_sword_recipe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyShovelRecipe",
+      "type": "recipe",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_shovel_recipe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyHoeRecipe",
+      "type": "recipe",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_hoe_recipe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairySickle",
+      "type": "tool",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_sickle",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairySickleRecipe",
+      "type": "recipe",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_sickle_recipe",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyFungi",
+      "type": "plant",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_fungi",
+      "path": "~/EnchantedForest"
+    },
+    {
+      "name": "FairyCrystalDrops",
+      "type": "loottable",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_crystal_drops",
+      "path": "~/EnchantedForest"
     }
   ],
   "variable_elements": [],
@@ -1209,6 +1566,7 @@
   "language_map": {
     "en_us": {
       "item.battle_of_the_races_by_fzprules.ice_spear": "Ice Spear",
+      "block.battle_of_the_races_by_fzprules.fairy_crystal": "Fairy Crystal",
       "item.battle_of_the_races_by_fzprules.ice_shovel": "Ice Shovel",
       "item.battle_of_the_races_by_fzprules.scrap_pipe": "Scrap Pipe",
       "entity.scraplands_by_fzprules.infected_protogen": "Infected Protogen",
@@ -1221,6 +1579,7 @@
       "item.scraplands_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
       "item.scraplands_by_fzprules.thunder_ball": "Thunder Ball",
       "item.battle_of_the_races_by_fzprules.snowpile_spawn_egg": "Snowpile Spawn Egg",
+      "item.battle_of_the_races_by_fzprules.fairy_hoe": "Fairy Hoe",
       "entity.battle_of_the_races_by_fzprules.ion_giant": "Ion Giant",
       "item.battle_of_the_races_by_fzprules.ice_armor_helmet": "Ice Helmet",
       "block.scraplands_by_fzprules.scrap_pile": "Scrap Pile",
@@ -1230,9 +1589,11 @@
       "entity.scraplands_by_fzprules.ion_giant": "Ion Giant",
       "block.battle_of_the_races_by_fzprules.frosted_stone_slab": "Frosted Stone Slab",
       "item.scraplands_by_fzprules.ram": "RAM",
-      "item.battle_of_the_races_by_fzprules.ice_sword": "Ice Sword",
+      "item.battle_of_the_races_by_fzprules.fairy_pickaxe": "Fairy Pickaxe",
       "block.battle_of_the_races_by_fzprules.frosted_stone_stairs": "Frosted Stone Stairs",
+      "item.battle_of_the_races_by_fzprules.ice_sword": "Ice Sword",
       "entity.battle_of_the_races_by_fzprules.snowpile": "Snowpile",
+      "item.battle_of_the_races_by_fzprules.ice_seer_spawn_egg": "Frozen Seer Spawn Egg",
       "entity.scraplands_by_fzprules.scraplandian": "Scraplandian",
       "entity.battle_of_the_races_by_fzprules.scraplandian": "Scraplandian",
       "item.battle_of_the_races_by_fzprules.scrap_axe": "Scrap Axe",
@@ -1242,12 +1603,15 @@
       "item.battle_of_the_races_by_fzprules.ion_giant_spawn_egg": "Ion Giant Spawn Egg",
       "biome.battle_of_the_races_by_fzprules.frosen_wonders": "Frosen Wastes",
       "block.battle_of_the_races_by_fzprules.frosted_stone": "Frosted Stone",
+      "item.battle_of_the_races_by_fzprules.fairy_dust": "Fairy Dust",
       "item.battle_of_the_races_by_fzprules.scrap_armor_helmet": "Scrap Helmet",
       "item.battle_of_the_races_by_fzprules.scrap_sword": "Scrap Sword",
       "entity.battle_of_the_races_by_fzprules.mecha_slime": "Mecha Slime",
       "item.battle_of_the_races_by_fzprules.mecha_slime_spawn_egg": "Mecha Slime Spawn Egg",
+      "item.battle_of_the_races_by_fzprules.fairy_sword": "Fairy Sword",
       "item.battle_of_the_races_by_fzprules.robot_core": "Robot Core",
       "item.battle_of_the_races_by_fzprules.ice_pollen": "Ice Pollen",
+      "item.battle_of_the_races_by_fzprules.fairy_axe": "Fairy Axe",
       "block.battle_of_the_races_by_fzprules.scrap_pile": "Scrap Pile",
       "block.battle_of_the_races_by_fzprules.scrap_solar_panel": "Scrap Solar Panel",
       "item.battle_of_the_races_by_fzprules.greater_robot_core": "Greater Robot Core",
@@ -1276,6 +1640,8 @@
       "item.scraplands_by_fzprules.scrap_metal": "Scrap Metal",
       "item.battle_of_the_races_by_fzprules.ice_armor_boots": "Ice Boots",
       "item.battle_of_the_races_by_fzprules.robo_potato": "Robo Potato",
+      "item.battle_of_the_races_by_fzprules.ice_spike_spawn_egg": "Ice Spike Spawn Egg",
+      "item.battle_of_the_races_by_fzprules.fairy_sickle": "Fairy Sickle",
       "item.battle_of_the_races_by_fzprules.ram": "RAM",
       "block.scraplands_by_fzprules.robo_crops_small": "Robo Crops Small",
       "subtitles.thundershock": "",
@@ -1303,6 +1669,7 @@
       "item.battle_of_the_races_by_fzprules.robot_spawn": "Robot Spawn",
       "block.battle_of_the_races_by_fzprules.ice_blossom": "Ice Blossom",
       "entity.battle_of_the_races_by_fzprules.snowland_hunter": "Snowland Hunter",
+      "item.battle_of_the_races_by_fzprules.fairy_shovel": "Fairy Shovel",
       "entity.battle_of_the_races_by_fzprules.motherdrone": "Motherdrone",
       "item.scraplands_by_fzprules.infected_core": "Infected Core",
       "item.battle_of_the_races_by_fzprules.ice_wisp_spawn_egg": "Ice Wisp Spawn Egg",
@@ -1314,8 +1681,10 @@
       "item.battle_of_the_races_by_fzprules.snow_staff": "Snow Staff",
       "item.battle_of_the_races_by_fzprules.snowland_hunter_spawn_egg": "Snowland Hunter Spawn Egg",
       "subtitles.entity.robot.hurt": "",
+      "entity.battle_of_the_races_by_fzprules.ice_seer": "Frozen Seer",
       "subtitles.entity.orbonaut.dead": "",
       "item.battle_of_the_races_by_fzprules.scraplandian_spawn_egg": "Scraplandian Spawn Egg",
+      "entity.battle_of_the_races_by_fzprules.ice_spike": "Ice Spike",
       "item.scraplands_by_fzprules.thundershock": "Thundershock",
       "item.scraplands_by_fzprules.robot_spawn": "Robot Spawn",
       "entity.battle_of_the_races_by_fzprules.protogen": "Protogen",
@@ -1336,12 +1705,14 @@
       "entity.scraplands_by_fzprules.ion_slime": "Mecha Slime",
       "item.scraplands_by_fzprules.protogen_spawn_egg": "Protogen Spawn Egg",
       "block.scraplands_by_fzprules.robo_crops": "Robo Crops",
+      "item.battle_of_the_races_by_fzprules.fairy_shard": "Fairy Shard",
       "biome.scraplands_by_fzprules.lifeless_scraplands": "Lifeless Scraplands",
       "item.scraplands_by_fzprules.mecha_slime_spawn_egg": "Mecha Slime Spawn Egg",
       "block.scraplands_by_fzprules.robotic_log": "Robotic Log",
       "item.battle_of_the_races_by_fzprules.scrap_armor_chestplate": "Scrap Chestplate",
       "item.battle_of_the_races_by_fzprules.ice_crystal": "Ice Crystal",
       "entity.battle_of_the_races_by_fzprules.figther_drone": "Figther Drone",
+      "block.battle_of_the_races_by_fzprules.fairy_fungi": "Fairy Mushroom",
       "item.scraplands_by_fzprules.infected_protogen_spawn_egg": "Infected Protogen Spawn Egg",
       "block.battle_of_the_races_by_fzprules.thunder_processor": "Thunder Processor",
       "block.scraplands_by_fzprules.thunder_reed": "Thunder Reed",
@@ -1371,7 +1742,20 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Scraplands",
+        "children": []
+      },
+      {
+        "name": "SnowWastes",
+        "children": []
+      },
+      {
+        "name": "EnchantedForest",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "battle_of_the_races_by_fzprules",

@@ -35,6 +35,12 @@
       "value": "Items.SNOWBALL"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": ""
+    "customBulletModelTexture": "",
+    "onBulletHitsPlayer": {
+      "name": "SpawnIcespike"
+    },
+    "onBulletHitsEntity": {
+      "name": "SpawnIcespike"
+    }
   }
 }

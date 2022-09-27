@@ -33,6 +33,8 @@ import net.mcreator.scraplandsbyfzprules.entity.IonDroneEntity;
 import net.mcreator.scraplandsbyfzprules.entity.InfectedScraplandianEntity;
 import net.mcreator.scraplandsbyfzprules.entity.InfectedProtogenEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IceWispEntity;
+import net.mcreator.scraplandsbyfzprules.entity.IceSpikeEntity;
+import net.mcreator.scraplandsbyfzprules.entity.IceSeerEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IceButterflyEntity;
 import net.mcreator.scraplandsbyfzprules.entity.FrozenEntity;
 import net.mcreator.scraplandsbyfzprules.entity.FigtherDroneEntity;
@@ -131,6 +133,14 @@ public class BattleOfTheRacesByFzprulesModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(IceWispEntity::new)
 
 					.sized(1f, 1f));
+	public static final RegistryObject<EntityType<IceSeerEntity>> ICE_SEER = register("ice_seer",
+			EntityType.Builder.<IceSeerEntity>of(IceSeerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(IceSeerEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<IceSpikeEntity>> ICE_SPIKE = register("ice_spike",
+			EntityType.Builder.<IceSpikeEntity>of(IceSpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0)
+					.setUpdateInterval(3).setCustomClientFactory(IceSpikeEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -157,6 +167,8 @@ public class BattleOfTheRacesByFzprulesModEntities {
 			SnowlandFurryEntity.init();
 			SnowlandShadowEntity.init();
 			IceWispEntity.init();
+			IceSeerEntity.init();
+			IceSpikeEntity.init();
 		});
 	}
 
@@ -180,5 +192,7 @@ public class BattleOfTheRacesByFzprulesModEntities {
 		event.put(SNOWLAND_FURRY.get(), SnowlandFurryEntity.createAttributes().build());
 		event.put(SNOWLAND_SHADOW.get(), SnowlandShadowEntity.createAttributes().build());
 		event.put(ICE_WISP.get(), IceWispEntity.createAttributes().build());
+		event.put(ICE_SEER.get(), IceSeerEntity.createAttributes().build());
+		event.put(ICE_SPIKE.get(), IceSpikeEntity.createAttributes().build());
 	}
 }

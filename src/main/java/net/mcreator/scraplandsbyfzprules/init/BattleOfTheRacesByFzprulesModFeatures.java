@@ -22,6 +22,7 @@ import net.mcreator.scraplandsbyfzprules.world.features.plants.ScrapFlowerFeatur
 import net.mcreator.scraplandsbyfzprules.world.features.plants.RoboCropsSmallFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.RoboCropsFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.IceBlossomFeature;
+import net.mcreator.scraplandsbyfzprules.world.features.plants.FairyFungiFeature;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 import java.util.function.Supplier;
@@ -45,6 +46,8 @@ public class BattleOfTheRacesByFzprulesModFeatures {
 			GenerationStep.Decoration.VEGETAL_DECORATION, ThunderReedFeature.GENERATE_BIOMES, ThunderReedFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ICE_BLOSSOM = register("ice_blossom", IceBlossomFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.VEGETAL_DECORATION, IceBlossomFeature.GENERATE_BIOMES, IceBlossomFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> FAIRY_FUNGI = register("fairy_fungi", FairyFungiFeature::feature, new FeatureRegistration(
+			GenerationStep.Decoration.VEGETAL_DECORATION, FairyFungiFeature.GENERATE_BIOMES, FairyFungiFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

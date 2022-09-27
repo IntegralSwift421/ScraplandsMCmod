@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "battle_of_the_races_by_fzprules:fairy_shard"
+    },
+    "1": {
+      "item": "battle_of_the_races_by_fzprules:fairy_shard"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "battle_of_the_races_by_fzprules:fairy_sword",
+    "count": 1
+  }
+}

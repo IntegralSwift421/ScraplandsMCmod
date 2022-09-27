@@ -1,0 +1,59 @@
+{
+  "_fv": 33,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:SnowlandFurry"
+      },
+      {
+        "value": "CUSTOM:SnowlandHunter"
+      },
+      {
+        "value": "CUSTOM:SnowlandShadow"
+      },
+      {
+        "value": "CUSTOM:Snowpile"
+      },
+      {
+        "value": "EntitySnowman"
+      },
+      {
+        "value": "EntityIronGolem"
+      },
+      {
+        "value": "EntityVillager"
+      },
+      {
+        "value": "EntityPillager"
+      },
+      {
+        "value": "EntityRavager"
+      },
+      {
+        "value": "EntityVindicator"
+      },
+      {
+        "value": "EntityPiglin"
+      },
+      {
+        "value": "EntityPiglinBrute"
+      },
+      {
+        "value": "EntityEnderman"
+      },
+      {
+        "value": "CUSTOM:Protogen"
+      },
+      {
+        "value": "CUSTOM:Scraplandian"
+      }
+    ],
+    "name": "enemy_of_boss_mob",
+    "namespace": "forge"
+  }
+}

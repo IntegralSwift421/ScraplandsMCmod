@@ -46,6 +46,14 @@ import net.mcreator.scraplandsbyfzprules.item.IceCrystalItem;
 import net.mcreator.scraplandsbyfzprules.item.IceAxeItem;
 import net.mcreator.scraplandsbyfzprules.item.IceArmorItem;
 import net.mcreator.scraplandsbyfzprules.item.GreaterRobotCoreItem;
+import net.mcreator.scraplandsbyfzprules.item.FairySwordItem;
+import net.mcreator.scraplandsbyfzprules.item.FairySickleItem;
+import net.mcreator.scraplandsbyfzprules.item.FairyShovelItem;
+import net.mcreator.scraplandsbyfzprules.item.FairyShardItem;
+import net.mcreator.scraplandsbyfzprules.item.FairyPickaxeItem;
+import net.mcreator.scraplandsbyfzprules.item.FairyHoeItem;
+import net.mcreator.scraplandsbyfzprules.item.FairyDustItem;
+import net.mcreator.scraplandsbyfzprules.item.FairyAxeItem;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 public class BattleOfTheRacesByFzprulesModItems {
@@ -164,6 +172,17 @@ public class BattleOfTheRacesByFzprulesModItems {
 	public static final RegistryObject<Item> ICE_WISP = REGISTRY.register("ice_wisp_spawn_egg",
 			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.ICE_WISP, -3342337, -6697729,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> FAIRY_CRYSTAL = block(BattleOfTheRacesByFzprulesModBlocks.FAIRY_CRYSTAL,
+			CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> FAIRY_SHARD = REGISTRY.register("fairy_shard", () -> new FairyShardItem());
+	public static final RegistryObject<Item> FAIRY_DUST = REGISTRY.register("fairy_dust", () -> new FairyDustItem());
+	public static final RegistryObject<Item> FAIRY_PICKAXE = REGISTRY.register("fairy_pickaxe", () -> new FairyPickaxeItem());
+	public static final RegistryObject<Item> FAIRY_AXE = REGISTRY.register("fairy_axe", () -> new FairyAxeItem());
+	public static final RegistryObject<Item> FAIRY_SWORD = REGISTRY.register("fairy_sword", () -> new FairySwordItem());
+	public static final RegistryObject<Item> FAIRY_SHOVEL = REGISTRY.register("fairy_shovel", () -> new FairyShovelItem());
+	public static final RegistryObject<Item> FAIRY_HOE = REGISTRY.register("fairy_hoe", () -> new FairyHoeItem());
+	public static final RegistryObject<Item> FAIRY_SICKLE = REGISTRY.register("fairy_sickle", () -> new FairySickleItem());
+	public static final RegistryObject<Item> FAIRY_FUNGI = block(BattleOfTheRacesByFzprulesModBlocks.FAIRY_FUNGI, CreativeModeTab.TAB_DECORATIONS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

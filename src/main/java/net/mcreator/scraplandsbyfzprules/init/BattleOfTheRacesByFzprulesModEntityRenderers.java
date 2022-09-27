@@ -26,6 +26,8 @@ import net.mcreator.scraplandsbyfzprules.client.renderer.IonDroneRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.InfectedScraplandianRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.InfectedProtogenRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.IceWispRenderer;
+import net.mcreator.scraplandsbyfzprules.client.renderer.IceSpikeRenderer;
+import net.mcreator.scraplandsbyfzprules.client.renderer.IceSeerRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.IceButterflyRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.FrozenRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.FigtherDroneRenderer;
@@ -54,5 +56,7 @@ public class BattleOfTheRacesByFzprulesModEntityRenderers {
 		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_FURRY.get(), SnowlandFurryRenderer::new);
 		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_SHADOW.get(), SnowlandShadowRenderer::new);
 		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.ICE_WISP.get(), IceWispRenderer::new);
+		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.ICE_SEER.get(), IceSeerRenderer::new);
+		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.ICE_SPIKE.get(), IceSpikeRenderer::new);
 	}
 }

@@ -31,6 +31,8 @@ import net.mcreator.scraplandsbyfzprules.block.FrostedStoneWallBlock;
 import net.mcreator.scraplandsbyfzprules.block.FrostedStoneStairsBlock;
 import net.mcreator.scraplandsbyfzprules.block.FrostedStoneSlabBlock;
 import net.mcreator.scraplandsbyfzprules.block.FrostedStoneBlock;
+import net.mcreator.scraplandsbyfzprules.block.FairyFungiBlock;
+import net.mcreator.scraplandsbyfzprules.block.FairyCrystalBlock;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 public class BattleOfTheRacesByFzprulesModBlocks {
@@ -52,6 +54,8 @@ public class BattleOfTheRacesByFzprulesModBlocks {
 	public static final RegistryObject<Block> FROSTED_STONE_STAIRS = REGISTRY.register("frosted_stone_stairs", () -> new FrostedStoneStairsBlock());
 	public static final RegistryObject<Block> FROSTED_STONE_WALL = REGISTRY.register("frosted_stone_wall", () -> new FrostedStoneWallBlock());
 	public static final RegistryObject<Block> ICE_BLOSSOM = REGISTRY.register("ice_blossom", () -> new IceBlossomBlock());
+	public static final RegistryObject<Block> FAIRY_CRYSTAL = REGISTRY.register("fairy_crystal", () -> new FairyCrystalBlock());
+	public static final RegistryObject<Block> FAIRY_FUNGI = REGISTRY.register("fairy_fungi", () -> new FairyFungiBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -63,6 +67,7 @@ public class BattleOfTheRacesByFzprulesModBlocks {
 			ThunderReedBlock.registerRenderLayer();
 			FrostedStoneWallBlock.registerRenderLayer();
 			IceBlossomBlock.registerRenderLayer();
+			FairyFungiBlock.registerRenderLayer();
 		}
 	}
 }

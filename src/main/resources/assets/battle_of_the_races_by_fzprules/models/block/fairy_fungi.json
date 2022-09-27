@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "battle_of_the_races_by_fzprules:blocks/fairy_fungi",
+    "particle": "battle_of_the_races_by_fzprules:blocks/fairy_fungi"
+  }
+}

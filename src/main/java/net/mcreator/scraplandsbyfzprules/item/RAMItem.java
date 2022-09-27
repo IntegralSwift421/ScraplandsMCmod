@@ -8,7 +8,7 @@ import net.minecraft.world.food.FoodProperties;
 
 public class RAMItem extends Item {
 	public RAMItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64).rarity(Rarity.COMMON)
+		super(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).stacksTo(64).rarity(Rarity.COMMON)
 				.food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.3f)
 
 						.build()));
