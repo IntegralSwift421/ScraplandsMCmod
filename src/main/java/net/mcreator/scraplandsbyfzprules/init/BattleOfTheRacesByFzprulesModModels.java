@@ -9,6 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.scraplandsbyfzprules.client.model.ModelTortise;
+import net.mcreator.scraplandsbyfzprules.client.model.ModelSpell;
 import net.mcreator.scraplandsbyfzprules.client.model.ModelSnowpile;
 import net.mcreator.scraplandsbyfzprules.client.model.ModelSeer;
 import net.mcreator.scraplandsbyfzprules.client.model.ModelProtogen;
@@ -29,8 +31,10 @@ public class BattleOfTheRacesByFzprulesModModels {
 		event.registerLayerDefinition(ModelProtogen.LAYER_LOCATION, ModelProtogen::createBodyLayer);
 		event.registerLayerDefinition(ModelMotherdrone.LAYER_LOCATION, ModelMotherdrone::createBodyLayer);
 		event.registerLayerDefinition(ModelSnowpile.LAYER_LOCATION, ModelSnowpile::createBodyLayer);
+		event.registerLayerDefinition(ModelSpell.LAYER_LOCATION, ModelSpell::createBodyLayer);
 		event.registerLayerDefinition(ModelOrbonaut.LAYER_LOCATION, ModelOrbonaut::createBodyLayer);
 		event.registerLayerDefinition(ModelSeer.LAYER_LOCATION, ModelSeer::createBodyLayer);
+		event.registerLayerDefinition(ModelTortise.LAYER_LOCATION, ModelTortise::createBodyLayer);
 		event.registerLayerDefinition(ModelDrone.LAYER_LOCATION, ModelDrone::createBodyLayer);
 	}
 }

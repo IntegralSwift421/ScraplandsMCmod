@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.scraplandsbyfzprules.block.entity.WandForgeBlockEntity;
 import net.mcreator.scraplandsbyfzprules.block.entity.ThunderProcessorBlockEntity;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
@@ -19,6 +20,8 @@ public class BattleOfTheRacesByFzprulesModBlockEntities {
 			BattleOfTheRacesByFzprulesMod.MODID);
 	public static final RegistryObject<BlockEntityType<?>> THUNDER_PROCESSOR = register("thunder_processor",
 			BattleOfTheRacesByFzprulesModBlocks.THUNDER_PROCESSOR, ThunderProcessorBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> WAND_FORGE = register("wand_forge", BattleOfTheRacesByFzprulesModBlocks.WAND_FORGE,
+			WandForgeBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,
 			BlockEntityType.BlockEntitySupplier<?> supplier) {

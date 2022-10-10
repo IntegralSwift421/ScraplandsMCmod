@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    },
+    "1": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    },
+    "2": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    },
+    "3": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    },
+    "4": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    },
+    "5": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    },
+    "6": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    },
+    "7": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    },
+    "8": {
+      "item": "battle_of_the_races_by_fzprules:topaz"
+    }
+  },
+  "result": {
+    "item": "battle_of_the_races_by_fzprules:topaz_block",
+    "count": 1
+  }
+}

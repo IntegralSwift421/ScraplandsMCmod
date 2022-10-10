@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "battle_of_the_races_by_fzprules:blocks/wand_forge_botom",
+    "up": "battle_of_the_races_by_fzprules:blocks/wand_forge_top",
+    "north": "battle_of_the_races_by_fzprules:blocks/wand_forge_side",
+    "east": "battle_of_the_races_by_fzprules:blocks/wand_forge_side",
+    "south": "battle_of_the_races_by_fzprules:blocks/wand_forge_side",
+    "west": "battle_of_the_races_by_fzprules:blocks/wand_forge_side",
+    "particle": "battle_of_the_races_by_fzprules:blocks/wand_forge_botom"
+  }
+}

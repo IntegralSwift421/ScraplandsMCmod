@@ -30,10 +30,12 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
 
+import net.mcreator.scraplandsbyfzprules.world.biome.StormwoodsBiome;
 import net.mcreator.scraplandsbyfzprules.world.biome.ScraplandsBiome;
 import net.mcreator.scraplandsbyfzprules.world.biome.LifelessScraplandsBiome;
 import net.mcreator.scraplandsbyfzprules.world.biome.FrosenWondersBiome;
 import net.mcreator.scraplandsbyfzprules.world.biome.FrosenWastesBiome;
+import net.mcreator.scraplandsbyfzprules.world.biome.EnchantedForestBiome;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 import java.util.Map;
@@ -50,6 +52,8 @@ public class BattleOfTheRacesByFzprulesModBiomes {
 	public static final RegistryObject<Biome> SCRAPLANDS = REGISTRY.register("scraplands", () -> ScraplandsBiome.createBiome());
 	public static final RegistryObject<Biome> FROSEN_WASTES = REGISTRY.register("frosen_wastes", () -> FrosenWastesBiome.createBiome());
 	public static final RegistryObject<Biome> FROSEN_WONDERS = REGISTRY.register("frosen_wonders", () -> FrosenWondersBiome.createBiome());
+	public static final RegistryObject<Biome> ENCHANTED_FOREST = REGISTRY.register("enchanted_forest", () -> EnchantedForestBiome.createBiome());
+	public static final RegistryObject<Biome> STORMWOODS = REGISTRY.register("stormwoods", () -> StormwoodsBiome.createBiome());
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -58,6 +62,8 @@ public class BattleOfTheRacesByFzprulesModBiomes {
 			ScraplandsBiome.init();
 			FrosenWastesBiome.init();
 			FrosenWondersBiome.init();
+			EnchantedForestBiome.init();
+			StormwoodsBiome.init();
 		});
 	}
 
@@ -84,6 +90,10 @@ public class BattleOfTheRacesByFzprulesModBiomes {
 								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, FROSEN_WASTES.getId()))));
 						parameters.add(new Pair<>(FrosenWondersBiome.PARAMETER_POINT,
 								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, FROSEN_WONDERS.getId()))));
+						parameters.add(new Pair<>(EnchantedForestBiome.PARAMETER_POINT,
+								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, ENCHANTED_FOREST.getId()))));
+						parameters.add(new Pair<>(StormwoodsBiome.PARAMETER_POINT,
+								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, STORMWOODS.getId()))));
 
 						MultiNoiseBiomeSource moddedNoiseSource = new MultiNoiseBiomeSource(new Climate.ParameterList<>(parameters),
 								noiseSource.preset);
@@ -108,6 +118,10 @@ public class BattleOfTheRacesByFzprulesModBiomes {
 									Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.DIRT.defaultBlockState(), Blocks.BLUE_ICE.defaultBlockState()));
 							surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, FROSEN_WONDERS.getId()),
 									Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.DIRT.defaultBlockState(), Blocks.BLUE_ICE.defaultBlockState()));
+							surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, ENCHANTED_FOREST.getId()),
+									Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.DIRT.defaultBlockState(), Blocks.DIRT.defaultBlockState()));
+							surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, STORMWOODS.getId()),
+									Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.DIRT.defaultBlockState(), Blocks.GRAVEL.defaultBlockState()));
 							NoiseGeneratorSettings moddedNoiseGeneratorSettings = new NoiseGeneratorSettings(noiseGeneratorSettings.noiseSettings(),
 									noiseGeneratorSettings.defaultBlock(), noiseGeneratorSettings.defaultFluid(),
 									noiseGeneratorSettings.noiseRouter(),

@@ -14,8 +14,8 @@ import net.mcreator.scraplandsbyfzprules.entity.IonGiantEntity;
 
 public class SpawnRobotProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, ItemStack itemstack) {
-		if (Math.random() == 0) {
-			if (Math.random() == 0) {
+		if (Math.random() < 0.5) {
+			if (Math.random() > 0.5) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = new ScraplandianEntity(BattleOfTheRacesByFzprulesModEntities.SCRAPLANDIAN.get(), _level);
 					entityToSpawn.moveTo(x, y, z, 0, 0);

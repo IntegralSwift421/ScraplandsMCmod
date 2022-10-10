@@ -14,8 +14,15 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.scraplandsbyfzprules.block.WandForgeBlock;
+import net.mcreator.scraplandsbyfzprules.block.TopazOreBlock;
+import net.mcreator.scraplandsbyfzprules.block.TopazBlockBlock;
 import net.mcreator.scraplandsbyfzprules.block.ThunderReedBlock;
 import net.mcreator.scraplandsbyfzprules.block.ThunderProcessorBlock;
+import net.mcreator.scraplandsbyfzprules.block.ThunderLeavesBlock;
+import net.mcreator.scraplandsbyfzprules.block.StormRoseBlock;
+import net.mcreator.scraplandsbyfzprules.block.StormBellBlock;
+import net.mcreator.scraplandsbyfzprules.block.SnowshellBlockBlock;
 import net.mcreator.scraplandsbyfzprules.block.ScrapSolarPanelBlock;
 import net.mcreator.scraplandsbyfzprules.block.ScrapPileBlock;
 import net.mcreator.scraplandsbyfzprules.block.ScrapPaneBlockBlock;
@@ -26,6 +33,7 @@ import net.mcreator.scraplandsbyfzprules.block.RustyDirtBlock;
 import net.mcreator.scraplandsbyfzprules.block.RoboticLogBlock;
 import net.mcreator.scraplandsbyfzprules.block.RoboCropsSmallBlock;
 import net.mcreator.scraplandsbyfzprules.block.RoboCropsBlock;
+import net.mcreator.scraplandsbyfzprules.block.ObsidianOreBlock;
 import net.mcreator.scraplandsbyfzprules.block.IceBlossomBlock;
 import net.mcreator.scraplandsbyfzprules.block.FrostedStoneWallBlock;
 import net.mcreator.scraplandsbyfzprules.block.FrostedStoneStairsBlock;
@@ -56,6 +64,14 @@ public class BattleOfTheRacesByFzprulesModBlocks {
 	public static final RegistryObject<Block> ICE_BLOSSOM = REGISTRY.register("ice_blossom", () -> new IceBlossomBlock());
 	public static final RegistryObject<Block> FAIRY_CRYSTAL = REGISTRY.register("fairy_crystal", () -> new FairyCrystalBlock());
 	public static final RegistryObject<Block> FAIRY_FUNGI = REGISTRY.register("fairy_fungi", () -> new FairyFungiBlock());
+	public static final RegistryObject<Block> WAND_FORGE = REGISTRY.register("wand_forge", () -> new WandForgeBlock());
+	public static final RegistryObject<Block> TOPAZ_ORE = REGISTRY.register("topaz_ore", () -> new TopazOreBlock());
+	public static final RegistryObject<Block> TOPAZ_BLOCK = REGISTRY.register("topaz_block", () -> new TopazBlockBlock());
+	public static final RegistryObject<Block> THUNDER_LEAVES = REGISTRY.register("thunder_leaves", () -> new ThunderLeavesBlock());
+	public static final RegistryObject<Block> SNOWSHELL_BLOCK = REGISTRY.register("snowshell_block", () -> new SnowshellBlockBlock());
+	public static final RegistryObject<Block> OBSIDIAN_ORE = REGISTRY.register("obsidian_ore", () -> new ObsidianOreBlock());
+	public static final RegistryObject<Block> STORM_ROSE = REGISTRY.register("storm_rose", () -> new StormRoseBlock());
+	public static final RegistryObject<Block> STORM_BELL = REGISTRY.register("storm_bell", () -> new StormBellBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -68,6 +84,9 @@ public class BattleOfTheRacesByFzprulesModBlocks {
 			FrostedStoneWallBlock.registerRenderLayer();
 			IceBlossomBlock.registerRenderLayer();
 			FairyFungiBlock.registerRenderLayer();
+			ThunderLeavesBlock.registerRenderLayer();
+			StormRoseBlock.registerRenderLayer();
+			StormBellBlock.registerRenderLayer();
 		}
 	}
 }

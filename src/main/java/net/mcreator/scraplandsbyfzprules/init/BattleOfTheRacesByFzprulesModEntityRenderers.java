@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.scraplandsbyfzprules.client.renderer.SnowshellRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.SnowpileRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.SnowlandShadowRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.SnowlandHunterRenderer;
@@ -20,6 +21,7 @@ import net.mcreator.scraplandsbyfzprules.client.renderer.ProtogenRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.OrbonautRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.MotherdroneRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.MechaSlimeRenderer;
+import net.mcreator.scraplandsbyfzprules.client.renderer.MagmashellRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.IonSlimeRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.IonGiantRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.IonDroneRenderer;
@@ -31,6 +33,7 @@ import net.mcreator.scraplandsbyfzprules.client.renderer.IceSeerRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.IceButterflyRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.FrozenRenderer;
 import net.mcreator.scraplandsbyfzprules.client.renderer.FigtherDroneRenderer;
+import net.mcreator.scraplandsbyfzprules.client.renderer.FairycrystalWandRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class BattleOfTheRacesByFzprulesModEntityRenderers {
@@ -58,5 +61,11 @@ public class BattleOfTheRacesByFzprulesModEntityRenderers {
 		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.ICE_WISP.get(), IceWispRenderer::new);
 		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.ICE_SEER.get(), IceSeerRenderer::new);
 		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.ICE_SPIKE.get(), IceSpikeRenderer::new);
+		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.FAIRYCRYSTAL_WAND.get(), FairycrystalWandRenderer::new);
+		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.DIAMOND_WAND.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.EMERALD_WAND.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.TOPAZ_WAND.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.SNOWSHELL.get(), SnowshellRenderer::new);
+		event.registerEntityRenderer(BattleOfTheRacesByFzprulesModEntities.MAGMASHELL.get(), MagmashellRenderer::new);
 	}
 }

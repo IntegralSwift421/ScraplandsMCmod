@@ -16,7 +16,9 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.scraplandsbyfzprules.entity.TopazWandEntity;
 import net.mcreator.scraplandsbyfzprules.entity.ThundershockEntity;
+import net.mcreator.scraplandsbyfzprules.entity.SnowshellEntity;
 import net.mcreator.scraplandsbyfzprules.entity.SnowpileEntity;
 import net.mcreator.scraplandsbyfzprules.entity.SnowlandShadowEntity;
 import net.mcreator.scraplandsbyfzprules.entity.SnowlandHunterEntity;
@@ -27,6 +29,7 @@ import net.mcreator.scraplandsbyfzprules.entity.ProtogenEntity;
 import net.mcreator.scraplandsbyfzprules.entity.OrbonautEntity;
 import net.mcreator.scraplandsbyfzprules.entity.MotherdroneEntity;
 import net.mcreator.scraplandsbyfzprules.entity.MechaSlimeEntity;
+import net.mcreator.scraplandsbyfzprules.entity.MagmashellEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IonSlimeEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IonGiantEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IonDroneEntity;
@@ -38,6 +41,9 @@ import net.mcreator.scraplandsbyfzprules.entity.IceSeerEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IceButterflyEntity;
 import net.mcreator.scraplandsbyfzprules.entity.FrozenEntity;
 import net.mcreator.scraplandsbyfzprules.entity.FigtherDroneEntity;
+import net.mcreator.scraplandsbyfzprules.entity.FairycrystalWandEntity;
+import net.mcreator.scraplandsbyfzprules.entity.EmeraldWandEntity;
+import net.mcreator.scraplandsbyfzprules.entity.DiamondWandEntity;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -141,6 +147,27 @@ public class BattleOfTheRacesByFzprulesModEntities {
 	public static final RegistryObject<EntityType<IceSpikeEntity>> ICE_SPIKE = register("ice_spike",
 			EntityType.Builder.<IceSpikeEntity>of(IceSpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0)
 					.setUpdateInterval(3).setCustomClientFactory(IceSpikeEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FairycrystalWandEntity>> FAIRYCRYSTAL_WAND = register("projectile_fairycrystal_wand",
+			EntityType.Builder.<FairycrystalWandEntity>of(FairycrystalWandEntity::new, MobCategory.MISC)
+					.setCustomClientFactory(FairycrystalWandEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DiamondWandEntity>> DIAMOND_WAND = register("projectile_diamond_wand",
+			EntityType.Builder.<DiamondWandEntity>of(DiamondWandEntity::new, MobCategory.MISC).setCustomClientFactory(DiamondWandEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<EmeraldWandEntity>> EMERALD_WAND = register("projectile_emerald_wand",
+			EntityType.Builder.<EmeraldWandEntity>of(EmeraldWandEntity::new, MobCategory.MISC).setCustomClientFactory(EmeraldWandEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TopazWandEntity>> TOPAZ_WAND = register("projectile_topaz_wand",
+			EntityType.Builder.<TopazWandEntity>of(TopazWandEntity::new, MobCategory.MISC).setCustomClientFactory(TopazWandEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SnowshellEntity>> SNOWSHELL = register("snowshell",
+			EntityType.Builder.<SnowshellEntity>of(SnowshellEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SnowshellEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MagmashellEntity>> MAGMASHELL = register("magmashell",
+			EntityType.Builder.<MagmashellEntity>of(MagmashellEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MagmashellEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -169,6 +196,8 @@ public class BattleOfTheRacesByFzprulesModEntities {
 			IceWispEntity.init();
 			IceSeerEntity.init();
 			IceSpikeEntity.init();
+			SnowshellEntity.init();
+			MagmashellEntity.init();
 		});
 	}
 
@@ -194,5 +223,7 @@ public class BattleOfTheRacesByFzprulesModEntities {
 		event.put(ICE_WISP.get(), IceWispEntity.createAttributes().build());
 		event.put(ICE_SEER.get(), IceSeerEntity.createAttributes().build());
 		event.put(ICE_SPIKE.get(), IceSpikeEntity.createAttributes().build());
+		event.put(SNOWSHELL.get(), SnowshellEntity.createAttributes().build());
+		event.put(MAGMASHELL.get(), MagmashellEntity.createAttributes().build());
 	}
 }

@@ -18,6 +18,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Holder;
 
 import net.mcreator.scraplandsbyfzprules.world.features.plants.ThunderReedFeature;
+import net.mcreator.scraplandsbyfzprules.world.features.plants.StormRoseFeature;
+import net.mcreator.scraplandsbyfzprules.world.features.plants.StormBellFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.ScrapFlowerFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.RoboCropsSmallFeature;
 import net.mcreator.scraplandsbyfzprules.world.features.plants.RoboCropsFeature;
@@ -48,6 +50,10 @@ public class BattleOfTheRacesByFzprulesModFeatures {
 			GenerationStep.Decoration.VEGETAL_DECORATION, IceBlossomFeature.GENERATE_BIOMES, IceBlossomFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> FAIRY_FUNGI = register("fairy_fungi", FairyFungiFeature::feature, new FeatureRegistration(
 			GenerationStep.Decoration.VEGETAL_DECORATION, FairyFungiFeature.GENERATE_BIOMES, FairyFungiFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> STORM_ROSE = register("storm_rose", StormRoseFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, StormRoseFeature.GENERATE_BIOMES, StormRoseFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> STORM_BELL = register("storm_bell", StormBellFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, StormBellFeature.GENERATE_BIOMES, StormBellFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

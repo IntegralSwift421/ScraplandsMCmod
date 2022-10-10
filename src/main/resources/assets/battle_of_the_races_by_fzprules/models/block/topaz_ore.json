@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "battle_of_the_races_by_fzprules:blocks/topaz_ore",
+    "up": "battle_of_the_races_by_fzprules:blocks/topaz_ore",
+    "north": "battle_of_the_races_by_fzprules:blocks/topaz_ore",
+    "east": "battle_of_the_races_by_fzprules:blocks/topaz_ore",
+    "south": "battle_of_the_races_by_fzprules:blocks/topaz_ore",
+    "west": "battle_of_the_races_by_fzprules:blocks/topaz_ore",
+    "particle": "battle_of_the_races_by_fzprules:blocks/topaz_ore"
+  }
+}

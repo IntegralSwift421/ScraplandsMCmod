@@ -15,6 +15,9 @@ import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.scraplandsbyfzprules.item.TopazWandItem;
+import net.mcreator.scraplandsbyfzprules.item.TopazSunItem;
+import net.mcreator.scraplandsbyfzprules.item.TopazItem;
 import net.mcreator.scraplandsbyfzprules.item.ThundershockItem;
 import net.mcreator.scraplandsbyfzprules.item.ThunderBallItem;
 import net.mcreator.scraplandsbyfzprules.item.SnowStaffItem;
@@ -46,6 +49,7 @@ import net.mcreator.scraplandsbyfzprules.item.IceCrystalItem;
 import net.mcreator.scraplandsbyfzprules.item.IceAxeItem;
 import net.mcreator.scraplandsbyfzprules.item.IceArmorItem;
 import net.mcreator.scraplandsbyfzprules.item.GreaterRobotCoreItem;
+import net.mcreator.scraplandsbyfzprules.item.FairycrystalWandItem;
 import net.mcreator.scraplandsbyfzprules.item.FairySwordItem;
 import net.mcreator.scraplandsbyfzprules.item.FairySickleItem;
 import net.mcreator.scraplandsbyfzprules.item.FairyShovelItem;
@@ -54,6 +58,8 @@ import net.mcreator.scraplandsbyfzprules.item.FairyPickaxeItem;
 import net.mcreator.scraplandsbyfzprules.item.FairyHoeItem;
 import net.mcreator.scraplandsbyfzprules.item.FairyDustItem;
 import net.mcreator.scraplandsbyfzprules.item.FairyAxeItem;
+import net.mcreator.scraplandsbyfzprules.item.EmeraldWandItem;
+import net.mcreator.scraplandsbyfzprules.item.DiamondWandItem;
 import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
 
 public class BattleOfTheRacesByFzprulesModItems {
@@ -183,6 +189,29 @@ public class BattleOfTheRacesByFzprulesModItems {
 	public static final RegistryObject<Item> FAIRY_HOE = REGISTRY.register("fairy_hoe", () -> new FairyHoeItem());
 	public static final RegistryObject<Item> FAIRY_SICKLE = REGISTRY.register("fairy_sickle", () -> new FairySickleItem());
 	public static final RegistryObject<Item> FAIRY_FUNGI = block(BattleOfTheRacesByFzprulesModBlocks.FAIRY_FUNGI, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> WAND_FORGE = block(BattleOfTheRacesByFzprulesModBlocks.WAND_FORGE, CreativeModeTab.TAB_MISC);
+	public static final RegistryObject<Item> FAIRYCRYSTAL_WAND = REGISTRY.register("fairycrystal_wand", () -> new FairycrystalWandItem());
+	public static final RegistryObject<Item> TOPAZ = REGISTRY.register("topaz", () -> new TopazItem());
+	public static final RegistryObject<Item> TOPAZ_ORE = block(BattleOfTheRacesByFzprulesModBlocks.TOPAZ_ORE, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> TOPAZ_BLOCK = block(BattleOfTheRacesByFzprulesModBlocks.TOPAZ_BLOCK,
+			CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> DIAMOND_WAND = REGISTRY.register("diamond_wand", () -> new DiamondWandItem());
+	public static final RegistryObject<Item> EMERALD_WAND = REGISTRY.register("emerald_wand", () -> new EmeraldWandItem());
+	public static final RegistryObject<Item> TOPAZ_SUN = REGISTRY.register("topaz_sun", () -> new TopazSunItem());
+	public static final RegistryObject<Item> TOPAZ_WAND = REGISTRY.register("topaz_wand", () -> new TopazWandItem());
+	public static final RegistryObject<Item> THUNDER_LEAVES = block(BattleOfTheRacesByFzprulesModBlocks.THUNDER_LEAVES,
+			CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> SNOWSHELL = REGISTRY.register("snowshell_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.SNOWSHELL, -6684673, -13421773,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SNOWSHELL_BLOCK = block(BattleOfTheRacesByFzprulesModBlocks.SNOWSHELL_BLOCK, CreativeModeTab.TAB_MISC);
+	public static final RegistryObject<Item> OBSIDIAN_ORE = block(BattleOfTheRacesByFzprulesModBlocks.OBSIDIAN_ORE,
+			CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> STORM_ROSE = block(BattleOfTheRacesByFzprulesModBlocks.STORM_ROSE, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> STORM_BELL = block(BattleOfTheRacesByFzprulesModBlocks.STORM_BELL, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MAGMASHELL = REGISTRY.register("magmashell_spawn_egg",
+			() -> new ForgeSpawnEggItem(BattleOfTheRacesByFzprulesModEntities.MAGMASHELL, -39424, -13421773,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

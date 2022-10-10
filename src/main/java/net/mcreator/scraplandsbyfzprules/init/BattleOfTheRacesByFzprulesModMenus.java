@@ -12,6 +12,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 
+import net.mcreator.scraplandsbyfzprules.world.inventory.WandforgeGUIMenu;
 import net.mcreator.scraplandsbyfzprules.world.inventory.ThunderShopMenu;
 import net.mcreator.scraplandsbyfzprules.world.inventory.ScraplandianMenuMenu;
 import net.mcreator.scraplandsbyfzprules.world.inventory.ProtoInventoryMenu;
@@ -28,6 +29,8 @@ public class BattleOfTheRacesByFzprulesModMenus {
 			(id, inv, extraData) -> new ProtoInventoryMenu(id, inv, extraData));
 	public static final MenuType<ThunderShopMenu> THUNDER_SHOP = register("thunder_shop",
 			(id, inv, extraData) -> new ThunderShopMenu(id, inv, extraData));
+	public static final MenuType<WandforgeGUIMenu> WANDFORGE_GUI = register("wandforge_gui",
+			(id, inv, extraData) -> new WandforgeGUIMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

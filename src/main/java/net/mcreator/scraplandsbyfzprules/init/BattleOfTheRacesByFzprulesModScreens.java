@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.scraplandsbyfzprules.client.gui.WandforgeGUIScreen;
 import net.mcreator.scraplandsbyfzprules.client.gui.ThunderShopScreen;
 import net.mcreator.scraplandsbyfzprules.client.gui.ScraplandianMenuScreen;
 import net.mcreator.scraplandsbyfzprules.client.gui.ProtoInventoryScreen;
@@ -23,6 +24,7 @@ public class BattleOfTheRacesByFzprulesModScreens {
 			MenuScreens.register(BattleOfTheRacesByFzprulesModMenus.SCRAPLANDIAN_MENU, ScraplandianMenuScreen::new);
 			MenuScreens.register(BattleOfTheRacesByFzprulesModMenus.PROTO_INVENTORY, ProtoInventoryScreen::new);
 			MenuScreens.register(BattleOfTheRacesByFzprulesModMenus.THUNDER_SHOP, ThunderShopScreen::new);
+			MenuScreens.register(BattleOfTheRacesByFzprulesModMenus.WANDFORGE_GUI, WandforgeGUIScreen::new);
 		});
 	}
 }

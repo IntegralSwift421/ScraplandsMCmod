@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "battle_of_the_races_by_fzprules:block/snowshell_block"
+    },
+    "facing=east": {
+      "model": "battle_of_the_races_by_fzprules:block/snowshell_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "battle_of_the_races_by_fzprules:block/snowshell_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "battle_of_the_races_by_fzprules:block/snowshell_block",
+      "y": 270
+    }
+  }
+}
