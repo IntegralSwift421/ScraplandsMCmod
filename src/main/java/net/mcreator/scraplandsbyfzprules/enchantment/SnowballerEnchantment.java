@@ -8,7 +8,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.EquipmentSlot;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+
+import java.util.List;
 
 public class SnowballerEnchantment extends Enchantment {
 	public SnowballerEnchantment(EquipmentSlot... slots) {
@@ -23,9 +25,9 @@ public class SnowballerEnchantment extends Enchantment {
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
 		Item item = stack.getItem();
-		return item == BattleOfTheRacesByFzprulesModItems.ICE_SWORD.get() || item == BattleOfTheRacesByFzprulesModItems.ICE_AXE.get()
-				|| item == BattleOfTheRacesByFzprulesModItems.ICE_SICKLE.get() || item == BattleOfTheRacesByFzprulesModItems.ICE_HAMMER.get()
-				|| item == BattleOfTheRacesByFzprulesModItems.ICE_SCYTHE.get() || item == Items.BOW
-				|| item == BattleOfTheRacesByFzprulesModItems.SNOW_STAFF.get() || item == BattleOfTheRacesByFzprulesModItems.SCRAP_PIPE.get();
+		return List.of(HardToFindBiomesByFzprulesModItems.ICE_SWORD.get(), HardToFindBiomesByFzprulesModItems.ICE_AXE.get(),
+				HardToFindBiomesByFzprulesModItems.ICE_SICKLE.get(), HardToFindBiomesByFzprulesModItems.ICE_HAMMER.get(),
+				HardToFindBiomesByFzprulesModItems.ICE_SCYTHE.get(), Items.BOW, HardToFindBiomesByFzprulesModItems.SNOW_STAFF.get(),
+				HardToFindBiomesByFzprulesModItems.SCRAP_PIPE.get()).contains(item);
 	}
 }

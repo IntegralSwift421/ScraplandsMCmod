@@ -1,0 +1,43 @@
+{
+  "_fv": 34,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "fairy_fungi",
+    "customModelName": "Normal",
+    "name": "Fairy Fungus",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 16,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": true,
+    "usageCount": 1,
+    "actionSound": {
+      "value": "entity.egg.throw"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 3.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 7.0,
+    "bulletKnockback": 5,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "ModelMushroom",
+    "customBulletModelTexture": "mush.png",
+    "onBulletHitsPlayer": {
+      "name": "PoisonSpell"
+    },
+    "onBulletHitsEntity": {
+      "name": "PoisonSpell"
+    }
+  }
+}

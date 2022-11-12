@@ -1,0 +1,23 @@
+{
+  "_fv": 34,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:ScrapArmor.legs"
+      },
+      {
+        "value": "CUSTOM:IceArmor.legs"
+      },
+      {
+        "value": "CUSTOM:FairyArmor.legs"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "leggings",
+    "namespace": "forge"
+  }
+}

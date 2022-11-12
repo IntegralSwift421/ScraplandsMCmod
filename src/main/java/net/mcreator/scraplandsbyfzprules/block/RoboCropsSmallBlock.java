@@ -16,7 +16,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 public class RoboCropsSmallBlock extends FlowerBlock {
 	public RoboCropsSmallBlock() {
@@ -40,7 +40,7 @@ public class RoboCropsSmallBlock extends FlowerBlock {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(BattleOfTheRacesByFzprulesModBlocks.ROBO_CROPS_SMALL.get(),
+		ItemBlockRenderTypes.setRenderLayer(HardToFindBiomesByFzprulesModBlocks.ROBO_CROPS_SMALL.get(),
 				renderType -> renderType == RenderType.cutout());
 	}
 }

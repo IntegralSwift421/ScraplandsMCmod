@@ -12,6 +12,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.WandforgeGUIMenu;
+import net.mcreator.scraplandsbyfzprules.network.WandforgeGUIButtonMessage;
+import net.mcreator.scraplandsbyfzprules.HardToFindBiomesByFzprulesMod;
 
 import java.util.HashMap;
 
@@ -35,7 +37,7 @@ public class WandforgeGUIScreen extends AbstractContainerScreen<WandforgeGUIMenu
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("battle_of_the_races_by_fzprules:textures/screens/wandforge_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/screens/wandforge_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -84,6 +86,10 @@ public class WandforgeGUIScreen extends AbstractContainerScreen<WandforgeGUIMenu
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(new Button(this.leftPos + 59, this.topPos + 52, 56, 20, new TextComponent("Create"), e -> {
+			if (true) {
+				HardToFindBiomesByFzprulesMod.PACKET_HANDLER.sendToServer(new WandforgeGUIButtonMessage(0, x, y, z));
+				WandforgeGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}));
 	}
 }

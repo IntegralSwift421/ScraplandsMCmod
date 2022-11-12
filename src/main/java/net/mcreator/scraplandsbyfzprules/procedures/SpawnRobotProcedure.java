@@ -7,7 +7,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 import net.mcreator.scraplandsbyfzprules.entity.ScraplandianEntity;
 import net.mcreator.scraplandsbyfzprules.entity.ProtogenEntity;
 import net.mcreator.scraplandsbyfzprules.entity.IonGiantEntity;
@@ -17,7 +17,7 @@ public class SpawnRobotProcedure {
 		if (Math.random() < 0.5) {
 			if (Math.random() > 0.5) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new ScraplandianEntity(BattleOfTheRacesByFzprulesModEntities.SCRAPLANDIAN.get(), _level);
+					Entity entityToSpawn = new ScraplandianEntity(HardToFindBiomesByFzprulesModEntities.SCRAPLANDIAN.get(), _level);
 					entityToSpawn.moveTo(x, y, z, 0, 0);
 					entityToSpawn.setYBodyRot(0);
 					entityToSpawn.setYHeadRot(0);
@@ -29,7 +29,7 @@ public class SpawnRobotProcedure {
 				}
 			} else {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new ProtogenEntity(BattleOfTheRacesByFzprulesModEntities.PROTOGEN.get(), _level);
+					Entity entityToSpawn = new ProtogenEntity(HardToFindBiomesByFzprulesModEntities.PROTOGEN.get(), _level);
 					entityToSpawn.moveTo(x, y, z, 0, 0);
 					entityToSpawn.setYBodyRot(0);
 					entityToSpawn.setYHeadRot(0);
@@ -42,7 +42,7 @@ public class SpawnRobotProcedure {
 			}
 		} else {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new IonGiantEntity(BattleOfTheRacesByFzprulesModEntities.ION_GIANT.get(), _level);
+				Entity entityToSpawn = new IonGiantEntity(HardToFindBiomesByFzprulesModEntities.ION_GIANT.get(), _level);
 				entityToSpawn.moveTo(x, y, z, 0, 0);
 				entityToSpawn.setYBodyRot(0);
 				entityToSpawn.setYHeadRot(0);

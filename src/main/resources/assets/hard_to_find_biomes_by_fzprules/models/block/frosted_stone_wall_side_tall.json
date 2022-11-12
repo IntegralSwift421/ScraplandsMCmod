@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side_tall",
+  "textures": {
+    "wall": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "particle": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks"
+  }
+}

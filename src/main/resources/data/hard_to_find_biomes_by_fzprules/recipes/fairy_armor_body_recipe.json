@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:fairy_shard"
+    },
+    "2": {
+      "item": "hard_to_find_biomes_by_fzprules:fairy_shard"
+    },
+    "3": {
+      "item": "hard_to_find_biomes_by_fzprules:fairy_shard"
+    },
+    "4": {
+      "item": "hard_to_find_biomes_by_fzprules:fairy_shard"
+    },
+    "5": {
+      "item": "hard_to_find_biomes_by_fzprules:fairy_shard"
+    },
+    "6": {
+      "item": "hard_to_find_biomes_by_fzprules:fairy_shard"
+    },
+    "7": {
+      "item": "hard_to_find_biomes_by_fzprules:fairy_shard"
+    },
+    "8": {
+      "item": "hard_to_find_biomes_by_fzprules:fairy_shard"
+    }
+  },
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:fairy_armor_chestplate",
+    "count": 1
+  }
+}

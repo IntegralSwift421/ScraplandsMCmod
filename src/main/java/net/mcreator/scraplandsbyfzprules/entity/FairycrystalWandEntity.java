@@ -7,24 +7,27 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.procedures.FairySpellProcedure;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class FairycrystalWandEntity extends AbstractArrow implements ItemSupplier {
 	public FairycrystalWandEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(BattleOfTheRacesByFzprulesModEntities.FAIRYCRYSTAL_WAND.get(), world);
+		super(HardToFindBiomesByFzprulesModEntities.FAIRYCRYSTAL_WAND.get(), world);
 	}
 
 	public FairycrystalWandEntity(EntityType<? extends FairycrystalWandEntity> type, Level world) {
@@ -62,6 +65,18 @@ public class FairycrystalWandEntity extends AbstractArrow implements ItemSupplie
 	}
 
 	@Override
+	public void playerTouch(Player entity) {
+		super.playerTouch(entity);
+		FairySpellProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), entity);
+	}
+
+	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		FairySpellProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
+	}
+
+	@Override
 	public void tick() {
 		super.tick();
 		if (this.inGround)
@@ -69,7 +84,7 @@ public class FairycrystalWandEntity extends AbstractArrow implements ItemSupplie
 	}
 
 	public static FairycrystalWandEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
-		FairycrystalWandEntity entityarrow = new FairycrystalWandEntity(BattleOfTheRacesByFzprulesModEntities.FAIRYCRYSTAL_WAND.get(), entity, world);
+		FairycrystalWandEntity entityarrow = new FairycrystalWandEntity(HardToFindBiomesByFzprulesModEntities.FAIRYCRYSTAL_WAND.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -77,13 +92,13 @@ public class FairycrystalWandEntity extends AbstractArrow implements ItemSupplie
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
 		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
-				1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:item.magicspell")), SoundSource.PLAYERS,
+				1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
 	public static FairycrystalWandEntity shoot(LivingEntity entity, LivingEntity target) {
-		FairycrystalWandEntity entityarrow = new FairycrystalWandEntity(BattleOfTheRacesByFzprulesModEntities.FAIRYCRYSTAL_WAND.get(), entity,
+		FairycrystalWandEntity entityarrow = new FairycrystalWandEntity(HardToFindBiomesByFzprulesModEntities.FAIRYCRYSTAL_WAND.get(), entity,
 				entity.level);
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
@@ -91,12 +106,12 @@ public class FairycrystalWandEntity extends AbstractArrow implements ItemSupplie
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(8);
-		entityarrow.setKnockback(8);
+		entityarrow.setKnockback(1);
 		entityarrow.setCritArrow(false);
 		entity.level.addFreshEntity(entityarrow);
 		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
-				1f / (new Random().nextFloat() * 0.5f + 1));
+				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:item.magicspell")), SoundSource.PLAYERS,
+				1, 1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

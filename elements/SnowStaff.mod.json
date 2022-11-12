@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
@@ -17,7 +17,7 @@
     "shootConstantly": false,
     "usageCount": 554,
     "actionSound": {
-      "value": "entity.arrow.shoot"
+      "value": "CUSTOM:item.magicspell"
     },
     "hasGlow": false,
     "animation": "bow",
@@ -27,8 +27,8 @@
       "name": "IceToolDebuffs"
     },
     "bulletPower": 1.0,
-    "bulletDamage": 6.0,
-    "bulletKnockback": 5,
+    "bulletDamage": 4.0,
+    "bulletKnockback": 0,
     "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
@@ -36,6 +36,9 @@
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "SpawnIcespike"
+    },
     "onBulletHitsPlayer": {
       "name": "SpawnIcespike"
     },

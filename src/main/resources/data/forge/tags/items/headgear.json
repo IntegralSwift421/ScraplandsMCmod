@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hard_to_find_biomes_by_fzprules:ice_armor_helmet",
+    "hard_to_find_biomes_by_fzprules:fairy_armor_helmet",
+    "hard_to_find_biomes_by_fzprules:scrap_armor_helmet",
+    "hard_to_find_biomes_by_fzprules:protogen_head_helmet"
+  ]
+}

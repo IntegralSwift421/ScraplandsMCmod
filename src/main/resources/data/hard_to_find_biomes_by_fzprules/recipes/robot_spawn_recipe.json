@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "hard_to_find_biomes_by_fzprules:ram"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "hard_to_find_biomes_by_fzprules:robo_potato"
+    },
+    {
+      "item": "hard_to_find_biomes_by_fzprules:robot_core"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "hard_to_find_biomes_by_fzprules:thunder_ball"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:robot_spawn",
+    "count": 1
+  }
+}

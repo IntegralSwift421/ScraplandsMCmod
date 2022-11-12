@@ -13,7 +13,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.ScraplandianMenuMenu;
 import net.mcreator.scraplandsbyfzprules.network.ScraplandianMenuButtonMessage;
-import net.mcreator.scraplandsbyfzprules.BattleOfTheRacesByFzprulesMod;
+import net.mcreator.scraplandsbyfzprules.HardToFindBiomesByFzprulesMod;
 
 import java.util.HashMap;
 
@@ -37,7 +37,7 @@ public class ScraplandianMenuScreen extends AbstractContainerScreen<Scraplandian
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("battle_of_the_races_by_fzprules:textures/screens/scraplandian_menu.png");
+	private static final ResourceLocation texture = new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/screens/scraplandian_menu.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -54,7 +54,7 @@ public class ScraplandianMenuScreen extends AbstractContainerScreen<Scraplandian
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("battle_of_the_races_by_fzprules:textures/screens/arrow.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/screens/arrow.png"));
 		this.blit(ms, this.leftPos + 69, this.topPos + 52, 0, 0, 32, 16, 32, 16);
 
 		RenderSystem.disableBlend();
@@ -91,7 +91,7 @@ public class ScraplandianMenuScreen extends AbstractContainerScreen<Scraplandian
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		this.addRenderableWidget(new Button(this.leftPos + 61, this.topPos + 25, 51, 20, new TextComponent("Trade"), e -> {
 			if (true) {
-				BattleOfTheRacesByFzprulesMod.PACKET_HANDLER.sendToServer(new ScraplandianMenuButtonMessage(0, x, y, z));
+				HardToFindBiomesByFzprulesMod.PACKET_HANDLER.sendToServer(new ScraplandianMenuButtonMessage(0, x, y, z));
 				ScraplandianMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "1": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "2": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:scrap_pickaxe",
+    "count": 1
+  }
+}

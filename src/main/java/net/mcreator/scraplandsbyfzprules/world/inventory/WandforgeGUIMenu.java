@@ -19,8 +19,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModMenus;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModMenus;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class WandforgeGUIMenu extends AbstractContainerMenu implements Supplier<
 	private boolean bound = false;
 
 	public WandforgeGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(BattleOfTheRacesByFzprulesModMenus.WANDFORGE_GUI, id);
+		super(HardToFindBiomesByFzprulesModMenus.WANDFORGE_GUI, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(3);
@@ -82,13 +82,13 @@ public class WandforgeGUIMenu extends AbstractContainerMenu implements Supplier<
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 79, 26) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (BattleOfTheRacesByFzprulesModItems.FAIRY_DUST.get() == stack.getItem());
+				return (Items.STICK == stack.getItem());
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 97, 26) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (Items.STICK == stack.getItem());
+				return (HardToFindBiomesByFzprulesModItems.FAIRY_DUST.get() == stack.getItem());
 			}
 		}));
 		for (int si = 0; si < 3; ++si)

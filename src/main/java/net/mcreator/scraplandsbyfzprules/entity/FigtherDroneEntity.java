@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.DungeonHooks;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -43,22 +44,26 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
+import java.util.Set;
 import java.util.Random;
 import java.util.EnumSet;
 
 @Mod.EventBusSubscriber
 public class FigtherDroneEntity extends Monster implements RangedAttackMob {
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("hard_to_find_biomes_by_fzprules:lifeless_scraplands"));
+
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(MobCategory.MONSTER)
-				.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.FIGTHER_DRONE.get(), 20, 4, 4));
+		if (SPAWN_BIOMES.contains(event.getName()))
+			event.getSpawns().getSpawner(MobCategory.MONSTER)
+					.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.FIGTHER_DRONE.get(), 20, 4, 4));
 	}
 
 	public FigtherDroneEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.FIGTHER_DRONE.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.FIGTHER_DRONE.get(), world);
 	}
 
 	public FigtherDroneEntity(EntityType<FigtherDroneEntity> type, Level world) {
@@ -155,7 +160,7 @@ public class FigtherDroneEntity extends Monster implements RangedAttackMob {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(BattleOfTheRacesByFzprulesModItems.THUNDER_BALL.get()));
+		this.spawnAtLocation(new ItemStack(HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get()));
 	}
 
 	@Override
@@ -198,9 +203,10 @@ public class FigtherDroneEntity extends Monster implements RangedAttackMob {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.FIGTHER_DRONE.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.FIGTHER_DRONE.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		DungeonHooks.addDungeonMob(HardToFindBiomesByFzprulesModEntities.FIGTHER_DRONE.get(), 180);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

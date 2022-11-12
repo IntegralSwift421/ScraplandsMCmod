@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:obsidian_shard"
+    },
+    "1": {
+      "item": "hard_to_find_biomes_by_fzprules:topaz"
+    },
+    "2": {
+      "item": "hard_to_find_biomes_by_fzprules:obsidian_shard"
+    },
+    "3": {
+      "item": "hard_to_find_biomes_by_fzprules:obsidian_shard"
+    },
+    "5": {
+      "item": "hard_to_find_biomes_by_fzprules:obsidian_shard"
+    }
+  },
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:volcanic_armor_boots",
+    "count": 1
+  }
+}

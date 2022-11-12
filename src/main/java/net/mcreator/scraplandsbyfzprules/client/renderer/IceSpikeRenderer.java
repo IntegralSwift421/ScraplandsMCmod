@@ -15,6 +15,6 @@ public class IceSpikeRenderer extends MobRenderer<IceSpikeEntity, ModelFallingSp
 
 	@Override
 	public ResourceLocation getTextureLocation(IceSpikeEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/iceicle.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/iceicle.png");
 	}
 }

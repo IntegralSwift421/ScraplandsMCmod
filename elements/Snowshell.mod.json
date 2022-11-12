@@ -1,10 +1,10 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "livingentity",
   "definition": {
     "mobName": "Snowshell",
     "mobLabel": "",
-    "mobModelName": "Biped",
+    "mobModelName": "ModelTortise",
     "mobModelTexture": "icetortise.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
@@ -78,13 +78,13 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Blocks.ICE"
+      "value": "CUSTOM:SnowshellCore"
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:entity.tortise"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:entity.tortise"
     },
     "deathSound": {
       "value": "entity.generic.death"

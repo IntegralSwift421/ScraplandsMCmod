@@ -15,6 +15,6 @@ public class SnowpileRenderer extends MobRenderer<SnowpileEntity, ModelSnowpile<
 
 	@Override
 	public ResourceLocation getTextureLocation(SnowpileEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/snowpile_my_beloved.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/snowpile_my_beloved.png");
 	}
 }

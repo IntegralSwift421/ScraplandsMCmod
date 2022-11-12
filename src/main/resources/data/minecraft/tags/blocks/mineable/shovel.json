@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "battle_of_the_races_by_fzprules:rusty_dirt",
-    "battle_of_the_races_by_fzprules:rusty_top"
+    "hard_to_find_biomes_by_fzprules:rusty_dirt",
+    "hard_to_find_biomes_by_fzprules:rusty_top",
+    "hard_to_find_biomes_by_fzprules:obsidian_ore"
   ]
 }

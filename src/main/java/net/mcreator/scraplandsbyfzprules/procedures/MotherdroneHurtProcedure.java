@@ -9,14 +9,14 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 import net.mcreator.scraplandsbyfzprules.entity.FigtherDroneEntity;
 
 import java.util.Random;
 
 public class MotherdroneHurtProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (Math.random() == 0) {
+		if (Math.random() < 0.5) {
 			if (Mth.nextInt(new Random(), 1, 10) >= 4) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = new PrimedTnt(EntityType.TNT, _level);
@@ -31,7 +31,7 @@ public class MotherdroneHurtProcedure {
 				}
 			} else if (Mth.nextInt(new Random(), 1, 10) <= 6) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new FigtherDroneEntity(BattleOfTheRacesByFzprulesModEntities.FIGTHER_DRONE.get(), _level);
+					Entity entityToSpawn = new FigtherDroneEntity(HardToFindBiomesByFzprulesModEntities.FIGTHER_DRONE.get(), _level);
 					entityToSpawn.moveTo(x, y, z, 0, 0);
 					entityToSpawn.setYBodyRot(0);
 					entityToSpawn.setYHeadRot(0);

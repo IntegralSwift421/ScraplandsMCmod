@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -27,6 +27,9 @@
         "type": "button",
         "data": {
           "text": "Trade",
+          "onClick": {
+            "name": "ThunderProcessorProcess"
+          },
           "width": 51,
           "height": 20,
           "name": "Trade",
@@ -38,7 +41,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "Items.COPPER_INGOT"
+            "value": ""
           },
           "id": 0,
           "disableStackInteraction": false,
@@ -66,7 +69,7 @@
         "type": "outputslot",
         "data": {
           "id": 2,
-          "disableStackInteraction": true,
+          "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
           "x": 240,
@@ -77,7 +80,7 @@
         "type": "outputslot",
         "data": {
           "id": 3,
-          "disableStackInteraction": true,
+          "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #3",
           "x": 267,

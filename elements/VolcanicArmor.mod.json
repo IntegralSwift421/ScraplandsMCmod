@@ -1,0 +1,65 @@
+{
+  "_fv": 34,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "volcanic_helmet",
+    "enableBody": true,
+    "textureBody": "volcanic_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "volcanic_leggings",
+    "enableBoots": true,
+    "textureBoots": "volcanic_boots",
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "volcanic_layer_1",
+    "helmetName": "Volcanic Armor Helmet",
+    "bodyName": "Volcanic Armor Body",
+    "leggingsName": "Volcanic Armor Leggings",
+    "bootsName": "Volcanic Armor Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "ModelVolcanicArmor",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "LeftArm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 25,
+    "damageValueHelmet": 4,
+    "damageValueBody": 8,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 4,
+    "enchantability": 9,
+    "toughness": 3.0,
+    "knockbackResistance": 0.1,
+    "equipSound": {
+      "value": "item.armor.equip_generic"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Topaz"
+      },
+      {
+        "value": "CUSTOM:ObsidianShard"
+      }
+    ]
+  }
+}

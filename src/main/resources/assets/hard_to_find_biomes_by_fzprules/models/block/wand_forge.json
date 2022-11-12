@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hard_to_find_biomes_by_fzprules:blocks/wand_forge_botom",
+    "up": "hard_to_find_biomes_by_fzprules:blocks/wand_forge_top",
+    "north": "hard_to_find_biomes_by_fzprules:blocks/wand_forge_side",
+    "east": "hard_to_find_biomes_by_fzprules:blocks/wand_forge_side",
+    "south": "hard_to_find_biomes_by_fzprules:blocks/wand_forge_side",
+    "west": "hard_to_find_biomes_by_fzprules:blocks/wand_forge_side",
+    "particle": "hard_to_find_biomes_by_fzprules:blocks/wand_forge_botom"
+  }
+}

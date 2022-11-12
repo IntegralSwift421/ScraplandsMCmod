@@ -19,6 +19,6 @@ public class InfectedScraplandianRenderer extends HumanoidMobRenderer<InfectedSc
 
 	@Override
 	public ResourceLocation getTextureLocation(InfectedScraplandianEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/infected_scraplandian.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/infected_scraplandian.png");
 	}
 }

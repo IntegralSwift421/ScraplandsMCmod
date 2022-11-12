@@ -3,6 +3,7 @@ package net.mcreator.scraplandsbyfzprules.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,6 +19,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 import net.mcreator.scraplandsbyfzprules.entity.ThundershockEntity;
 
 import com.google.common.collect.Multimap;
@@ -65,9 +67,37 @@ public class ThundershockItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				ThundershockEntity entityarrow = ThundershockEntity.shoot(world, entity, world.getRandom(), 1f, 5, 5);
-				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
-				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+				ItemStack stack = ProjectileWeaponItem.getHeldProjectile(entity,
+						e -> e.getItem() == HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get());
+				if (stack == ItemStack.EMPTY) {
+					for (int i = 0; i < entity.getInventory().items.size(); i++) {
+						ItemStack teststack = entity.getInventory().items.get(i);
+						if (teststack != null && teststack.getItem() == HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get()) {
+							stack = teststack;
+							break;
+						}
+					}
+				}
+				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
+					ThundershockEntity entityarrow = ThundershockEntity.shoot(world, entity, world.getRandom(), 1f, 5, 5);
+					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
+					if (entity.getAbilities().instabuild) {
+						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
+					} else {
+						if (new ItemStack(HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get()).isDamageableItem()) {
+							if (stack.hurt(1, world.getRandom(), entity)) {
+								stack.shrink(1);
+								stack.setDamageValue(0);
+								if (stack.isEmpty())
+									entity.getInventory().removeItem(stack);
+							}
+						} else {
+							stack.shrink(1);
+							if (stack.isEmpty())
+								entity.getInventory().removeItem(stack);
+						}
+					}
+				}
 			}
 		}
 	}

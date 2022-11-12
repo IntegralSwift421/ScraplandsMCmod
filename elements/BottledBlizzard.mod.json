@@ -1,0 +1,30 @@
+{
+  "_fv": 34,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Blizzard in a Bottle",
+    "splashName": "Blizzard in a Splash Bottle",
+    "lingeringName": "Blizzard in a Lingering Bottle",
+    "arrowName": "Blizzard on an Arrow",
+    "effects": [
+      {
+        "effect": {
+          "value": "SLOWNESS"
+        },
+        "duration": 3600,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": false
+      },
+      {
+        "effect": {
+          "value": "WITHER"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}

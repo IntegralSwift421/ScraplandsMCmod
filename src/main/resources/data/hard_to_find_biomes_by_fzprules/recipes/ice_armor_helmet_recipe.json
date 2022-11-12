@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "1": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "2": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "3": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "5": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    }
+  },
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:ice_armor_helmet",
+    "count": 1
+  }
+}

@@ -1,9 +1,10 @@
 {
   "replace": false,
   "values": [
-    "battle_of_the_races_by_fzprules:thunder_processor",
-    "battle_of_the_races_by_fzprules:frosted_stone",
-    "battle_of_the_races_by_fzprules:fairy_crystal",
-    "battle_of_the_races_by_fzprules:topaz_ore"
+    "hard_to_find_biomes_by_fzprules:thunder_processor",
+    "hard_to_find_biomes_by_fzprules:frosted_stone",
+    "hard_to_find_biomes_by_fzprules:fairy_crystal",
+    "hard_to_find_biomes_by_fzprules:topaz_ore",
+    "hard_to_find_biomes_by_fzprules:electite_ore"
   ]
 }

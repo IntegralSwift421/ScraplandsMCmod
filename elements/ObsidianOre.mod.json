@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "block",
   "definition": {
     "texture": "obsidian_ore",
@@ -42,9 +42,9 @@
     "creativeTab": {
       "value": "BUILDING_BLOCKS"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "shovel",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:ObsidianShard"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,

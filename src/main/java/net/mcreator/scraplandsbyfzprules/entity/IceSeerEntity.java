@@ -44,28 +44,29 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Set;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
 public class IceSeerEntity extends Monster implements RangedAttackMob {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wastes"),
-			new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wonders"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("snowy_plains"), new ResourceLocation("windswept_hills"),
+			new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wonders"), new ResourceLocation("snowy_taiga"),
+			new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wastes"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.ICE_SEER.get(), 1, 1, 1));
+					.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.ICE_SEER.get(), 1, 1, 1));
 	}
 
 	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.BLUE,
 			ServerBossEvent.BossBarOverlay.PROGRESS);
 
 	public IceSeerEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.ICE_SEER.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.ICE_SEER.get(), world);
 	}
 
 	public IceSeerEntity(EntityType<IceSeerEntity> type, Level world) {
@@ -201,7 +202,7 @@ public class IceSeerEntity extends Monster implements RangedAttackMob {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.ICE_SEER.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.ICE_SEER.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

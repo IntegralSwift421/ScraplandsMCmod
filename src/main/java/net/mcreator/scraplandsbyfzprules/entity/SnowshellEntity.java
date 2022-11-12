@@ -9,7 +9,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -37,18 +36,19 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.scraplandsbyfzprules.procedures.SnowshellEntitySpawnProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 @Mod.EventBusSubscriber
 public class SnowshellEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		event.getSpawns().getSpawner(MobCategory.MONSTER)
-				.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.SNOWSHELL.get(), 20, 4, 4));
+				.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.SNOWSHELL.get(), 20, 4, 4));
 	}
 
 	public SnowshellEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.SNOWSHELL.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.SNOWSHELL.get(), world);
 	}
 
 	public SnowshellEntity(EntityType<SnowshellEntity> type, Level world) {
@@ -85,12 +85,17 @@ public class SnowshellEntity extends Monster {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(Blocks.ICE));
+		this.spawnAtLocation(new ItemStack(HardToFindBiomesByFzprulesModItems.SNOWSHELL_CORE.get()));
+	}
+
+	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.tortise"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.tortise"));
 	}
 
 	@Override
@@ -116,7 +121,7 @@ public class SnowshellEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.SNOWSHELL.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.SNOWSHELL.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

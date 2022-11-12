@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hard_to_find_biomes_by_fzprules:blocks/thunderleaves",
+    "up": "hard_to_find_biomes_by_fzprules:blocks/thunderleaves",
+    "north": "hard_to_find_biomes_by_fzprules:blocks/thunderleaves",
+    "east": "hard_to_find_biomes_by_fzprules:blocks/thunderleaves",
+    "south": "hard_to_find_biomes_by_fzprules:blocks/thunderleaves",
+    "west": "hard_to_find_biomes_by_fzprules:blocks/thunderleaves",
+    "particle": "hard_to_find_biomes_by_fzprules:blocks/thunderleaves"
+  }
+}

@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public class IceSpearItem extends SwordItem {
 	public IceSpearItem() {
@@ -34,7 +34,7 @@ public class IceSpearItem extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.ICE_CRYSTAL.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.ICE_CRYSTAL.get()));
 			}
 		}, 3, -3f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
 	}

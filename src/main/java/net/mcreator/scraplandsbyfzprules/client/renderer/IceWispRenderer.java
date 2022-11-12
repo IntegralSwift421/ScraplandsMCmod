@@ -16,6 +16,6 @@ public class IceWispRenderer extends MobRenderer<IceWispEntity, SlimeModel<IceWi
 
 	@Override
 	public ResourceLocation getTextureLocation(IceWispEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/icewisp.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/icewisp.png");
 	}
 }

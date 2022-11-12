@@ -16,7 +16,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -42,7 +42,7 @@ public class FrostedStoneWallBlock extends WallBlock {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(BattleOfTheRacesByFzprulesModBlocks.FROSTED_STONE_WALL.get(),
+		ItemBlockRenderTypes.setRenderLayer(HardToFindBiomesByFzprulesModBlocks.FROSTED_STONE_WALL.get(),
 				renderType -> renderType == RenderType.cutout());
 	}
 }

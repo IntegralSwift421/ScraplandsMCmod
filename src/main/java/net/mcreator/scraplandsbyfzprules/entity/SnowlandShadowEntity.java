@@ -34,32 +34,32 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Set;
 
 @Mod.EventBusSubscriber
 public class SnowlandShadowEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wastes"),
-			new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wonders"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wonders"),
+			new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wastes"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_SHADOW.get(), 10, 3, 5));
+					.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.SNOWLAND_SHADOW.get(), 10, 3, 5));
 	}
 
 	public SnowlandShadowEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_SHADOW.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.SNOWLAND_SHADOW.get(), world);
 	}
 
 	public SnowlandShadowEntity(EntityType<SnowlandShadowEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(BattleOfTheRacesByFzprulesModItems.SNOW_STAFF.get()));
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(HardToFindBiomesByFzprulesModItems.SNOW_STAFF.get()));
 	}
 
 	@Override
@@ -99,7 +99,7 @@ public class SnowlandShadowEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_SHADOW.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.SNOWLAND_SHADOW.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

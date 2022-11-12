@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public class IceShovelItem extends ShovelItem {
 	public IceShovelItem() {
@@ -34,7 +34,7 @@ public class IceShovelItem extends ShovelItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.ICE_CRYSTAL.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.ICE_CRYSTAL.get()));
 			}
 		}, 1, -3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
 	}

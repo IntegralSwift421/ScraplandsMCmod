@@ -21,15 +21,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.scraplandsbyfzprules.procedures.ShockProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ThundershockEntity extends AbstractArrow implements ItemSupplier {
 	public ThundershockEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(BattleOfTheRacesByFzprulesModEntities.THUNDERSHOCK.get(), world);
+		super(HardToFindBiomesByFzprulesModEntities.THUNDERSHOCK.get(), world);
 	}
 
 	public ThundershockEntity(EntityType<? extends ThundershockEntity> type, Level world) {
@@ -52,12 +52,12 @@ public class ThundershockEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return new ItemStack(BattleOfTheRacesByFzprulesModItems.THUNDER_BALL.get());
+		return new ItemStack(HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get());
 	}
 
 	@Override
 	protected ItemStack getPickupItem() {
-		return ItemStack.EMPTY;
+		return new ItemStack(HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get());
 	}
 
 	@Override
@@ -93,7 +93,7 @@ public class ThundershockEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static ThundershockEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
-		ThundershockEntity entityarrow = new ThundershockEntity(BattleOfTheRacesByFzprulesModEntities.THUNDERSHOCK.get(), entity, world);
+		ThundershockEntity entityarrow = new ThundershockEntity(HardToFindBiomesByFzprulesModEntities.THUNDERSHOCK.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -101,13 +101,13 @@ public class ThundershockEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
 		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:thundershock")), SoundSource.PLAYERS, 1,
+				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:thundershock")), SoundSource.PLAYERS, 1,
 				1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
 	public static ThundershockEntity shoot(LivingEntity entity, LivingEntity target) {
-		ThundershockEntity entityarrow = new ThundershockEntity(BattleOfTheRacesByFzprulesModEntities.THUNDERSHOCK.get(), entity, entity.level);
+		ThundershockEntity entityarrow = new ThundershockEntity(HardToFindBiomesByFzprulesModEntities.THUNDERSHOCK.get(), entity, entity.level);
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
@@ -118,7 +118,7 @@ public class ThundershockEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setCritArrow(false);
 		entity.level.addFreshEntity(entityarrow);
 		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:thundershock")), SoundSource.PLAYERS, 1,
+				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:thundershock")), SoundSource.PLAYERS, 1,
 				1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}

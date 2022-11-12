@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hard_to_find_biomes_by_fzprules:items/ice_pollen"
+  }
+}

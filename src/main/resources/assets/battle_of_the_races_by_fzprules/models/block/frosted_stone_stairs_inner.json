@@ -1,8 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "battle_of_the_races_by_fzprules:blocks/ice_bricks",
-    "top": "battle_of_the_races_by_fzprules:blocks/ice_bricks",
-    "side": "battle_of_the_races_by_fzprules:blocks/ice_bricks"
-  }
-}

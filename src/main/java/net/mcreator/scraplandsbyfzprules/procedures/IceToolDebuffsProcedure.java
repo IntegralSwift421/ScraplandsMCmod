@@ -17,20 +17,20 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEnchantments;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEnchantments;
 
 public class IceToolDebuffsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (EnchantmentHelper.getItemEnchantmentLevel(BattleOfTheRacesByFzprulesModEnchantments.FROST_BITER.get(), itemstack) == 1) {
+		if (EnchantmentHelper.getItemEnchantmentLevel(HardToFindBiomesByFzprulesModEnchantments.FROST_BITER.get(), itemstack) == 1) {
 			entity.hurt(DamageSource.GENERIC, 2);
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1, (false), (false)));
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 60, 1, (false), (false)));
 		}
-		if (EnchantmentHelper.getItemEnchantmentLevel(BattleOfTheRacesByFzprulesModEnchantments.SNOWBALLER.get(), itemstack) >= 1) {
+		if (EnchantmentHelper.getItemEnchantmentLevel(HardToFindBiomesByFzprulesModEnchantments.SNOWBALLER.get(), itemstack) >= 1) {
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -58,14 +58,14 @@ public class IceToolDebuffsProcedure {
 						_entityToSpawn.shoot(1, 1, 1, 1, 2);
 						projectileLevel.addFreshEntity(_entityToSpawn);
 					}
-					if (EnchantmentHelper.getItemEnchantmentLevel(BattleOfTheRacesByFzprulesModEnchantments.SNOWBALLER.get(), itemstack) >= 2) {
+					if (EnchantmentHelper.getItemEnchantmentLevel(HardToFindBiomesByFzprulesModEnchantments.SNOWBALLER.get(), itemstack) >= 2) {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Snowball(EntityType.SNOWBALL, projectileLevel);
 							_entityToSpawn.setPos(x, y, z);
 							_entityToSpawn.shoot(1, 1, 1, 1, 2);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
-					} else if (EnchantmentHelper.getItemEnchantmentLevel(BattleOfTheRacesByFzprulesModEnchantments.SNOWBALLER.get(),
+					} else if (EnchantmentHelper.getItemEnchantmentLevel(HardToFindBiomesByFzprulesModEnchantments.SNOWBALLER.get(),
 							itemstack) == 3) {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Snowball(EntityType.SNOWBALL, projectileLevel);

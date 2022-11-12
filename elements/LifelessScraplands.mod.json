@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "biome",
   "definition": {
     "name": "Lifeless Scraplands",
@@ -38,7 +38,6 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "DESERT",
     "rainingPossibility": 0.0,
     "temperature": 1.6,
     "baseHeight": 0.2,
@@ -47,11 +46,6 @@
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 3,
-    "biomeDictionaryTypes": [
-      "WASTELAND",
-      "DRY",
-      "RARE"
-    ],
     "grassPerChunk": 4,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,

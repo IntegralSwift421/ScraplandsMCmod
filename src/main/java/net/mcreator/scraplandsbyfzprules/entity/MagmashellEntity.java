@@ -26,24 +26,26 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.procedures.MagmashellEntitySpawnProcedure;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 @Mod.EventBusSubscriber
 public class MagmashellEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		event.getSpawns().getSpawner(MobCategory.MONSTER)
-				.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.MAGMASHELL.get(), 20, 4, 4));
+				.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.MAGMASHELL.get(), 20, 4, 4));
 	}
 
 	public MagmashellEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.MAGMASHELL.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.MAGMASHELL.get(), world);
 	}
 
 	public MagmashellEntity(EntityType<MagmashellEntity> type, Level world) {
@@ -78,8 +80,13 @@ public class MagmashellEntity extends Monster {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.tortise"));
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.tortise"));
 	}
 
 	@Override
@@ -96,8 +103,14 @@ public class MagmashellEntity extends Monster {
 		return super.hurt(source, amount);
 	}
 
+	@Override
+	public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
+		super.awardKillScore(entity, score, damageSource);
+		MagmashellEntitySpawnProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+	}
+
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.MAGMASHELL.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.MAGMASHELL.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

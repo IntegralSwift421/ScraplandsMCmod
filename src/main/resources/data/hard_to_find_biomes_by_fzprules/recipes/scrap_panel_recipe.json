@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "1": {
+      "item": "minecraft:copper_ingot"
+    },
+    "2": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "3": {
+      "item": "minecraft:redstone"
+    },
+    "4": {
+      "item": "minecraft:glass"
+    },
+    "5": {
+      "item": "minecraft:copper_ingot"
+    },
+    "6": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "7": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "8": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    }
+  },
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:scrap_solar_panel",
+    "count": 1
+  }
+}

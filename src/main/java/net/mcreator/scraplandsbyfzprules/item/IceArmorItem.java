@@ -14,7 +14,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public abstract class IceArmorItem extends ArmorItem {
 	public IceArmorItem(EquipmentSlot slot, Item.Properties properties) {
@@ -41,7 +41,7 @@ public abstract class IceArmorItem extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.ICE_CRYSTAL.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.ICE_CRYSTAL.get()));
 			}
 
 			@Override
@@ -68,7 +68,7 @@ public abstract class IceArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/ice_layer_1.png";
+			return "hard_to_find_biomes_by_fzprules:textures/models/armor/ice_layer_1.png";
 		}
 	}
 
@@ -79,7 +79,7 @@ public abstract class IceArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/ice_layer_1.png";
+			return "hard_to_find_biomes_by_fzprules:textures/models/armor/ice_layer_1.png";
 		}
 	}
 
@@ -90,7 +90,7 @@ public abstract class IceArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/ice_layer_2.png";
+			return "hard_to_find_biomes_by_fzprules:textures/models/armor/ice_layer_2.png";
 		}
 	}
 
@@ -101,7 +101,7 @@ public abstract class IceArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/ice_layer_1.png";
+			return "hard_to_find_biomes_by_fzprules:textures/models/armor/ice_layer_1.png";
 		}
 	}
 }

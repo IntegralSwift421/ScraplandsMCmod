@@ -49,8 +49,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.scraplandsbyfzprules.procedures.ShockProcedure;
 import net.mcreator.scraplandsbyfzprules.procedures.MotherdroneHurtProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import javax.annotation.Nullable;
 
@@ -61,21 +61,21 @@ import java.util.EnumSet;
 @Mod.EventBusSubscriber
 public class MotherdroneEntity extends Monster {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("badlands"),
-			new ResourceLocation("battle_of_the_races_by_fzprules:lifeless_scraplands"), new ResourceLocation("desert"),
-			new ResourceLocation("battle_of_the_races_by_fzprules:scraplands"), new ResourceLocation("end_barrens"));
+			new ResourceLocation("hard_to_find_biomes_by_fzprules:scraplands"), new ResourceLocation("desert"),
+			new ResourceLocation("hard_to_find_biomes_by_fzprules:lifeless_scraplands"), new ResourceLocation("end_barrens"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.MOTHERDRONE.get(), 1, 4, 4));
+					.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.MOTHERDRONE.get(), 1, 4, 4));
 	}
 
 	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.YELLOW,
 			ServerBossEvent.BossBarOverlay.PROGRESS);
 
 	public MotherdroneEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.MOTHERDRONE.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.MOTHERDRONE.get(), world);
 	}
 
 	public MotherdroneEntity(EntityType<MotherdroneEntity> type, Level world) {
@@ -99,7 +99,8 @@ public class MotherdroneEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new Goal() {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.goalSelector.addGoal(2, new Goal() {
 			{
 				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
 			}
@@ -139,7 +140,7 @@ public class MotherdroneEntity extends Monster {
 				}
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				Random random = MotherdroneEntity.this.getRandom();
@@ -149,15 +150,15 @@ public class MotherdroneEntity extends Monster {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(7, new HurtByTargetGoal(this));
 	}
 
 	@Override
@@ -170,24 +171,29 @@ public class MotherdroneEntity extends Monster {
 		return false;
 	}
 
+	@Override
+	public double getPassengersRidingOffset() {
+		return super.getPassengersRidingOffset() + 0.3;
+	}
+
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(BattleOfTheRacesByFzprulesModItems.GREATER_ROBOT_CORE.get()));
+		this.spawnAtLocation(new ItemStack(HardToFindBiomesByFzprulesModItems.GREATER_ROBOT_CORE.get()));
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.orbonaut.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.orbonaut.ambient"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.robot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.robot.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.orbonaut.dead"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.orbonaut.dead"));
 	}
 
 	@Override
@@ -253,7 +259,7 @@ public class MotherdroneEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.MOTHERDRONE.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.MOTHERDRONE.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
@@ -265,7 +271,6 @@ public class MotherdroneEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}

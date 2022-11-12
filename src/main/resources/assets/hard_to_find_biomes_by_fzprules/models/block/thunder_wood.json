@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hard_to_find_biomes_by_fzprules:blocks/thunderwood_top",
+    "up": "hard_to_find_biomes_by_fzprules:blocks/thunderwood_top",
+    "north": "hard_to_find_biomes_by_fzprules:blocks/thunderlog",
+    "east": "hard_to_find_biomes_by_fzprules:blocks/thunderlog",
+    "south": "hard_to_find_biomes_by_fzprules:blocks/thunderlog",
+    "west": "hard_to_find_biomes_by_fzprules:blocks/thunderlog",
+    "particle": "hard_to_find_biomes_by_fzprules:blocks/thunderwood_top"
+  }
+}

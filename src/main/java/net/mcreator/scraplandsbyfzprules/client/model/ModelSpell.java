@@ -22,7 +22,7 @@ public class ModelSpell<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-			new ResourceLocation("battle_of_the_races_by_fzprules", "model_spell"), "main");
+			new ResourceLocation("hard_to_find_biomes_by_fzprules", "model_spell"), "main");
 	public final ModelPart Sphere;
 	public final ModelPart Ring;
 

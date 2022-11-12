@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "1": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "2": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "3": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "5": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    }
+  },
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:scrap_armor_helmet",
+    "count": 1
+  }
+}

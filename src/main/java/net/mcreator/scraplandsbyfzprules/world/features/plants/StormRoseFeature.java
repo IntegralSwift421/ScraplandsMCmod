@@ -21,7 +21,7 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.core.Holder;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 import java.util.Set;
 import java.util.List;
@@ -34,12 +34,12 @@ public class StormRoseFeature extends RandomPatchFeature {
 	public static Feature<?> feature() {
 		FEATURE = new StormRoseFeature();
 		CONFIGURED_FEATURE = FeatureUtils
-				.register("battle_of_the_races_by_fzprules:storm_rose", FEATURE,
+				.register("hard_to_find_biomes_by_fzprules:storm_rose", FEATURE,
 						FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
 								new SimpleBlockConfiguration(
-										BlockStateProvider.simple(BattleOfTheRacesByFzprulesModBlocks.STORM_ROSE.get().defaultBlockState())),
+										BlockStateProvider.simple(HardToFindBiomesByFzprulesModBlocks.STORM_ROSE.get().defaultBlockState())),
 								List.of(), 64));
-		PLACED_FEATURE = PlacementUtils.register("battle_of_the_races_by_fzprules:storm_rose", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
+		PLACED_FEATURE = PlacementUtils.register("hard_to_find_biomes_by_fzprules:storm_rose", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
 				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 		return FEATURE;
 	}
@@ -48,7 +48,7 @@ public class StormRoseFeature extends RandomPatchFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:stormwoods"));
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("hard_to_find_biomes_by_fzprules:stormwoods"));
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public StormRoseFeature() {

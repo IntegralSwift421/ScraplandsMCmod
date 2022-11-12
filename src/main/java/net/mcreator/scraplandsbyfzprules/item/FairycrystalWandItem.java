@@ -44,7 +44,7 @@ public class FairycrystalWandItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				FairycrystalWandEntity entityarrow = FairycrystalWandEntity.shoot(world, entity, world.getRandom(), 1f, 8, 8);
+				FairycrystalWandEntity entityarrow = FairycrystalWandEntity.shoot(world, entity, world.getRandom(), 1f, 8, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 			}

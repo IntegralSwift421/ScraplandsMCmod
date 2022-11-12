@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hard_to_find_biomes_by_fzprules:blocks/scrap_pile",
+    "up": "hard_to_find_biomes_by_fzprules:blocks/scrap_pile",
+    "north": "hard_to_find_biomes_by_fzprules:blocks/scrap_pile",
+    "east": "hard_to_find_biomes_by_fzprules:blocks/scrap_pile",
+    "south": "hard_to_find_biomes_by_fzprules:blocks/scrap_pile",
+    "west": "hard_to_find_biomes_by_fzprules:blocks/scrap_pile",
+    "particle": "hard_to_find_biomes_by_fzprules:blocks/scrap_pile"
+  }
+}

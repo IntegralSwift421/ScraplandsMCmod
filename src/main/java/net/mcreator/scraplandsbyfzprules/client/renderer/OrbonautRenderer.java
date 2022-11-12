@@ -15,6 +15,6 @@ public class OrbonautRenderer extends MobRenderer<OrbonautEntity, ModelOrbonaut<
 
 	@Override
 	public ResourceLocation getTextureLocation(OrbonautEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/orbonauttexture.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/orbonauttexture.png");
 	}
 }

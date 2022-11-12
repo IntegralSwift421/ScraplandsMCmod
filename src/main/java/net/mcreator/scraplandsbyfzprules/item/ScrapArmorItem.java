@@ -15,7 +15,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public abstract class ScrapArmorItem extends ArmorItem {
 	public ScrapArmorItem(EquipmentSlot slot, Item.Properties properties) {
@@ -42,7 +42,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.SCRAP_METAL.get()), new ItemStack(Items.IRON_INGOT),
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.SCRAP_METAL.get()), new ItemStack(Items.IRON_INGOT),
 						new ItemStack(Items.GOLD_INGOT), new ItemStack(Items.COPPER_INGOT));
 			}
 
@@ -70,7 +70,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
+			return "hard_to_find_biomes_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
 		}
 	}
 
@@ -81,7 +81,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
+			return "hard_to_find_biomes_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
 		}
 	}
 
@@ -92,7 +92,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap2_layer_1_layer_2.png";
+			return "hard_to_find_biomes_by_fzprules:textures/models/armor/scrap2_layer_1_layer_2.png";
 		}
 	}
 
@@ -103,7 +103,7 @@ public abstract class ScrapArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "battle_of_the_races_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
+			return "hard_to_find_biomes_by_fzprules:textures/models/armor/scrap2_layer_1_layer_1.png";
 		}
 	}
 }

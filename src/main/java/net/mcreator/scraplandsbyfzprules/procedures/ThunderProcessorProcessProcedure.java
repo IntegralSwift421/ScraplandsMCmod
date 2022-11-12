@@ -1,26 +1,27 @@
 package net.mcreator.scraplandsbyfzprules.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 import java.util.function.Supplier;
 import java.util.Map;
 
 public class ThunderProcessorProcessProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt
 				? ((Slot) _slt.get(0)).getItem()
-				: ItemStack.EMPTY).getItem() == BattleOfTheRacesByFzprulesModBlocks.THUNDER_REED.get().asItem()
+				: ItemStack.EMPTY).getItem() == HardToFindBiomesByFzprulesModBlocks.THUNDER_REED.get().asItem()
 				&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
 						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY)
-						.getItem() == BattleOfTheRacesByFzprulesModBlocks.THUNDER_REED.get().asItem()
+						.getItem() == HardToFindBiomesByFzprulesModBlocks.THUNDER_REED.get().asItem()
 				&& (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
@@ -33,10 +34,10 @@ public class ThunderProcessorProcessProcedure {
 					}
 				}.getAmount(2) == 0 || (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
 						&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY)
-						.getItem() == BattleOfTheRacesByFzprulesModItems.THUNDER_BALL.get()
+						.getItem() == HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get()
 						&& (entity instanceof ServerPlayer _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr
 								&& _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY)
-								.getItem() == BattleOfTheRacesByFzprulesModItems.THUNDER_BALL.get())) {
+								.getItem() == HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get())) {
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
 				((Slot) _slots.get(0)).remove(1);
@@ -49,7 +50,7 @@ public class ThunderProcessorProcessProcedure {
 			}
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(BattleOfTheRacesByFzprulesModItems.THUNDER_BALL.get());
+				ItemStack _setstack = new ItemStack(HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get());
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
@@ -66,7 +67,7 @@ public class ThunderProcessorProcessProcedure {
 			}
 			if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
 					&& _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(BattleOfTheRacesByFzprulesModItems.THUNDER_BALL.get());
+				ItemStack _setstack = new ItemStack(HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get());
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof ServerPlayer _player && _player.containerMenu instanceof Supplier _current
@@ -81,6 +82,7 @@ public class ThunderProcessorProcessProcedure {
 				((Slot) _slots.get(3)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
+			ShockProcedure.execute(world, x, y, z);
 		}
 	}
 }

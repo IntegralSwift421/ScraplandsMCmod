@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "1": {
+      "item": "minecraft:stone_bricks"
+    },
+    "2": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "3": {
+      "item": "minecraft:stone_bricks"
+    },
+    "4": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "5": {
+      "item": "minecraft:stone_bricks"
+    },
+    "6": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "7": {
+      "item": "minecraft:stone_bricks"
+    },
+    "8": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    }
+  },
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:frosted_stone",
+    "count": 4
+  }
+}

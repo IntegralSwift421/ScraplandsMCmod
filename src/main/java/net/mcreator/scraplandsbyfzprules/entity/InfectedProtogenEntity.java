@@ -36,8 +36,8 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Set;
 
@@ -49,11 +49,11 @@ public class InfectedProtogenEntity extends Monster {
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.INFECTED_PROTOGEN.get(), 15, 4, 4));
+					.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.INFECTED_PROTOGEN.get(), 15, 4, 4));
 	}
 
 	public InfectedProtogenEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.INFECTED_PROTOGEN.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.INFECTED_PROTOGEN.get(), world);
 	}
 
 	public InfectedProtogenEntity(EntityType<InfectedProtogenEntity> type, Level world) {
@@ -91,7 +91,7 @@ public class InfectedProtogenEntity extends Monster {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(BattleOfTheRacesByFzprulesModItems.INFECTED_CORE.get()));
+		this.spawnAtLocation(new ItemStack(HardToFindBiomesByFzprulesModItems.INFECTED_CORE.get()));
 	}
 
 	@Override
@@ -101,12 +101,12 @@ public class InfectedProtogenEntity extends Monster {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.robot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.robot.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("battle_of_the_races_by_fzprules:entity.protogen.dead"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("hard_to_find_biomes_by_fzprules:entity.protogen.dead"));
 	}
 
 	@Override
@@ -117,7 +117,7 @@ public class InfectedProtogenEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.INFECTED_PROTOGEN.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.INFECTED_PROTOGEN.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

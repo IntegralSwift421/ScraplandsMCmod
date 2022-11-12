@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "biome",
   "definition": {
     "name": "Enchanted Forest",
@@ -30,7 +30,6 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "FOREST",
     "rainingPossibility": 0.5,
     "temperature": 0.5,
     "baseHeight": 0.2,
@@ -39,12 +38,6 @@
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 10,
-    "biomeDictionaryTypes": [
-      "FOREST",
-      "MAGICAL",
-      "MUSHROOM",
-      "RARE"
-    ],
     "grassPerChunk": 4,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 5,
@@ -96,6 +89,43 @@
       "AmethystGeodes",
       "Lakes"
     ],
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:FairyFungus"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 100,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityBee"
+        },
+        "minGroup": 3,
+        "maxGroup": 3,
+        "weight": 20,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntitySheep"
+        },
+        "minGroup": 4,
+        "maxGroup": 4,
+        "weight": 20,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityAllay"
+        },
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 5,
+        "spawnType": "monster"
+      }
+    ]
   }
 }

@@ -19,6 +19,6 @@ public class FrozenRenderer extends HumanoidMobRenderer<FrozenEntity, HumanoidMo
 
 	@Override
 	public ResourceLocation getTextureLocation(FrozenEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/icefallen.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/icefallen.png");
 	}
 }

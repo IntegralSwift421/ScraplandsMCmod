@@ -10,7 +10,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.scraplandsbyfzprules.procedures.IceToolDebuffsProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public class IceSickleItem extends HoeItem {
 	public IceSickleItem() {
@@ -36,7 +36,7 @@ public class IceSickleItem extends HoeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.ICE_CRYSTAL.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.ICE_CRYSTAL.get()));
 			}
 		}, 0, -3.2999999999999999f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
 	}

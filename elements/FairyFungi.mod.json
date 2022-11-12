@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -61,7 +61,7 @@
     },
     "useLootTableForDrops": false,
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:FairyFungiThrowable"
     },
     "dropAmount": 1,
     "forceTicking": false,

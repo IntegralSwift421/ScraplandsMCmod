@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.AxeItem;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public class ScrapAxeItem extends AxeItem {
 	public ScrapAxeItem() {
@@ -34,7 +34,7 @@ public class ScrapAxeItem extends AxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.SCRAP_METAL.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.SCRAP_METAL.get()));
 			}
 		}, 1, -3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
 	}

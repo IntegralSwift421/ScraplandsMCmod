@@ -18,7 +18,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -48,11 +49,11 @@ public class FairyFungiBlock extends FlowerBlock {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
+		return Collections.singletonList(new ItemStack(HardToFindBiomesByFzprulesModItems.FAIRY_FUNGI_THROWABLE.get()));
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(BattleOfTheRacesByFzprulesModBlocks.FAIRY_FUNGI.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(HardToFindBiomesByFzprulesModBlocks.FAIRY_FUNGI.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

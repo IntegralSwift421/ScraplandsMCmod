@@ -25,12 +25,12 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.particles.ParticleTypes;
 
 import net.mcreator.scraplandsbyfzprules.procedures.FallingSpikeEventProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 public class IceSpikeEntity extends Monster {
 	public IceSpikeEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.ICE_SPIKE.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.ICE_SPIKE.get(), world);
 	}
 
 	public IceSpikeEntity(EntityType<IceSpikeEntity> type, Level world) {
@@ -51,7 +51,7 @@ public class IceSpikeEntity extends Monster {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(BattleOfTheRacesByFzprulesModItems.ICE_POLLEN.get()));
+		this.spawnAtLocation(new ItemStack(HardToFindBiomesByFzprulesModItems.ICE_POLLEN.get()));
 	}
 
 	@Override

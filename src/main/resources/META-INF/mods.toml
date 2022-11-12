@@ -3,14 +3,14 @@ loaderVersion="[40,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="battle_of_the_races_by_fzprules"
+modId="hard_to_find_biomes_by_fzprules"
 version="1.0.0"
-displayName="Battle Of The Races by FZPrules"
+displayName="Hard to Find Adventures by FZPrules"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
 authors="Francisco, MCreator"
 
-[[dependencies.battle_of_the_races_by_fzprules]]
+[[dependencies.hard_to_find_biomes_by_fzprules]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2]"

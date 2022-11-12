@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "livingentity",
   "definition": {
     "mobName": "Snowland Shadow",
@@ -109,7 +109,7 @@
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "Default item",
+    "rangedItemType": "SnowStaff",
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 10,

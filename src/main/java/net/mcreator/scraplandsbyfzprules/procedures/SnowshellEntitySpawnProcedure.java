@@ -8,7 +8,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 public class SnowshellEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity sourceentity) {
@@ -36,7 +36,7 @@ public class SnowshellEntitySpawnProcedure {
 				}
 
 				private void run() {
-					world.setBlock(new BlockPos(x, y, z), BattleOfTheRacesByFzprulesModBlocks.SNOWSHELL_BLOCK.get().defaultBlockState(), 3);
+					world.setBlock(new BlockPos(x, y, z), HardToFindBiomesByFzprulesModBlocks.SNOWSHELL_BLOCK.get().defaultBlockState(), 3);
 					if (!sourceentity.level.isClientSide())
 						sourceentity.discard();
 					MinecraftForge.EVENT_BUS.unregister(this);

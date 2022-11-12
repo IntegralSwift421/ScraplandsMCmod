@@ -15,6 +15,6 @@ public class IceButterflyRenderer extends MobRenderer<IceButterflyEntity, ModelB
 
 	@Override
 	public ResourceLocation getTextureLocation(IceButterflyEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/icebutterfly.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/icebutterfly.png");
 	}
 }

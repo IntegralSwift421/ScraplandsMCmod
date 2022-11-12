@@ -18,7 +18,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -53,6 +53,6 @@ public class StormBellBlock extends FlowerBlock {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(BattleOfTheRacesByFzprulesModBlocks.STORM_BELL.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(HardToFindBiomesByFzprulesModBlocks.STORM_BELL.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

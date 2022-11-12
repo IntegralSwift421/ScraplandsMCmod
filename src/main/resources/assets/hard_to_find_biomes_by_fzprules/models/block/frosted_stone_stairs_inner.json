@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "top": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "side": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks"
+  }
+}

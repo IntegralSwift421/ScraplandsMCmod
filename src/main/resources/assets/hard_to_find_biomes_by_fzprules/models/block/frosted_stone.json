@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "up": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "north": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "east": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "south": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "west": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks",
+    "particle": "hard_to_find_biomes_by_fzprules:blocks/ice_bricks"
+  }
+}

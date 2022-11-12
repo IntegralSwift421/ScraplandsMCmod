@@ -1,0 +1,62 @@
+{
+  "_fv": 34,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Thundershock"
+      },
+      {
+        "value": "CUSTOM:ScrapSword"
+      },
+      {
+        "value": "CUSTOM:ScrapPipe"
+      },
+      {
+        "value": "CUSTOM:SnowStaff"
+      },
+      {
+        "value": "CUSTOM:IceSword"
+      },
+      {
+        "value": "CUSTOM:IceSickle"
+      },
+      {
+        "value": "CUSTOM:IceHammer"
+      },
+      {
+        "value": "CUSTOM:IceScythe"
+      },
+      {
+        "value": "CUSTOM:IceSpear"
+      },
+      {
+        "value": "CUSTOM:FairySword"
+      },
+      {
+        "value": "CUSTOM:FairySickle"
+      },
+      {
+        "value": "CUSTOM:FairycrystalWand"
+      },
+      {
+        "value": "CUSTOM:DiamondWand"
+      },
+      {
+        "value": "CUSTOM:EmeraldWand"
+      },
+      {
+        "value": "CUSTOM:TopazWand"
+      },
+      {
+        "value": "CUSTOM:RamBlade"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "mainhand_weapon",
+    "namespace": "forge"
+  }
+}

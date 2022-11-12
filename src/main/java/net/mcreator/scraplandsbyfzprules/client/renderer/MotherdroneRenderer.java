@@ -10,11 +10,11 @@ import net.mcreator.scraplandsbyfzprules.client.model.ModelMotherdrone;
 
 public class MotherdroneRenderer extends MobRenderer<MotherdroneEntity, ModelMotherdrone<MotherdroneEntity>> {
 	public MotherdroneRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelMotherdrone(context.bakeLayer(ModelMotherdrone.LAYER_LOCATION)), 0.5f);
+		super(context, new ModelMotherdrone(context.bakeLayer(ModelMotherdrone.LAYER_LOCATION)), 3f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(MotherdroneEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/motherdrone.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/motherdrone.png");
 	}
 }

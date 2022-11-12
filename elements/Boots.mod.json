@@ -1,0 +1,23 @@
+{
+  "_fv": 34,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:ScrapArmor.boots"
+      },
+      {
+        "value": "CUSTOM:IceArmor.boots"
+      },
+      {
+        "value": "CUSTOM:FairyArmor.boots"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "boots",
+    "namespace": "forge"
+  }
+}

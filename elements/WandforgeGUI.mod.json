@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -41,6 +41,9 @@
         "type": "button",
         "data": {
           "text": "Create",
+          "onClick": {
+            "name": "WandForgeProcess"
+          },
           "width": 56,
           "height": 20,
           "name": "Create",
@@ -52,7 +55,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:FairyDust"
+            "value": "Items.STICK"
           },
           "id": 1,
           "disableStackInteraction": false,
@@ -66,7 +69,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "Items.STICK"
+            "value": "CUSTOM:FairyDust"
           },
           "id": 2,
           "disableStackInteraction": false,

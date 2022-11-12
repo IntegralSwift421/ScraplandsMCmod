@@ -23,7 +23,7 @@ public class ModelTortise<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-			new ResourceLocation("battle_of_the_races_by_fzprules", "model_tortise"), "main");
+			new ResourceLocation("hard_to_find_biomes_by_fzprules", "model_tortise"), "main");
 	public final ModelPart Head;
 	public final ModelPart Body;
 	public final ModelPart FrontLeftLeg;
@@ -97,5 +97,6 @@ public class ModelTortise<T extends Entity> extends EntityModel<T> {
 		this.HindLeftLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.HindRightLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 		this.FrontLeftLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.Tail.yRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
 	}
 }

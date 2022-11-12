@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "battle_of_the_races_by_fzprules:robotic_log",
-    "battle_of_the_races_by_fzprules:thunder_leaves"
+    "hard_to_find_biomes_by_fzprules:robotic_log",
+    "hard_to_find_biomes_by_fzprules:thunder_leaves",
+    "hard_to_find_biomes_by_fzprules:thunder_wood"
   ]
 }

@@ -12,6 +12,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -26,36 +27,39 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Set;
 
 @Mod.EventBusSubscriber
 public class SnowlandHunterEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wastes"),
-			new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wonders"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wonders"),
+			new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wastes"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.CREATURE)
-					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_HUNTER.get(), 20, 3, 5));
+					.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.SNOWLAND_HUNTER.get(), 20, 3, 5));
 	}
 
 	public SnowlandHunterEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_HUNTER.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.SNOWLAND_HUNTER.get(), world);
 	}
 
 	public SnowlandHunterEntity(EntityType<SnowlandHunterEntity> type, Level world) {
 		super(type, world);
 		xpReward = 3;
 		setNoAi(false);
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(HardToFindBiomesByFzprulesModItems.ICE_SWORD.get()));
 	}
 
 	@Override
@@ -95,7 +99,7 @@ public class SnowlandHunterEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.SNOWLAND_HUNTER.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.SNOWLAND_HUNTER.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos,
 						random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
 	}

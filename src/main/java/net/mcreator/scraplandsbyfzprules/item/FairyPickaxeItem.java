@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public class FairyPickaxeItem extends PickaxeItem {
 	public FairyPickaxeItem() {
@@ -34,7 +34,7 @@ public class FairyPickaxeItem extends PickaxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.FAIRY_SHARD.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.FAIRY_SHARD.get()));
 			}
 		}, 1, -3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
 	}

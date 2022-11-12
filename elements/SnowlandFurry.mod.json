@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "livingentity",
   "definition": {
     "mobName": "Snowland Furry",
@@ -27,10 +27,10 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": ""
+      "value": "CUSTOM:IceSpear"
     },
     "equipmentOffHand": {
-      "value": ""
+      "value": "Items.SHIELD"
     },
     "equipmentHelmet": {
       "value": ""

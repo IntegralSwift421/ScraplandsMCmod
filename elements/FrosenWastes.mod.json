@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "biome",
   "definition": {
     "name": "Frosen Wastes",
@@ -42,7 +42,6 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "ICY",
     "rainingPossibility": 0.7999999999999999,
     "temperature": 0.1,
     "baseHeight": 0.1,
@@ -51,10 +50,6 @@
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 4,
-    "biomeDictionaryTypes": [
-      "SNOWY",
-      "COLD"
-    ],
     "grassPerChunk": 4,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,
@@ -122,6 +117,42 @@
         "minGroup": 1,
         "maxGroup": 1,
         "weight": 100,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:IceButterfly"
+        },
+        "minGroup": 4,
+        "maxGroup": 4,
+        "weight": 20,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:IceWisp"
+        },
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 30,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Snowpile"
+        },
+        "minGroup": 4,
+        "maxGroup": 4,
+        "weight": 20,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Snowshell"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 20,
         "spawnType": "monster"
       }
     ]

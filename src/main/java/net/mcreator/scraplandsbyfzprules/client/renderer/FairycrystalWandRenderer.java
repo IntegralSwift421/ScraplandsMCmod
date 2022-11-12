@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class FairycrystalWandRenderer extends EntityRenderer<FairycrystalWandEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/magicball.png");
+	private static final ResourceLocation texture = new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/magicball.png");
 	private final ModelSpell model;
 
 	public FairycrystalWandRenderer(EntityRendererProvider.Context context) {

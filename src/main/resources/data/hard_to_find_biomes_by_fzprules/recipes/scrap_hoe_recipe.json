@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    " 3",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "1": {
+      "item": "hard_to_find_biomes_by_fzprules:scrap_metal"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:scrap_hoe",
+    "count": 1
+  }
+}

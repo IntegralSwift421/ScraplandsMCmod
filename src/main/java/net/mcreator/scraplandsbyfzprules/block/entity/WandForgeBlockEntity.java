@@ -23,7 +23,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.scraplandsbyfzprules.world.inventory.WandforgeGUIMenu;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlockEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlockEntities;
 
 import javax.annotation.Nullable;
 
@@ -36,7 +36,7 @@ public class WandForgeBlockEntity extends RandomizableContainerBlockEntity imple
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public WandForgeBlockEntity(BlockPos position, BlockState state) {
-		super(BattleOfTheRacesByFzprulesModBlockEntities.WAND_FORGE.get(), position, state);
+		super(HardToFindBiomesByFzprulesModBlockEntities.WAND_FORGE.get(), position, state);
 	}
 
 	@Override

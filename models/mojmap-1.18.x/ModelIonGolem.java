@@ -99,6 +99,6 @@ public class ModelIonGolem<T extends Entity> extends EntityModel<T> {
 		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.Head.xRot = headPitch / (180F / (float) Math.PI);
 		this.LeftArm.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
-		this.LowerBody.xRot = ageInTicks;
+		this.LowerBody.yRot = ageInTicks / 20.f;
 	}
 }

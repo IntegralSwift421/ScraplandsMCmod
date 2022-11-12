@@ -38,25 +38,25 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Set;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
 public class IceWispEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wastes"),
-			new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wonders"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wonders"),
+			new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wastes"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.AMBIENT)
-					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.ICE_WISP.get(), 20, 1, 1));
+					.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.ICE_WISP.get(), 20, 1, 1));
 	}
 
 	public IceWispEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.ICE_WISP.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.ICE_WISP.get(), world);
 	}
 
 	public IceWispEntity(EntityType<IceWispEntity> type, Level world) {
@@ -146,7 +146,7 @@ public class IceWispEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.ICE_WISP.get(), SpawnPlacements.Type.NO_RESTRICTIONS,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.ICE_WISP.get(), SpawnPlacements.Type.NO_RESTRICTIONS,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
 	}
 

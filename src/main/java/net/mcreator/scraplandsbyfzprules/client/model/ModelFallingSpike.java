@@ -23,7 +23,7 @@ public class ModelFallingSpike<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-			new ResourceLocation("battle_of_the_races_by_fzprules", "model_falling_spike"), "main");
+			new ResourceLocation("hard_to_find_biomes_by_fzprules", "model_falling_spike"), "main");
 	public final ModelPart Block;
 
 	public ModelFallingSpike(ModelPart root) {
@@ -44,12 +44,12 @@ public class ModelFallingSpike<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-	}
-
-	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
 			float blue, float alpha) {
 		Block.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	}
+
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.Block.yRot = ageInTicks;
 	}
 }

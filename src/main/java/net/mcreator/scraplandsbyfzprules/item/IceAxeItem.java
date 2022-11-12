@@ -10,7 +10,7 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.scraplandsbyfzprules.procedures.IceToolDebuffsProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public class IceAxeItem extends AxeItem {
 	public IceAxeItem() {
@@ -36,7 +36,7 @@ public class IceAxeItem extends AxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.ICE_CRYSTAL.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.ICE_CRYSTAL.get()));
 			}
 		}, 1, -3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
 	}

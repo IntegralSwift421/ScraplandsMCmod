@@ -26,7 +26,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.mcreator.scraplandsbyfzprules.procedures.ShockProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 import java.util.Random;
 import java.util.List;
@@ -55,7 +55,7 @@ public class ThunderReedBlock extends SugarCaneBlock {
 	public boolean canSurvive(BlockState blockstate, LevelReader worldIn, BlockPos pos) {
 		BlockPos blockpos = pos.below();
 		BlockState groundState = worldIn.getBlockState(blockpos);
-		return groundState.is(this) || groundState.is(BattleOfTheRacesByFzprulesModBlocks.RUSTY_DIRT.get())
+		return groundState.is(this) || groundState.is(HardToFindBiomesByFzprulesModBlocks.RUSTY_DIRT.get())
 
 		;
 	}
@@ -96,6 +96,6 @@ public class ThunderReedBlock extends SugarCaneBlock {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(BattleOfTheRacesByFzprulesModBlocks.THUNDER_REED.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(HardToFindBiomesByFzprulesModBlocks.THUNDER_REED.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

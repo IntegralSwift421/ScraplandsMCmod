@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "battle_of_the_races_by_fzprules:frosted_stone"
-  },
-  "result": "battle_of_the_races_by_fzprules:frosted_stone_wall"
-}

@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 import java.util.List;
 import java.util.Collections;
@@ -40,6 +40,6 @@ public class TopazOreBlock extends Block {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(BattleOfTheRacesByFzprulesModItems.TOPAZ.get()));
+		return Collections.singletonList(new ItemStack(HardToFindBiomesByFzprulesModItems.TOPAZ.get()));
 	}
 }

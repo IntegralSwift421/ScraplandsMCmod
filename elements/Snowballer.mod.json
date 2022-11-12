@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "enchantment",
   "definition": {
     "name": "Snowballer",
@@ -9,6 +9,7 @@
     "maxLevel": 3,
     "damageModifier": 0,
     "compatibleEnchantments": [],
+    "excludeEnchantments": false,
     "compatibleItems": [
       {
         "value": "CUSTOM:IceSword"
@@ -35,6 +36,7 @@
         "value": "CUSTOM:ScrapPipe"
       }
     ],
+    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
     "isAllowedOnBooks": true,

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "1": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "2": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "3": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "4": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "5": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "6": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "7": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    },
+    "8": {
+      "item": "hard_to_find_biomes_by_fzprules:ice_crystal"
+    }
+  },
+  "result": {
+    "item": "minecraft:blue_ice",
+    "count": 1
+  }
+}

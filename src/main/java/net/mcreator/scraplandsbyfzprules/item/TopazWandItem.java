@@ -45,7 +45,7 @@ public class TopazWandItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				TopazWandEntity entityarrow = TopazWandEntity.shoot(world, entity, world.getRandom(), 1f, 5, 5);
+				TopazWandEntity entityarrow = TopazWandEntity.shoot(world, entity, world.getRandom(), 1f, 5, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 				entity.releaseUsingItem();

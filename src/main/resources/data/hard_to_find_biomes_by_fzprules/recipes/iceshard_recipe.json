@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_ice"
+    }
+  ],
+  "result": {
+    "item": "hard_to_find_biomes_by_fzprules:ice_crystal",
+    "count": 9
+  }
+}

@@ -44,7 +44,7 @@ public class EmeraldWandItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				EmeraldWandEntity entityarrow = EmeraldWandEntity.shoot(world, entity, world.getRandom(), 1f, 6, 5);
+				EmeraldWandEntity entityarrow = EmeraldWandEntity.shoot(world, entity, world.getRandom(), 1f, 6, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 			}

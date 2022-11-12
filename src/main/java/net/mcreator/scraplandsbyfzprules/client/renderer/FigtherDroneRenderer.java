@@ -15,6 +15,6 @@ public class FigtherDroneRenderer extends MobRenderer<FigtherDroneEntity, ModelD
 
 	@Override
 	public ResourceLocation getTextureLocation(FigtherDroneEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/rougedrone.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/rougedrone.png");
 	}
 }

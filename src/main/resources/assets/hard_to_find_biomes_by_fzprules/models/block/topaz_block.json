@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hard_to_find_biomes_by_fzprules:blocks/topaz_block",
+    "up": "hard_to_find_biomes_by_fzprules:blocks/topaz_block",
+    "north": "hard_to_find_biomes_by_fzprules:blocks/topaz_block",
+    "east": "hard_to_find_biomes_by_fzprules:blocks/topaz_block",
+    "south": "hard_to_find_biomes_by_fzprules:blocks/topaz_block",
+    "west": "hard_to_find_biomes_by_fzprules:blocks/topaz_block",
+    "particle": "hard_to_find_biomes_by_fzprules:blocks/topaz_block"
+  }
+}

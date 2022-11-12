@@ -44,7 +44,7 @@ public class DiamondWandItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				DiamondWandEntity entityarrow = DiamondWandEntity.shoot(world, entity, world.getRandom(), 1f, 9, 5);
+				DiamondWandEntity entityarrow = DiamondWandEntity.shoot(world, entity, world.getRandom(), 1f, 9, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 			}

@@ -90,5 +90,6 @@ public class ModelTortise<T extends Entity> extends EntityModel<T> {
 		this.HindLeftLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.HindRightLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 		this.FrontLeftLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.Tail.yRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
 	}
 }

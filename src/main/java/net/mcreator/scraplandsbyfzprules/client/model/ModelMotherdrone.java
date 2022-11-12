@@ -1,9 +1,7 @@
 package net.mcreator.scraplandsbyfzprules.client.model;
 
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.Main;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.data.Main;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
@@ -13,26 +11,25 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.EntityModel;
-import net.minecraft.client.main.Main;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.4.1
+// Made with Blockbench 4.4.3
 // Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class ModelMotherdrone<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-			new ResourceLocation("battle_of_the_races_by_fzprules", "model_motherdrone"), "main");
-	public final ModelPart Main;
+			new ResourceLocation("hard_to_find_biomes_by_fzprules", "model_motherdrone"), "main");
+	public final ModelPart Mainbody;
 	public final ModelPart Part1;
 	public final ModelPart Part2;
 	public final ModelPart Part3;
 
 	public ModelMotherdrone(ModelPart root) {
-		this.Main = root.getChild("Main");
+		this.Mainbody = root.getChild("Mainbody");
 		this.Part1 = root.getChild("Part1");
 		this.Part2 = root.getChild("Part2");
 		this.Part3 = root.getChild("Part3");
@@ -41,7 +38,7 @@ public class ModelMotherdrone<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition Main = partdefinition.addOrReplaceChild("Main",
+		PartDefinition Mainbody = partdefinition.addOrReplaceChild("Mainbody",
 				CubeListBuilder.create().texOffs(0, 0).addBox(-19.0F, -31.8333F, -19.0F, 38.0F, 32.0F, 38.0F, new CubeDeformation(0.0F))
 						.texOffs(114, 0).addBox(-9.0F, 0.1667F, -9.0F, 18.0F, 9.0F, 18.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 3.8333F, 0.0F));
@@ -78,14 +75,16 @@ public class ModelMotherdrone<T extends Entity> extends EntityModel<T> {
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
 			float blue, float alpha) {
-		Main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		Mainbody.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Part1.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Part2.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Part3.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-		this.Part2.yRot = ageInTicks / 20.f;
-		this.Part1.yRot = ageInTicks;
+		this.Part3.yRot = netHeadYaw / (180F / (float) Math.PI);
+		this.Part3.xRot = headPitch / (180F / (float) Math.PI);
+		this.Part2.yRot = ageInTicks;
+		this.Part1.yRot = ageInTicks / 20.f;
 	}
 }

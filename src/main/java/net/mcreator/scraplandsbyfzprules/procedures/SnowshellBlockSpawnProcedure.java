@@ -8,7 +8,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 import net.mcreator.scraplandsbyfzprules.entity.SnowshellEntity;
 
 public class SnowshellBlockSpawnProcedure {
@@ -16,7 +16,7 @@ public class SnowshellBlockSpawnProcedure {
 		if (!(world instanceof Level _lvl && _lvl.isDay())) {
 			world.destroyBlock(new BlockPos(x, y, z), false);
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new SnowshellEntity(BattleOfTheRacesByFzprulesModEntities.SNOWSHELL.get(), _level);
+				Entity entityToSpawn = new SnowshellEntity(HardToFindBiomesByFzprulesModEntities.SNOWSHELL.get(), _level);
 				entityToSpawn.moveTo(x, y, z, 0, 0);
 				entityToSpawn.setYBodyRot(0);
 				entityToSpawn.setYHeadRot(0);

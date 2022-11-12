@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "biome",
   "definition": {
     "name": "Stormwoods",
@@ -38,16 +38,14 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "NONE",
     "rainingPossibility": 1.0,
     "temperature": 0.6,
     "baseHeight": 0.1,
-    "heightVariation": 0.30000000000000004,
+    "heightVariation": 0.7,
     "spawnBiome": true,
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 4,
-    "biomeDictionaryTypes": [],
     "grassPerChunk": 4,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,
@@ -57,12 +55,12 @@
     "gravelPatchesPerChunk": 0,
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
-    "treesPerChunk": 5,
+    "treesPerChunk": 7,
     "vanillaTreeType": "Default",
     "treeType": 1,
     "minHeight": 7,
     "treeStem": {
-      "value": "Blocks.LOG2#1"
+      "value": "CUSTOM:ThunderWood"
     },
     "treeBranch": {
       "value": "CUSTOM:ThunderLeaves"
@@ -73,10 +71,10 @@
     "treeFruits": {
       "value": ""
     },
-    "spawnStronghold": false,
+    "spawnStronghold": true,
     "spawnMineshaft": true,
     "spawnMineshaftMesa": false,
-    "spawnPillagerOutpost": false,
+    "spawnPillagerOutpost": true,
     "villageType": "none",
     "spawnWoodlandMansion": false,
     "spawnJungleTemple": true,
@@ -100,6 +98,61 @@
       "ExtraGoldOre",
       "InfestedStone"
     ],
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:Electron"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 80,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityFox"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 20,
+        "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "EntitySpider"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 20,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityCreeper"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 20,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityGlowSquid"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 20,
+        "spawnType": "waterCreature"
+      },
+      {
+        "entity": {
+          "value": "EntityPhantom"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 80,
+        "spawnType": "monster"
+      }
+    ]
   }
 }

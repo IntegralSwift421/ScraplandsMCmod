@@ -17,15 +17,15 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class TopazWandEntity extends AbstractArrow implements ItemSupplier {
 	public TopazWandEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(BattleOfTheRacesByFzprulesModEntities.TOPAZ_WAND.get(), world);
+		super(HardToFindBiomesByFzprulesModEntities.TOPAZ_WAND.get(), world);
 	}
 
 	public TopazWandEntity(EntityType<? extends TopazWandEntity> type, Level world) {
@@ -48,7 +48,7 @@ public class TopazWandEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return new ItemStack(BattleOfTheRacesByFzprulesModItems.TOPAZ_SUN.get());
+		return new ItemStack(HardToFindBiomesByFzprulesModItems.TOPAZ_SUN.get());
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class TopazWandEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static TopazWandEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
-		TopazWandEntity entityarrow = new TopazWandEntity(BattleOfTheRacesByFzprulesModEntities.TOPAZ_WAND.get(), entity, world);
+		TopazWandEntity entityarrow = new TopazWandEntity(HardToFindBiomesByFzprulesModEntities.TOPAZ_WAND.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -79,25 +79,25 @@ public class TopazWandEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setSecondsOnFire(100);
 		world.addFreshEntity(entityarrow);
 		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
+				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1,
 				1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
 	public static TopazWandEntity shoot(LivingEntity entity, LivingEntity target) {
-		TopazWandEntity entityarrow = new TopazWandEntity(BattleOfTheRacesByFzprulesModEntities.TOPAZ_WAND.get(), entity, entity.level);
+		TopazWandEntity entityarrow = new TopazWandEntity(HardToFindBiomesByFzprulesModEntities.TOPAZ_WAND.get(), entity, entity.level);
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(5);
-		entityarrow.setKnockback(5);
+		entityarrow.setKnockback(1);
 		entityarrow.setCritArrow(false);
 		entityarrow.setSecondsOnFire(100);
 		entity.level.addFreshEntity(entityarrow);
 		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
+				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1,
 				1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}

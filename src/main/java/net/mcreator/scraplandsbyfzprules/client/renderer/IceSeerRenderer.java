@@ -15,6 +15,6 @@ public class IceSeerRenderer extends MobRenderer<IceSeerEntity, ModelSeer<IceSee
 
 	@Override
 	public ResourceLocation getTextureLocation(IceSeerEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/iceseer.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/iceseer.png");
 	}
 }

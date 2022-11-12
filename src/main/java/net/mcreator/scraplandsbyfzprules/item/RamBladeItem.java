@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public class RamBladeItem extends SwordItem {
 	public RamBladeItem() {
@@ -34,7 +34,7 @@ public class RamBladeItem extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.RAM.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.RAM.get()));
 			}
 		}, 3, -3.2f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
 	}

@@ -8,7 +8,6 @@ import net.minecraftforge.items.CapabilityItemHandler;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -19,7 +18,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModMenus;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModMenus;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -35,7 +34,7 @@ public class ThunderShopMenu extends AbstractContainerMenu implements Supplier<M
 	private boolean bound = false;
 
 	public ThunderShopMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(BattleOfTheRacesByFzprulesModMenus.THUNDER_SHOP, id);
+		super(HardToFindBiomesByFzprulesModMenus.THUNDER_SHOP, id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(4);
@@ -77,30 +76,16 @@ public class ThunderShopMenu extends AbstractContainerMenu implements Supplier<M
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 16, 53) {
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return (Items.COPPER_INGOT == stack.getItem());
-			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 43, 53) {
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 115, 53) {
-			@Override
-			public boolean mayPickup(Player player) {
-				return false;
-			}
-
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;
 			}
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 142, 53) {
-			@Override
-			public boolean mayPickup(Player player) {
-				return false;
-			}
-
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;

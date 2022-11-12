@@ -1,0 +1,38 @@
+{
+  "_fv": 34,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Frozen"
+      },
+      {
+        "value": "CUSTOM:IceButterfly"
+      },
+      {
+        "value": "CUSTOM:IceSeer"
+      },
+      {
+        "value": "CUSTOM:IceWisp"
+      },
+      {
+        "value": "CUSTOM:Snowpile"
+      },
+      {
+        "value": "CUSTOM:Snowshell"
+      },
+      {
+        "value": "EntitySnowman"
+      },
+      {
+        "value": "EntityStray"
+      }
+    ],
+    "name": "ice_type",
+    "namespace": "mod"
+  }
+}

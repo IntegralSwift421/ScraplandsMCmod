@@ -44,25 +44,25 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModEntities;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModEntities;
 
 import java.util.Set;
 import java.util.List;
 
 @Mod.EventBusSubscriber
 public class SnowpileEntity extends TamableAnimal {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("battle_of_the_races_by_fzprules:frosen_wonders"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("hard_to_find_biomes_by_fzprules:frosen_wonders"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(BattleOfTheRacesByFzprulesModEntities.SNOWPILE.get(), 90, 4, 5));
+					.add(new MobSpawnSettings.SpawnerData(HardToFindBiomesByFzprulesModEntities.SNOWPILE.get(), 90, 4, 5));
 	}
 
 	public SnowpileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(BattleOfTheRacesByFzprulesModEntities.SNOWPILE.get(), world);
+		this(HardToFindBiomesByFzprulesModEntities.SNOWPILE.get(), world);
 	}
 
 	public SnowpileEntity(EntityType<SnowpileEntity> type, Level world) {
@@ -167,18 +167,18 @@ public class SnowpileEntity extends TamableAnimal {
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		SnowpileEntity retval = BattleOfTheRacesByFzprulesModEntities.SNOWPILE.get().create(serverWorld);
+		SnowpileEntity retval = HardToFindBiomesByFzprulesModEntities.SNOWPILE.get().create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return List.of(BattleOfTheRacesByFzprulesModItems.ICE_CRYSTAL.get(), Items.SNOWBALL).contains(stack.getItem());
+		return List.of(HardToFindBiomesByFzprulesModItems.ICE_CRYSTAL.get(), Items.SNOWBALL).contains(stack.getItem());
 	}
 
 	public static void init() {
-		SpawnPlacements.register(BattleOfTheRacesByFzprulesModEntities.SNOWPILE.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HardToFindBiomesByFzprulesModEntities.SNOWPILE.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}

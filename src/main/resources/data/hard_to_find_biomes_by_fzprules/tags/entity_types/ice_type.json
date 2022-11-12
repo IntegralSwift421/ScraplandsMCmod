@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "hard_to_find_biomes_by_fzprules:ice_butterfly",
+    "stray",
+    "hard_to_find_biomes_by_fzprules:ice_seer",
+    "hard_to_find_biomes_by_fzprules:frozen",
+    "hard_to_find_biomes_by_fzprules:ice_wisp",
+    "hard_to_find_biomes_by_fzprules:snowshell",
+    "snow_golem",
+    "hard_to_find_biomes_by_fzprules:snowpile"
+  ]
+}

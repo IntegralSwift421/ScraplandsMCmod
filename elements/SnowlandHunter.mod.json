@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "livingentity",
   "definition": {
     "mobName": "Snowland Hunter",
@@ -27,7 +27,7 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": ""
+      "value": "CUSTOM:IceSword"
     },
     "equipmentOffHand": {
       "value": ""

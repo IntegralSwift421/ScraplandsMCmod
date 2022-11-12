@@ -15,6 +15,6 @@ public class InfectedProtogenRenderer extends MobRenderer<InfectedProtogenEntity
 
 	@Override
 	public ResourceLocation getTextureLocation(InfectedProtogenEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/infected_protogen.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/infected_protogen.png");
 	}
 }

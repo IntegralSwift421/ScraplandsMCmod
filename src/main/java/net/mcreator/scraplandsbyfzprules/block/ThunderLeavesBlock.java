@@ -27,8 +27,8 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.scraplandsbyfzprules.procedures.ShockProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModBlocks;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModBlocks;
 
 import java.util.Random;
 import java.util.List;
@@ -67,7 +67,7 @@ public class ThunderLeavesBlock extends Block {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(BattleOfTheRacesByFzprulesModItems.THUNDER_BALL.get()));
+		return Collections.singletonList(new ItemStack(HardToFindBiomesByFzprulesModItems.THUNDER_BALL.get()));
 	}
 
 	@OnlyIn(Dist.CLIENT)
@@ -97,7 +97,7 @@ public class ThunderLeavesBlock extends Block {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(BattleOfTheRacesByFzprulesModBlocks.THUNDER_LEAVES.get(),
+		ItemBlockRenderTypes.setRenderLayer(HardToFindBiomesByFzprulesModBlocks.THUNDER_LEAVES.get(),
 				renderType -> renderType == RenderType.cutout());
 	}
 

@@ -10,7 +10,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.scraplandsbyfzprules.procedures.GeneralEnchantmentProcedureProcedure;
-import net.mcreator.scraplandsbyfzprules.init.BattleOfTheRacesByFzprulesModItems;
+import net.mcreator.scraplandsbyfzprules.init.HardToFindBiomesByFzprulesModItems;
 
 public class ScrapPipeItem extends SwordItem {
 	public ScrapPipeItem() {
@@ -24,7 +24,7 @@ public class ScrapPipeItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 5f;
+				return 3f;
 			}
 
 			public int getLevel() {
@@ -36,7 +36,7 @@ public class ScrapPipeItem extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(BattleOfTheRacesByFzprulesModItems.SCRAP_METAL.get()));
+				return Ingredient.of(new ItemStack(HardToFindBiomesByFzprulesModItems.SCRAP_METAL.get()));
 			}
 		}, 3, -3f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
 	}

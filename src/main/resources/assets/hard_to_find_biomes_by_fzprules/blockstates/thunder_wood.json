@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hard_to_find_biomes_by_fzprules:block/thunder_wood"
+    },
+    "facing=east": {
+      "model": "hard_to_find_biomes_by_fzprules:block/thunder_wood",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "hard_to_find_biomes_by_fzprules:block/thunder_wood",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hard_to_find_biomes_by_fzprules:block/thunder_wood",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "hard_to_find_biomes_by_fzprules:block/thunder_wood",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "hard_to_find_biomes_by_fzprules:block/thunder_wood",
+      "x": 90
+    }
+  }
+}

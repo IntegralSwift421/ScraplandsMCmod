@@ -19,6 +19,6 @@ public class SnowlandFurryRenderer extends HumanoidMobRenderer<SnowlandFurryEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(SnowlandFurryEntity entity) {
-		return new ResourceLocation("battle_of_the_races_by_fzprules:textures/entities/snowlandfurry.png");
+		return new ResourceLocation("hard_to_find_biomes_by_fzprules:textures/entities/snowlandfurry.png");
 	}
 }

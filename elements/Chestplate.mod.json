@@ -1,0 +1,23 @@
+{
+  "_fv": 34,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:ScrapArmor.body"
+      },
+      {
+        "value": "CUSTOM:IceArmor.body"
+      },
+      {
+        "value": "CUSTOM:FairyArmor.body"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "chestplate",
+    "namespace": "forge"
+  }
+}

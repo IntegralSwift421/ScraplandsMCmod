@@ -1,5 +1,5 @@
 {
-  "_fv": 33,
+  "_fv": 34,
   "_type": "livingentity",
   "definition": {
     "mobName": "Frozen Seer",
@@ -122,6 +122,15 @@
       },
       {
         "value": "CUSTOM:FrosenWonders"
+      },
+      {
+        "value": "snowy_tundra"
+      },
+      {
+        "value": "taiga_cold"
+      },
+      {
+        "value": "snowy_mountains"
       }
     ],
     "spawnInDungeons": false
